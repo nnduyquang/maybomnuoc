@@ -1,6 +1,12 @@
 <?php
 
+//Route cửa front end
 
+Route::get('/sanpham-chitiet.html', function () {
+    return view('frontend.products.index');
+});
+
+//Route cửa front end
 Route::get('/', function () {
     return view('frontend.home.index');
 });

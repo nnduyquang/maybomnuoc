@@ -1,16 +1,16 @@
 @extends('frontend.master')
 @section('title')
-    Nội Thất
+    Máy bơm nước
 @stop
 @section('description')
-    Nội Thất
+    Công ty máy bơm nước
 @stop
 @section('styles')
-    {{ Html::style('css/themes/default/default.css') }}
+
 @stop
 @section('slider')
-    @include('frontend.common.slider')
+@include('frontend.home.home_leftmenu')
 @stop
 @section('container')
-    hello
+@include('frontend.home.home_footer')
 @stop

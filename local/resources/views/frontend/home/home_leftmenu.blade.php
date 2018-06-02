@@ -5,11 +5,6 @@
         font-size: 14px;
     }
 
-    .font_chuan_2 {
-        font-family: 'Cuprum', sans-serif;
-        font-size: 22px;
-    }
-
     #fe_home_leftmenu-content ul {
         list-style-type: none;
         margin: 0;
@@ -34,14 +29,31 @@
         padding-left: 10px;
     }
 
-    #fe_home_leftmenu-content p {
+    #fe_home_leftmenu-content > p {
         font-family: 'Comfortaa', cursive;
         position: relative;
         font-size: 16px;
         font-weight: 600;
     }
 
-    #fe_home_leftmenu-content p:after {
+    #fe_home_leftmenu-content > p:after {
+        content: "";
+        width: 40px;
+        height: 4px;
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        background-color: #0d51db;
+    }
+
+    p.home_p_style {
+        font-family: 'Comfortaa', cursive;
+        position: relative;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    p.home_p_style:after {
         content: "";
         width: 40px;
         height: 4px;
@@ -89,21 +101,42 @@
         text-decoration: line-through;
     }
 
-    .fe_pro_detailpro .card-body span{
+    .fe_pro_detailpro .card-body span {
         font-size: 13px;
-        color: #5c5c5c ;
+        color: #5c5c5c;
     }
 
-    .fe_pro_detailpro .card-body span.rating{
+    .fe_pro_detailpro .card-body span.rating {
         font-size: 13px;
-        color: #f28300 ;
+        color: #f28300;
     }
 
-    .fe_pro_detailpro:hover .card img:hover{
-        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    .img-hover-visible {
+        position: absolute;
+        z-index: 8;
+        display: none;
+        top: 15%;
+        left: 0;
+        transition: .3s;
+    }
+
+    .img-hover-first:hover {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .img-hover-first:hover + .img-hover-visible {
+        opacity: 1;
+        top: 0;
+        display: block;
+    }
+
+    .img-hover-visible:hover {
+        display: block;
     }
 
     .sale-percent {
+        z-index: 111;
         position: absolute;
         background-color: #f60;
         -webkit-border-radius: 50%;
@@ -116,8 +149,33 @@
         height: 50px;
     }
 
-    .sale-percent p{
-       color: white;
+    .sale-percent p {
+        color: white;
+    }
+
+    .p_small_title {
+        font-size: 15px;
+        color: #0d51db;
+        font-weight: 600;
+    }
+
+    .p_small_rate > i {
+        font-size: 11px;
+        color: #f60;
+    }
+
+    .p_small_rate span {
+
+    }
+
+    .p_small_price > div:first-child {
+        color: #f60;
+        font-weight: 600;
+    }
+
+    .p_small_price > div:last-child {
+        font-size: 13px;
+        text-decoration: line-through;
     }
 
 </style>
@@ -154,26 +212,95 @@
 
                 <div class="row mb-4 mt-4">
                     <div class="col-12">
-                        <p class="pt-3 pb-3">New Products</p>
+                        <p class="pt-3 pb-3 home_p_style">New Products</p>
                     </div>
 
-                    <div class="col-12 mt-2 mb-2">
-                        <img src="http://diennuochongphuc.net/wp-content/uploads/2017/09/lap-dat-may-bom-nuoc-tai-ha-noi-678x381.jpg"
-                             alt="" style="width: 100%;height: auto;">
-                    </div>
 
                     <div class="col-12 text-center">
-                        <span class="font_chuan_2 text-warning"><a href="">MÁY BƠM NƯỚC Pentax P012</a></span>
-                        <div class="row align-self-center">
-                            <div class="col-6 align-self-center fa-1x text-info p-2">$30.000</div>
-                            <div class="col-6 align-self-center text-secondary p-2">$40.000</div>
+                        <div class="row">
+                            <marquee direction="up" height="180px" scrolldelay="1">
+                                <div class="col-12">
+                                    <div class="row mb-5 border p-2">
+                                        <div class="col-4 align-self-center">
+                                            <img src="https://cdn.shopify.com/s/files/1/1769/3917/products/TC-60CX650U-800_10524c6f-f004-4b0c-a5ce-eeb52f6a2e30_small.jpg"
+                                                 alt="" style="width: 100%;height:auto;
+">
+                                        </div>
+                                        <div class="col-8 align-self-center text-left">
+                                            <p class="p_small_title pb-2">Single Sundex</p>
+                                            <p class="p_small_rate pb-2">
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <span>(0)</span>
+                                            </p>
+                                            <div class="row p_small_price align-self-center">
+                                                <div class="col-6 align-self-center">$300.00</div>
+                                                <div class="col-6 align-self-center">$600.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-5 border p-2">
+                                        <div class="col-4 align-self-center">
+                                            <img src="https://cdn.shopify.com/s/files/1/1769/3917/products/TC-60CX650U-800_10524c6f-f004-4b0c-a5ce-eeb52f6a2e30_small.jpg"
+                                                 alt="" style="width: 100%;height:auto;
+">
+                                        </div>
+                                        <div class="col-8 align-self-center text-left">
+                                            <p class="p_small_title pb-2">Single Sundex</p>
+                                            <p class="p_small_rate pb-2">
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <span>(0)</span>
+                                            </p>
+                                            <div class="row p_small_price align-self-center">
+                                                <div class="col-6 align-self-center">$300.00</div>
+                                                <div class="col-6 align-self-center">$600.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-5 border p-2">
+                                        <div class="col-4 align-self-center">
+                                            <img src="https://cdn.shopify.com/s/files/1/1769/3917/products/TC-60CX650U-800_10524c6f-f004-4b0c-a5ce-eeb52f6a2e30_small.jpg"
+                                                 alt="" style="width: 100%;height:auto;
+">
+                                        </div>
+                                        <div class="col-8 align-self-center text-left">
+                                            <p class="p_small_title pb-2">Single Sundex</p>
+                                            <p class="p_small_rate pb-2">
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <span>(0)</span>
+                                            </p>
+                                            <div class="row p_small_price align-self-center">
+                                                <div class="col-6 align-self-center">$300.00</div>
+                                                <div class="col-6 align-self-center">$600.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </marquee>
                         </div>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-12">
-                        <p class="pt-3 pb-3">Customer support</p>
+                        <p class="pt-3 pb-3 home_p_style">Customer support</p>
                     </div>
 
                     <div class="col-12 mt-2 mb-2">
@@ -222,15 +349,23 @@
 
                     <div class="col-md-4 col-sm-6 col-12 mb-4 fe_pro_detailpro" id="">
                         <div class="card one-product h-100 shadow-sm bg-white rounded">
-                            
+
                             <a href="sanpham-chitiet.html" class="pt-5 pb-5 position-relative">
 
                                 <div class="sale-percent">
                                     <p>-60%</p>
                                 </div>
 
-                                <img src="http://maybomnuoc.org.vn/products/1453078619LD%20370.jpg"
-                                     alt="" style="width: 98%;height: auto;margin: auto">
+                                <div class="img-hover-first">
+                                    <img class="" src="http://maybomnuoc.org.vn/products/1453078619LD%20370.jpg"
+                                         alt="" style="width: 98%;height: auto;margin: auto">
+                                </div>
+
+                                <div class="img-hover-visible">
+                                    <img class=""
+                                         src="http://maybomnuocdailoan.com/file/images/TinTuc/khai-niem-va-phan-loai-may-bom-nuoc.jpg"
+                                         alt="" style="width: 98%;height: auto;margin: auto">
+                                </div>
                             </a>
 
                             <div class="card-body text-left p-2 mb-3">
@@ -267,8 +402,16 @@
                                     <p>-60%</p>
                                 </div>
 
-                                <img src="http://maybomnuoc.org.vn/products/1453078619LD%20370.jpg"
-                                     alt="" style="width: 98%;height: auto;margin: auto">
+                                <div class="img-hover-first">
+                                    <img class="" src="http://maybomnuoc.org.vn/products/1453078619LD%20370.jpg"
+                                         alt="" style="width: 98%;height: auto;margin: auto">
+                                </div>
+
+                                <div class="img-hover-visible">
+                                    <img class=""
+                                         src="http://maybomnuocdailoan.com/file/images/TinTuc/khai-niem-va-phan-loai-may-bom-nuoc.jpg"
+                                         alt="" style="width: 98%;height: auto;margin: auto">
+                                </div>
                             </a>
 
                             <div class="card-body text-left p-2 mb-3">
@@ -305,8 +448,16 @@
                                     <p>-60%</p>
                                 </div>
 
-                                <img src="http://maybomnuoc.org.vn/products/1453078619LD%20370.jpg"
-                                     alt="" style="width: 98%;height: auto;margin: auto">
+                                <div class="img-hover-first">
+                                    <img class="" src="http://maybomnuoc.org.vn/products/1453078619LD%20370.jpg"
+                                         alt="" style="width: 98%;height: auto;margin: auto">
+                                </div>
+
+                                <div class="img-hover-visible">
+                                    <img class=""
+                                         src="http://maybomnuocdailoan.com/file/images/TinTuc/khai-niem-va-phan-loai-may-bom-nuoc.jpg"
+                                         alt="" style="width: 98%;height: auto;margin: auto">
+                                </div>
                             </a>
 
                             <div class="card-body text-left p-2 mb-3">
@@ -343,8 +494,16 @@
                                     <p>-60%</p>
                                 </div>
 
-                                <img src="http://maybomnuoc.org.vn/products/1453078619LD%20370.jpg"
-                                     alt="" style="width: 98%;height: auto;margin: auto">
+                                <div class="img-hover-first">
+                                    <img class="" src="http://maybomnuoc.org.vn/products/1453078619LD%20370.jpg"
+                                         alt="" style="width: 98%;height: auto;margin: auto">
+                                </div>
+
+                                <div class="img-hover-visible">
+                                    <img class=""
+                                         src="http://maybomnuocdailoan.com/file/images/TinTuc/khai-niem-va-phan-loai-may-bom-nuoc.jpg"
+                                         alt="" style="width: 98%;height: auto;margin: auto">
+                                </div>
                             </a>
 
                             <div class="card-body text-left p-2 mb-3">
@@ -381,8 +540,16 @@
                                     <p>-60%</p>
                                 </div>
 
-                                <img src="http://maybomnuoc.org.vn/products/1453078619LD%20370.jpg"
-                                     alt="" style="width: 98%;height: auto;margin: auto">
+                                <div class="img-hover-first">
+                                    <img class="" src="http://maybomnuoc.org.vn/products/1453078619LD%20370.jpg"
+                                         alt="" style="width: 98%;height: auto;margin: auto">
+                                </div>
+
+                                <div class="img-hover-visible">
+                                    <img class=""
+                                         src="http://maybomnuocdailoan.com/file/images/TinTuc/khai-niem-va-phan-loai-may-bom-nuoc.jpg"
+                                         alt="" style="width: 98%;height: auto;margin: auto">
+                                </div>
                             </a>
 
                             <div class="card-body text-left p-2 mb-3">
@@ -419,8 +586,16 @@
                                     <p>-60%</p>
                                 </div>
 
-                                <img src="http://maybomnuoc.org.vn/products/1453078619LD%20370.jpg"
-                                     alt="" style="width: 98%;height: auto;margin: auto">
+                                <div class="img-hover-first">
+                                    <img class="" src="http://maybomnuoc.org.vn/products/1453078619LD%20370.jpg"
+                                         alt="" style="width: 98%;height: auto;margin: auto">
+                                </div>
+
+                                <div class="img-hover-visible">
+                                    <img class=""
+                                         src="http://maybomnuocdailoan.com/file/images/TinTuc/khai-niem-va-phan-loai-may-bom-nuoc.jpg"
+                                         alt="" style="width: 98%;height: auto;margin: auto">
+                                </div>
                             </a>
 
                             <div class="card-body text-left p-2 mb-3">
@@ -457,8 +632,16 @@
                                     <p>-60%</p>
                                 </div>
 
-                                <img src="http://maybomnuoc.org.vn/products/1453078619LD%20370.jpg"
-                                     alt="" style="width: 98%;height: auto;margin: auto">
+                                <div class="img-hover-first">
+                                    <img class="" src="http://maybomnuoc.org.vn/products/1453078619LD%20370.jpg"
+                                         alt="" style="width: 98%;height: auto;margin: auto">
+                                </div>
+
+                                <div class="img-hover-visible">
+                                    <img class=""
+                                         src="http://maybomnuocdailoan.com/file/images/TinTuc/khai-niem-va-phan-loai-may-bom-nuoc.jpg"
+                                         alt="" style="width: 98%;height: auto;margin: auto">
+                                </div>
                             </a>
 
                             <div class="card-body text-left p-2 mb-3">
@@ -495,8 +678,16 @@
                                     <p>-60%</p>
                                 </div>
 
-                                <img src="http://maybomnuoc.org.vn/products/1453078619LD%20370.jpg"
-                                     alt="" style="width: 98%;height: auto;margin: auto">
+                                <div class="img-hover-first">
+                                    <img class="" src="http://maybomnuoc.org.vn/products/1453078619LD%20370.jpg"
+                                         alt="" style="width: 98%;height: auto;margin: auto">
+                                </div>
+
+                                <div class="img-hover-visible">
+                                    <img class=""
+                                         src="http://maybomnuocdailoan.com/file/images/TinTuc/khai-niem-va-phan-loai-may-bom-nuoc.jpg"
+                                         alt="" style="width: 98%;height: auto;margin: auto">
+                                </div>
                             </a>
 
                             <div class="card-body text-left p-2 mb-3">
@@ -524,45 +715,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-12 mb-4 fe_pro_detailpro" id="">
-                        <div class="card one-product h-100 shadow-sm bg-white rounded">
-
-                            <a href="sanpham-chitiet.html" class="pt-5 pb-5 position-relative">
-
-                                <div class="sale-percent">
-                                    <p>-60%</p>
-                                </div>
-
-                                <img src="http://maybomnuoc.org.vn/products/1453078619LD%20370.jpg"
-                                     alt="" style="width: 98%;height: auto;margin: auto">
-                            </a>
-
-                            <div class="card-body text-left p-2 mb-3">
-
-                                <p class="">
-                                    <a href="sanpham-chitiet.html" class="text-primary">MÁY BƠM PANASONIC </a>
-                                </p>
-                                <br>
-
-                                <span class="pt-3 pb-3">THE ROCKY STEEL</span>
-                                <br>
-                                <span class="rating pt-2 pb-2">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                </span>
-                            </div>
-
-                            <div class="info card-footer bg-transparent border-top p-2 pb-3">
-                                <div class="card-text mt-2 align-self-center" class="pbtn_price">
-                                    <div class="old-price float-left align-self-center">$120.000</div>
-                                    <div class="new-price float-right align-self-center">$150.000</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
 
 
                 </div>

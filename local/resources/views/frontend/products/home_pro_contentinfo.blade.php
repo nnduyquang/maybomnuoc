@@ -172,7 +172,7 @@
         color: white;
     }
 
-    #home_pro_content_btn button{
+    #home_pro_content_btn button {
         cursor: pointer;
         border: 0;
         border-radius: 5px;
@@ -184,10 +184,9 @@
         background-color: #0d51db;
     }
 
-    .home-pro-title{
+    .home-pro-title {
         font-size: 26px;
     }
-
 
     /*phần tab content css*/
 
@@ -241,15 +240,22 @@
 
     /* Fade in tabs */
     @-webkit-keyframes fadeEffect {
-        from {opacity: 0;}
-        to {opacity: 1;}
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
     }
 
     @keyframes fadeEffect {
-        from {opacity: 0;}
-        to {opacity: 1;}
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
     }
-
 
     @media only screen and (max-width: 1000px) {
 
@@ -261,15 +267,16 @@
             width: 100%;
         }
 
-        .tab button{
+        .tab button {
             width: 100%;
         }
+
         .tabcontent {
             width: 100%;
         }
     }
 
-    #product_relate_pro p{
+    #product_relate_pro #relate_pro_child > p {
 
         font-family: 'Comfortaa', cursive;
         position: relative;
@@ -277,15 +284,79 @@
         font-weight: 600;
     }
 
-    #product_relate_pro p:after {
+    #product_relate_pro #relate_pro_child > p:after {
         content: "";
         width: 180px;
         height: 4px;
         position: absolute;
-        top:20px;
+        top: 20px;
         left: 0;
         background-color: #0d51db;
 
+    }
+
+    .fe_pro_detailpro .card-body span {
+        font-size: 13px;
+        color: #5c5c5c;
+    }
+
+    .fe_pro_detailpro .card-body span.rating {
+        font-size: 13px;
+        color: #f28300;
+    }
+
+
+    .old-price {
+        color: #f28300;
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    .new-price {
+        text-decoration: line-through;
+    }
+
+
+    .img-hover-visible {
+        position: absolute;
+        z-index: 8;
+        display:none;
+        top:15%;
+        left: 0;
+        transition: .3s;
+    }
+
+    .img-hover-first:hover {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .img-hover-first:hover + .img-hover-visible {
+        opacity: 1;
+        top: 0;
+        display: block;
+    }
+
+    .img-hover-visible:hover{
+        display: block;
+    }
+
+    .sale-percent {
+        z-index: 111;
+        position: absolute;
+        background-color: #f60;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        font-size: 15px;
+        line-height: 50px;
+        text-align: center;
+        width: 50px;
+        height: 50px;
+    }
+
+    .sale-percent p {
+        color: white;
     }
 
 
@@ -407,7 +478,7 @@
                         </div>
 
                         <div class="col-md-12 pt-1" id="fe_product_availoption">
-                            <p>Availability:  in stock</p>
+                            <p>Availability: in stock</p>
                         </div>
 
                     </div>
@@ -415,7 +486,7 @@
 
                     <div class="col-md-12 mt-4 mb-5 border-top pt-3" id="home_pro_content_btn">
                         <span>Social network: </span><br>
-                       <button><i class="fab fa-facebook-f"></i></button>
+                        <button><i class="fab fa-facebook-f"></i></button>
                         <button><i class="fab fa-facebook-f"></i></button>
                         <button><i class="fab fa-facebook-f"></i></button>
 
@@ -430,7 +501,8 @@
                 <div class="col-md-12">
 
                     <div class="tab">
-                        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">DESCRIPTION</button>
+                        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">DESCRIPTION
+                        </button>
                         <button class="tablinks" onclick="openCity(event, 'Paris')">AUDITION INFO</button>
                         <button class="tablinks" onclick="openCity(event, 'Tokyo')">TAGS</button>
                         <button class="tablinks" onclick="openCity(event, 'Tokyo2')">CUSTOM TAB</button>
@@ -438,42 +510,62 @@
 
                     <div id="London" class="tabcontent">
                         <h3>London</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id purus et nisl elementum ornare sit amet non mi.
-                            Phasellus euismod sapien et sapien mollis auctor. Suspendisse interdum erat ut metus euismod sed elementum massa euismod.
-                            Donec eget magna orci, at fermentum metus. Sed rhoncus, nibh nec dapibus adipiscing, felis felis convallis arcu,
-                            quis semper justo mauris sed magna. Nulla facilisi. Aliquam ultricies diam non turpis tristique porta. Sed nec ligula
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id purus et nisl elementum
+                            ornare sit amet non mi.
+                            Phasellus euismod sapien et sapien mollis auctor. Suspendisse interdum erat ut metus euismod
+                            sed elementum massa euismod.
+                            Donec eget magna orci, at fermentum metus. Sed rhoncus, nibh nec dapibus adipiscing, felis
+                            felis convallis arcu,
+                            quis semper justo mauris sed magna. Nulla facilisi. Aliquam ultricies diam non turpis
+                            tristique porta. Sed nec ligula
                             id turpis iaculis adipiscing.
-                            Phasellus viverra urna sed purus porta rutrum. Nam ultrices molestie tellus, ac vulputate odio condimentum in.</p>
+                            Phasellus viverra urna sed purus porta rutrum. Nam ultrices molestie tellus, ac vulputate
+                            odio condimentum in.</p>
                     </div>
 
                     <div id="Paris" class="tabcontent">
                         <h3>Paris</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id purus et nisl elementum ornare sit amet non mi.
-                            Phasellus euismod sapien et sapien mollis auctor. Suspendisse interdum erat ut metus euismod sed elementum massa euismod.
-                            Donec eget magna orci, at fermentum metus. Sed rhoncus, nibh nec dapibus adipiscing, felis felis convallis arcu,
-                            quis semper justo mauris sed magna. Nulla facilisi. Aliquam ultricies diam non turpis tristique porta. Sed nec ligula
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id purus et nisl elementum
+                            ornare sit amet non mi.
+                            Phasellus euismod sapien et sapien mollis auctor. Suspendisse interdum erat ut metus euismod
+                            sed elementum massa euismod.
+                            Donec eget magna orci, at fermentum metus. Sed rhoncus, nibh nec dapibus adipiscing, felis
+                            felis convallis arcu,
+                            quis semper justo mauris sed magna. Nulla facilisi. Aliquam ultricies diam non turpis
+                            tristique porta. Sed nec ligula
                             id turpis iaculis adipiscing.
-                            Phasellus viverra urna sed purus porta rutrum. Nam ultrices molestie tellus, ac vulputate odio condimentum in.</p>
+                            Phasellus viverra urna sed purus porta rutrum. Nam ultrices molestie tellus, ac vulputate
+                            odio condimentum in.</p>
                     </div>
 
                     <div id="Tokyo" class="tabcontent">
                         <h3>Tokyo</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id purus et nisl elementum ornare sit amet non mi.
-                            Phasellus euismod sapien et sapien mollis auctor. Suspendisse interdum erat ut metus euismod sed elementum massa euismod.
-                            Donec eget magna orci, at fermentum metus. Sed rhoncus, nibh nec dapibus adipiscing, felis felis convallis arcu,
-                            quis semper justo mauris sed magna. Nulla facilisi. Aliquam ultricies diam non turpis tristique porta. Sed nec ligula
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id purus et nisl elementum
+                            ornare sit amet non mi.
+                            Phasellus euismod sapien et sapien mollis auctor. Suspendisse interdum erat ut metus euismod
+                            sed elementum massa euismod.
+                            Donec eget magna orci, at fermentum metus. Sed rhoncus, nibh nec dapibus adipiscing, felis
+                            felis convallis arcu,
+                            quis semper justo mauris sed magna. Nulla facilisi. Aliquam ultricies diam non turpis
+                            tristique porta. Sed nec ligula
                             id turpis iaculis adipiscing.
-                            Phasellus viverra urna sed purus porta rutrum. Nam ultrices molestie tellus, ac vulputate odio condimentum in.</p>
+                            Phasellus viverra urna sed purus porta rutrum. Nam ultrices molestie tellus, ac vulputate
+                            odio condimentum in.</p>
                     </div>
 
                     <div id="Tokyo2" class="tabcontent">
                         <h3>Tokyo 2</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id purus et nisl elementum ornare sit amet non mi.
-                            Phasellus euismod sapien et sapien mollis auctor. Suspendisse interdum erat ut metus euismod sed elementum massa euismod.
-                            Donec eget magna orci, at fermentum metus. Sed rhoncus, nibh nec dapibus adipiscing, felis felis convallis arcu,
-                            quis semper justo mauris sed magna. Nulla facilisi. Aliquam ultricies diam non turpis tristique porta. Sed nec ligula
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id purus et nisl elementum
+                            ornare sit amet non mi.
+                            Phasellus euismod sapien et sapien mollis auctor. Suspendisse interdum erat ut metus euismod
+                            sed elementum massa euismod.
+                            Donec eget magna orci, at fermentum metus. Sed rhoncus, nibh nec dapibus adipiscing, felis
+                            felis convallis arcu,
+                            quis semper justo mauris sed magna. Nulla facilisi. Aliquam ultricies diam non turpis
+                            tristique porta. Sed nec ligula
                             id turpis iaculis adipiscing.
-                            Phasellus viverra urna sed purus porta rutrum. Nam ultrices molestie tellus, ac vulputate odio condimentum in.</p>
+                            Phasellus viverra urna sed purus porta rutrum. Nam ultrices molestie tellus, ac vulputate
+                            odio condimentum in.</p>
                     </div>
 
                 </div>
@@ -481,141 +573,170 @@
 
             {{--phần relate product--}}
             <div class="row mt-4 mb-4" id="product_relate_pro">
-                <div class="col-md-12">
+                <div class="col-md-12 mb-5" id="relate_pro_child">
                     <p>Related Products</p>
                 </div>
 
                 <div class="col-md-12">
                     <div class="row">
-                    <div class="col-md-4 col-sm-6 col-12 mb-4 fe_pro_detailpro" id="">
-                        <div class="card one-product h-100 shadow-sm bg-white rounded">
 
-                            <a href="sanpham-chitiet.html" class="pt-5 pb-5 position-relative">
+                        <div class="col-md-4 col-sm-6 col-12 mb-4 fe_pro_detailpro" id="">
+                            <div class="card one-product h-100 shadow-sm bg-white rounded">
 
-                                <div class="sale-percent">
-                                    <p>-60%</p>
-                                </div>
+                                <a href="sanpham-chitiet.html" class="pt-5 pb-5 position-relative">
 
-                                <img src="http://maybomnuoc.org.vn/products/1453078619LD%20370.jpg"
-                                     alt="" style="width: 98%;height: auto;margin: auto">
-                            </a>
+                                    <div class="sale-percent">
+                                        <p>-60%</p>
+                                    </div>
 
-                            <div class="card-body text-left p-2 mb-3">
+                                    <div class="img-hover-first">
+                                        <img class="" src="http://maybomnuoc.org.vn/products/1453078619LD%20370.jpg"
+                                             alt="" style="width: 98%;height: auto;margin: auto">
+                                    </div>
 
-                                <p class="">
-                                    <a href="sanpham-chitiet.html" class="text-primary">MÁY BƠM PANASONIC </a>
-                                </p>
-                                <br>
+                                    <div class="img-hover-visible">
+                                        <img class=""
+                                             src="http://maybomnuocdailoan.com/file/images/TinTuc/khai-niem-va-phan-loai-may-bom-nuoc.jpg"
+                                             alt="" style="width: 98%;height: auto;margin: auto">
+                                    </div>
+                                </a>
 
-                                <span class="pt-3 pb-3">THE ROCKY STEEL</span>
-                                <br>
-                                <span class="rating pt-2 pb-2">
+                                <div class="card-body text-left p-2 mb-3">
+
+                                    <p class="">
+                                        <a href="sanpham-chitiet.html" class="text-primary">MÁY BƠM PANASONIC </a>
+                                    </p>
+                                    <br>
+
+                                    <span class="pt-3 pb-3">THE ROCKY STEEL</span>
+                                    <br>
+                                    <span class="rating pt-2 pb-2">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 </span>
-                            </div>
+                                </div>
 
-                            <div class="info card-footer bg-transparent border-top p-2 pb-3">
-                                <div class="card-text mt-2 align-self-center" class="pbtn_price">
-                                    <div class="old-price float-left align-self-center">$120.000</div>
-                                    <div class="new-price float-right align-self-center">$150.000</div>
+                                <div class="info card-footer bg-transparent border-top p-2 pb-3">
+                                    <div class="card-text mt-2 align-self-center" class="pbtn_price">
+                                        <div class="old-price float-left align-self-center">$120.000</div>
+                                        <div class="new-price float-right align-self-center">$150.000</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 mb-4 fe_pro_detailpro" id="">
-                        <div class="card one-product h-100 shadow-sm bg-white rounded">
+                        <div class="col-md-4 col-sm-6 col-12 mb-4 fe_pro_detailpro" id="">
+                            <div class="card one-product h-100 shadow-sm bg-white rounded">
 
-                            <a href="sanpham-chitiet.html" class="pt-5 pb-5 position-relative">
+                                <a href="sanpham-chitiet.html" class="pt-5 pb-5 position-relative">
 
-                                <div class="sale-percent">
-                                    <p>-60%</p>
-                                </div>
+                                    <div class="sale-percent">
+                                        <p>-60%</p>
+                                    </div>
 
-                                <img src="http://maybomnuoc.org.vn/products/1453078619LD%20370.jpg"
-                                     alt="" style="width: 98%;height: auto;margin: auto">
-                            </a>
+                                    <div class="img-hover-first">
+                                        <img class="" src="http://maybomnuoc.org.vn/products/1453078619LD%20370.jpg"
+                                             alt="" style="width: 98%;height: auto;margin: auto">
+                                    </div>
 
-                            <div class="card-body text-left p-2 mb-3">
+                                    <div class="img-hover-visible">
+                                        <img class=""
+                                             src="http://maybomnuocdailoan.com/file/images/TinTuc/khai-niem-va-phan-loai-may-bom-nuoc.jpg"
+                                             alt="" style="width: 98%;height: auto;margin: auto">
+                                    </div>
+                                </a>
 
-                                <p class="">
-                                    <a href="sanpham-chitiet.html" class="text-primary">MÁY BƠM PANASONIC </a>
-                                </p>
-                                <br>
+                                <div class="card-body text-left p-2 mb-3">
 
-                                <span class="pt-3 pb-3">THE ROCKY STEEL</span>
-                                <br>
-                                <span class="rating pt-2 pb-2">
+                                    <p class="">
+                                        <a href="sanpham-chitiet.html" class="text-primary">MÁY BƠM PANASONIC </a>
+                                    </p>
+                                    <br>
+
+                                    <span class="pt-3 pb-3">THE ROCKY STEEL</span>
+                                    <br>
+                                    <span class="rating pt-2 pb-2">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 </span>
-                            </div>
+                                </div>
 
-                            <div class="info card-footer bg-transparent border-top p-2 pb-3">
-                                <div class="card-text mt-2 align-self-center" class="pbtn_price">
-                                    <div class="old-price float-left align-self-center">$120.000</div>
-                                    <div class="new-price float-right align-self-center">$150.000</div>
+                                <div class="info card-footer bg-transparent border-top p-2 pb-3">
+                                    <div class="card-text mt-2 align-self-center" class="pbtn_price">
+                                        <div class="old-price float-left align-self-center">$120.000</div>
+                                        <div class="new-price float-right align-self-center">$150.000</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-12 mb-4 fe_pro_detailpro" id="">
-                        <div class="card one-product h-100 shadow-sm bg-white rounded">
+                        <div class="col-md-4 col-sm-6 col-12 mb-4 fe_pro_detailpro" id="">
+                            <div class="card one-product h-100 shadow-sm bg-white rounded">
 
-                            <a href="sanpham-chitiet.html" class="pt-5 pb-5 position-relative">
+                                <a href="sanpham-chitiet.html" class="pt-5 pb-5 position-relative">
 
-                                <div class="sale-percent">
-                                    <p>-60%</p>
-                                </div>
+                                    <div class="sale-percent">
+                                        <p>-60%</p>
+                                    </div>
 
-                                <img src="http://maybomnuoc.org.vn/products/1453078619LD%20370.jpg"
-                                     alt="" style="width: 98%;height: auto;margin: auto">
-                            </a>
+                                    <div class="img-hover-first">
+                                        <img class="" src="http://maybomnuoc.org.vn/products/1453078619LD%20370.jpg"
+                                             alt="" style="width: 98%;height: auto;margin: auto">
+                                    </div>
 
-                            <div class="card-body text-left p-2 mb-3">
+                                    <div class="img-hover-visible">
+                                        <img class=""
+                                             src="http://maybomnuocdailoan.com/file/images/TinTuc/khai-niem-va-phan-loai-may-bom-nuoc.jpg"
+                                             alt="" style="width: 98%;height: auto;margin: auto">
+                                    </div>
+                                </a>
 
-                                <p class="">
-                                    <a href="sanpham-chitiet.html" class="text-primary">MÁY BƠM PANASONIC </a>
-                                </p>
-                                <br>
+                                <div class="card-body text-left p-2 mb-3">
 
-                                <span class="pt-3 pb-3">THE ROCKY STEEL</span>
-                                <br>
-                                <span class="rating pt-2 pb-2">
+                                    <p class="">
+                                        <a href="sanpham-chitiet.html" class="text-primary">MÁY BƠM PANASONIC </a>
+                                    </p>
+                                    <br>
+
+                                    <span class="pt-3 pb-3">THE ROCKY STEEL</span>
+                                    <br>
+                                    <span class="rating pt-2 pb-2">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 </span>
-                            </div>
+                                </div>
 
-                            <div class="info card-footer bg-transparent border-top p-2 pb-3">
-                                <div class="card-text mt-2 align-self-center" class="pbtn_price">
-                                    <div class="old-price float-left align-self-center">$120.000</div>
-                                    <div class="new-price float-right align-self-center">$150.000</div>
+                                <div class="info card-footer bg-transparent border-top p-2 pb-3">
+                                    <div class="card-text mt-2 align-self-center" class="pbtn_price">
+                                        <div class="old-price float-left align-self-center">$120.000</div>
+                                        <div class="new-price float-right align-self-center">$150.000</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+
+
                     </div>
                 </div>
             </div>
 
 
+        </div>
+
+        <div class="col-md-3">
+
+            @include('frontend.products.home_pro_content_right')
 
         </div>
 
     </div>
-    <div class="col-md-3">
 
+</div>
 
-    </div>
-</div>
-</div>
 
 <script>
 

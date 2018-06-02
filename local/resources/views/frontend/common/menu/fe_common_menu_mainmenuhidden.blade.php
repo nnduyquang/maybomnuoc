@@ -34,20 +34,20 @@
         background-color: transparent;
     }
 
-    #fe_common_menu_mainmenuleft {
-        top: 55px;
-    }
 
-    #fe_common_menu_mainmenuleft .col-3 {
-        visibility: hidden;
-        position: relative;
+
+    #fe_common_menu_mainmenuleft > .col-3 {
+        top: 55px;
+        visibility: visible;
+        position: absolute;
         border: 1px solid #cdcfcb;
         padding: 10px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
+        z-index: 1;!important;
     }
 
     #fe_common_menu_mainmenuleft ul {
+        z-index: 1;
         list-style-type: none;
     }
 
@@ -81,7 +81,7 @@
     }
 
 </style>
-<div class="container position-relative" id="fe_common_menu_mainmenuhidden">
+<div class="container" id="fe_common_menu_mainmenuhidden">
 
     <div class="row">
         <div class="col-md-3 d-none d-sm-none d-md-block" id="fe_common_menu_mainmenuhidden_click">
@@ -96,21 +96,9 @@
         </div>
 
     </div>
-
-
-    <div class="row position-absolute" id="fe_common_menu_mainmenuleft">
-        <div class="col-3 lmenucontent_2">
-            <ul>
-                <li><a href="">123</a></li>
-                <li><a href="">123</a></li>
-                <li><a href="">123</a></li>
-                <li><a href="">123</a></li>
-                <li><a href="">123</a></li>
-            </ul>
-        </div>
-    </div>
-
 </div>
+
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>

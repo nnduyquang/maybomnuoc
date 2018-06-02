@@ -5,6 +5,10 @@
         font-size: 14px;
     }
 
+    #fe_home_leftmenu-content {
+
+    }
+
     #fe_home_leftmenu-content ul {
         list-style-type: none;
         margin: 0;
@@ -178,9 +182,65 @@
         text-decoration: line-through;
     }
 
+    /*phần centent menu hidden */
+
+    .lmenucontent_2{
+        position: absolute;
+        z-index: 1;
+        visibility: hidden;
+    }
+    .lmenucontent_2 ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        border: 1px solid #e6e1e0;
+        border-top: 3px solid #0d51db;
+    }
+
+    .lmenucontent_2 ul li {
+        background-color: white;
+    }
+
+    .lmenucontent_2 ul li:last-child {
+        border-top: 1px solid #e6e1e0;
+    }
+
+    .lmenucontent_2 ul li a {
+        text-decoration: none;
+        font-size: 15px;
+        padding: 10px;
+        display: block;
+        color: #1b1e21;
+    }
+
+    .lmenucontent_2 ul li a:hover {
+        background-color: #F4A137;
+        color: white;
+    }
+
 </style>
 
 <div class="container-fluid border-top mb-5">
+
+    <div class="container">
+        <div class="row position-relative">
+            <div class="col-3 text-light lmenucontent_2 p-0">
+                <ul>
+                    <li><a href=""><i class="fab fa-app-store"></i> Salon & Spa Equipment</a></li>
+                    <li><a href=""><i class="fab fa-app-store"></i> Fragrances</a></li>
+                    <li><a href=""><i class="fab fa-app-store"></i> Shaving & Hair Removal</a></li>
+                    <li><a href=""><i class="fab fa-app-store"></i> Gift for Woman</a></li>
+                    <li><a href=""><i class="fab fa-app-store"></i> Gift for Man</a></li>
+                    <li><a href=""><i class="fab fa-app-store"></i> Walkera</a></li>
+                    <li><a href=""><i class="fab fa-app-store"></i> FPV System & Parts</a></li>
+                    <li><a href=""><i class="fab fa-app-store"></i> Gadgets & Auto Parts</a></li>
+                    <li><a href=""><i class="fab fa-app-store"></i> More Car Accessories</a></li>
+                    <li><a href=""><i class="far fa-plus-square"></i> More Categories</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="row">
             <div class="col-md-3 p-0 d-none d-sm-none d-md-block d-lg-block" id="fe_home_leftmenu-content">
@@ -288,7 +348,6 @@
                                             </div>
                                         </div>
                                     </div>
-
 
 
                                 </div>

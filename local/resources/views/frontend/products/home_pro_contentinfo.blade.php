@@ -442,19 +442,19 @@
                                 <!-- Full-width images with number text -->
                                 <div class="mySlides">
                                     <div class="numbertext">1 / 3</div>
-                                    <img src="http://demo.smartaddons.com/templates/html/market/image/demo/shop/product/e11.jpg"
+                                    <img src="http://suadiennuoc.net/anhtin/sua-dien-nuoc-15121416381.jpg"
                                          style="width:100%">
                                 </div>
 
                                 <div class="mySlides">
                                     <div class="numbertext">2 / 3</div>
-                                    <img src="http://demo.smartaddons.com/templates/html/market/image/demo/shop/product/34.jpg"
+                                    <img src="http://hstatic.net/631/1000114631/1/2016/9-13/vms_chuan_e821e6de-6e7a-4964-6b23-2b809c4cb642_grande.jpg"
                                          style="width:100%">
                                 </div>
 
                                 <div class="mySlides">
                                     <div class="numbertext">3 / 3</div>
-                                    <img src="http://demo.smartaddons.com/templates/html/market/image/demo/shop/resize/E3-270x270.jpg"
+                                    <img src="http://sieuthicongnghiep.com.vn/template/uploads/2017/09/may-bom-nuoc-cong-nghiep.jpg"
                                          style="width:100%">
                                 </div>
 
@@ -471,17 +471,17 @@
                             <div class="row p-3">
                                 <div class="column">
                                     <img class="demo cursor active"
-                                         src="http://demo.smartaddons.com/templates/html/market/image/demo/shop/product/e11.jpg"
+                                         src="http://suadiennuoc.net/anhtin/sua-dien-nuoc-15121416381.jpg"
                                          style="width:100%" onclick="currentSlide(1)" alt="The Woods">
                                 </div>
                                 <div class="column">
                                     <img class="demo cursor"
-                                         src="http://demo.smartaddons.com/templates/html/market/image/demo/shop/product/34.jpg"
+                                         src="http://hstatic.net/631/1000114631/1/2016/9-13/vms_chuan_e821e6de-6e7a-4964-6b23-2b809c4cb642_grande.jpg"
                                          style="width:100%" onclick="currentSlide(2)" alt="Trolltunga, Norway">
                                 </div>
                                 <div class="column">
                                     <img class="demo cursor"
-                                         src="http://demo.smartaddons.com/templates/html/market/image/demo/shop/resize/E3-270x270.jpg"
+                                         src="http://sieuthicongnghiep.com.vn/template/uploads/2017/09/may-bom-nuoc-cong-nghiep.jpg"
                                          style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
                                 </div>
                             </div>

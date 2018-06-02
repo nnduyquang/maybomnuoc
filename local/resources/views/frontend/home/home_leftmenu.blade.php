@@ -188,6 +188,7 @@
         position: absolute;
         z-index: 1;
         visibility: hidden;
+
     }
     .lmenucontent_2 ul {
         margin: 0;
@@ -282,7 +283,7 @@
                                 <div class="col-12">
                                     <div class="row mb-5 border p-2">
                                         <div class="col-4 align-self-center">
-                                            <img src="https://cdn.shopify.com/s/files/1/1769/3917/products/TC-60CX650U-800_10524c6f-f004-4b0c-a5ce-eeb52f6a2e30_small.jpg"
+                                            <img src="http://suadiennuoc.net/anhtin/sua-dien-nuoc-15121416381.jpg"
                                                  alt="" style="width: 100%;height:auto;
 ">
                                         </div>
@@ -305,7 +306,7 @@
 
                                     <div class="row mb-5 border p-2">
                                         <div class="col-4 align-self-center">
-                                            <img src="https://cdn.shopify.com/s/files/1/1769/3917/products/TC-60CX650U-800_10524c6f-f004-4b0c-a5ce-eeb52f6a2e30_small.jpg"
+                                            <img src="http://suadiennuoc.net/anhtin/sua-dien-nuoc-15121416381.jpg"
                                                  alt="" style="width: 100%;height:auto;
 ">
                                         </div>
@@ -328,7 +329,7 @@
 
                                     <div class="row mb-5 border p-2">
                                         <div class="col-4 align-self-center">
-                                            <img src="https://cdn.shopify.com/s/files/1/1769/3917/products/TC-60CX650U-800_10524c6f-f004-4b0c-a5ce-eeb52f6a2e30_small.jpg"
+                                            <img src="http://suadiennuoc.net/anhtin/sua-dien-nuoc-15121416381.jpg"
                                                  alt="" style="width: 100%;height:auto;
 ">
                                         </div>
@@ -381,7 +382,7 @@
                 {{--image banner--}}
                 <div class="row">
                     <div class="col-md-12 mt-3 mb-4">
-                        <img src="https://cdn.shopify.com/s/files/1/1769/3917/t/27/assets/collection-slideshow-1.jpg?17978861903448136539"
+                        <img src="http://maybomhangphu.com/wp-content/uploads/2015/06/may-bom-nuoc.jpg"
                              alt="" style="width: 100%;height: auto;">
                     </div>
                 </div>

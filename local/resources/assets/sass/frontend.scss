@@ -1,8 +1,11 @@
 @import "variables";
 @import "reset";
 @import "fe.phoneanimation";
-@import "m-category";
-@import "m-menu-blur";
-//@import "fe.menu";
+@import "menu/m-category";
+@import "menu/m-menu-blur";
+@import "menu/fe.menu";
+@import "fe.slider2";
+@import "home/fe.home";
+@import "product/fe.product";
+@import "fe.footer";
 //@import "fe.menu2";
-@import "fe.menu";

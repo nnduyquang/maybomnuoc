@@ -2,8 +2,8 @@
 
 //Route cửa front end
 
-Route::get('/sanpham-chitiet.html', function () {
-    return view('frontend.products.index');
+Route::get('/san-pham/abc', function () {
+    return view('frontend.product.index');
 });
 
 //Route cửa front end

@@ -18,10 +18,15 @@
     @yield('styles')
 </head>
 <body>
-@include('frontend.common.top')
-@yield('slider')
-@yield('container')
+<div id="blurrMe">
+    @include('frontend.common.menu.menu')
+    @include('frontend.common.menu.m-menu')
+    @yield('container')
+    @include('frontend.common.footer')
+</div>
+@include('frontend.common.menu.m-sidebar')
 </body>
 {{ Html::script('js/core.common.js') }}
 {{ Html::script('js/core.frontend.js') }}
+{{ Html::script('js/scripts.js') }}
 </Html>

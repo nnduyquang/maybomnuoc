@@ -785,7 +785,7 @@
 
         <div class="col-md-3">
 
-            @include('frontend.products.home_pro_content_right')
+            @include('frontend.product.home_pro_content_right')
 
         </div>
 

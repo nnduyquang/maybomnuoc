@@ -12,5 +12,16 @@
 @include('frontend.home.home_leftmenu')
 @stop
 @section('container')
-@include('frontend.home.home_footer')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                @include('frontend.home.h_sidebar')
+            </div>
+            <div class="col-md-9">
+                @include('frontend.home.h_slider')
+                @include('frontend.home.h_product')
+            </div>
+        </div>
+    </div>
+
 @stop

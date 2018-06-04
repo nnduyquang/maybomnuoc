@@ -775,7 +775,15 @@ This class is added to the container
 }
 
 #h_sidebar ul li a {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   color: #303030;
+}
+
+#h_sidebar ul li:hover a {
+  color: #f60;
+  margin-left: 10px;
+  font-weight: bold;
 }
 
 #h_sidebar .marquee {
@@ -1044,10 +1052,27 @@ This class is added to the container
   margin: 0 0 0.5em;
 }
 
+#p_detail span.brand {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+}
+
+#p_detail span.brand span {
+  margin-left: 10px;
+  color: #0d51db;
+}
+
 #p_detail span.price {
-  color: #f60;
-  font-size: 24px;
+  margin-top: 20px;
+  display: block;
+  width: 100%;
   font-weight: 600;
+}
+
+#p_detail span.price span {
+  font-size: 24px;
+  color: #f60;
 }
 
 #p_detail .description {

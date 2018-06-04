@@ -3,7 +3,8 @@
         <div id="menu-top">
             <div class="row">
                 <div class="col-md-4">
-                    {{Html::image('images/logo/logo.png','',array('class'=>'img-logo'))}}
+                    <a href="{{URL::to('/')}}">{{Html::image('images/logo/logo.png','',array('class'=>'img-logo'))}}
+                    </a>
                 </div>
                 <div class="col-md-8 justify-content-center align-self-center">
                     <div class="row">

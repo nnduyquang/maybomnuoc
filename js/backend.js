@@ -1,4 +1,4 @@
-var token = $('meta[name="csrf-token"]').attr('content');function getBaseURL() {    var url = location.href;  // entire url including querystring - also: window.location.href;    var baseURL = url.substring(0, url.indexOf('/', 14));    if (baseURL.indexOf('http://localhost') != -1) {        // Base Url for localhost        var url = location.href;  // window.location.href;        var pathname = location.pathname;  // window.location.pathname;        var index1 = url.indexOf(pathname);        var index2 = url.indexOf("/", index1 + 1);        var baseLocalUrl = url.substr(0, index2);        return baseLocalUrl + "/";    }    else {        // Root Url for domain name        return baseURL + "/";    }}function selectFileWithKCFinder(elementPath, showHinhId) {    window.KCFinder = {        callBack: function (url) {            var output = document.getElementById(elementPath);            output.value = url;            $('#' + showHinhId).show();            $('#' + showHinhId).fadeIn("fast").attr('src', url);            window.KCFinder = null;        }    };    window.open(getBaseURL() + 'js/kcfinder/browse.php?type=images', 'kcfinder_textbox',        'status=0, toolbar=0, location=0, menubar=0, directories=0, ' +        'resizable=1, scrollbars=0, width=800, height=600'    );    if ($('#' + elementPath).val() == '')        $('#' + showHinhId).hide();    else        $('#' + showHinhId).show();}function integratedCKEDITOR(elementID, height) {    if ($('#' + elementID).length) {        var editor1=CKEDITOR.replace(elementID, {            height: height,            language: 'vi',            format_tags: 'p;h1;h2;h3;pre',            filebrowserBrowseUrl: '../../../js/kcfinder/browse.php?type=files',            filebrowserImageBrowseUrl: '../../../js/kcfinder/browse.php?type=images',            filebrowserFlashBrowseUrl: '../../../js/kcfinder/browse.php?type=flash',            filebrowserUploadUrl: '../../../js/kcfinder/upload.php?type=files',            filebrowserImageUploadUrl: '../../../js/kcfinder/upload.php?type=images',            filebrowserFlashUploadUrl: '../../../js/kcfinder/upload.php?type=flash',            extraAllowedContent : 'div',        });        editor1.on('instanceReady', function() {            // Output self-closing tags the HTML4 way, like <br>.            this.dataProcessor.writer.selfClosingEnd = '>';            // Use line breaks for block elements, tables, and lists.            var dtd = CKEDITOR.dtd;            for ( var e in CKEDITOR.tools.extend( {}, dtd.$nonBodyContent, dtd.$block, dtd.$listItem, dtd.$tableContent ) ) {                this.dataProcessor.writer.setRules( e, {                    indent: true,                    breakBeforeOpen: true,                    breakAfterOpen: true,                    breakBeforeClose: true,                    breakAfterClose: true                });            }            // Start in source mode.            // this.setMode('source');        });    }}function integrateSearch(elementID,formID){    $('#'+elementID).click(function () {        if ($('#txtSearch').val().trim() == '')            return;        if ($('#txtSearch').val().trim().replace(/ +(?= )/g, '') == $("input[name='hdKeyword']").val())            return;        $('#'+formID).submit();    });}function isEmpty(val) {    return ((val !== '') && (val !== undefined) && (val.length > 0) && (val !== null));}
+var token = $('meta[name="csrf-token"]').attr('content');function getBaseURL() {    var url = location.href;  // entire url including querystring - also: window.location.href;    var baseURL = url.substring(0, url.indexOf('/', 14));    if (baseURL.indexOf('http://localhost') != -1) {        // Base Url for localhost        var url = location.href;  // window.location.href;        var pathname = location.pathname;  // window.location.pathname;        var index1 = url.indexOf(pathname);        var index2 = url.indexOf("/", index1 + 1);        var baseLocalUrl = url.substr(0, index2);        return baseLocalUrl + "/";    }    else {        // Root Url for domain name        return baseURL + "/";    }}function selectFileWithKCFinder(elementPath, showHinhId) {    window.KCFinder = {        callBack: function (url) {            var output = document.getElementById(elementPath);            output.value = url;            $('#' + showHinhId).show();            $('#' + showHinhId).fadeIn("fast").attr('src', url);            window.KCFinder = null;        }    };    window.open(getBaseURL() + 'js/kcfinder/browse.php?type=images', 'kcfinder_textbox',        'status=0, toolbar=0, location=0, menubar=0, directories=0, ' +        'resizable=1, scrollbars=0, width=800, height=600'    );    if ($('#' + elementPath).val() == '')        $('#' + showHinhId).hide();    else        $('#' + showHinhId).show();}function integratedCKEDITOR(elementID, height) {    if ($('#' + elementID).length) {        var editor1=CKEDITOR.replace(elementID, {            height: height,            language: 'vi',            format_tags: 'p;h1;h2;h3;pre',            filebrowserBrowseUrl: 'http://localhost:8080/maybomnuoc/js/kcfinder/browse.php?type=files',            filebrowserImageBrowseUrl: 'http://localhost:8080/maybomnuoc/js/kcfinder/browse.php?type=images',            filebrowserFlashBrowseUrl: 'http://localhost:8080/maybomnuoc/js/kcfinder/browse.php?type=flash',            filebrowserUploadUrl: 'http://localhost:8080/maybomnuoc/js/kcfinder/upload.php?type=files',            filebrowserImageUploadUrl: 'http://localhost:8080/maybomnuoc/js/kcfinder/upload.php?type=images',            filebrowserFlashUploadUrl: 'http://localhost:8080/maybomnuoc/js/kcfinder/upload.php?type=flash',            extraAllowedContent : 'div',        });        editor1.on('instanceReady', function() {            // Output self-closing tags the HTML4 way, like <br>.            this.dataProcessor.writer.selfClosingEnd = '>';            // Use line breaks for block elements, tables, and lists.            var dtd = CKEDITOR.dtd;            for ( var e in CKEDITOR.tools.extend( {}, dtd.$nonBodyContent, dtd.$block, dtd.$listItem, dtd.$tableContent ) ) {                this.dataProcessor.writer.setRules( e, {                    indent: true,                    breakBeforeOpen: true,                    breakAfterOpen: true,                    breakBeforeClose: true,                    breakAfterClose: true                });            }            // Start in source mode.            // this.setMode('source');        });    }}function integrateSearch(elementID,formID){    $('#'+elementID).click(function () {        if ($('#txtSearch').val().trim() == '')            return;        if ($('#txtSearch').val().trim().replace(/ +(?= )/g, '') == $("input[name='hdKeyword']").val())            return;        $('#'+formID).submit();    });}function isEmpty(val) {    return ((val !== '') && (val !== undefined) && (val.length > 0) && (val !== null));}
 integratedCKEDITOR('description-page',height=200);
 // integratedCKEDITOR('seo-description',height=200);
 if ($('#btnBrowseImage').length) {
@@ -201,6 +201,78 @@ $('button#deleteMenu').click(function () {
     $('form#frmCreateThuNghiem').attr('action', getBaseURL() + "sml_admin/menu-delete/" + id);
     $('input[name=_method]').val('Delete');
     $('#frmCreateThuNghiem').submit();
+});
+
+
+integratedCKEDITOR('content-post',height=800);
+$('#btnBrowseMore').click(function () {
+    window.KCFinder = {
+        callBackMultiple: function (files) {
+            window.KCFinder = null;
+            var listImage = "";
+            // textarea.value = "";
+            for (var i = 0; i < files.length; i++)
+                listImage += "<div class='col-md-3 text-center one-image'>" +
+                    "<img src='" + files[i] + "' id='showHinh' class='image-choose' alt='' style=''>" +
+                    "<input type='hidden' name='image-choose[]' value='" + files[i] + "'>" +
+                    "<span data='" + i + "' class='remove-image'>X</span>" +
+                    "</div>"
+
+
+            $('#add-image').append(listImage);
+            $('.remove-image').click(function () {
+                $(this).parent().remove();
+            });
+        }
+    };
+    window.open('http://localhost:8080/maybomnuoc/js/kcfinder/browse.php?type=images',
+        'kcfinder_multiple', 'status=0, toolbar=0, location=0, menubar=0, ' +
+        'directories=0, resizable=1, scrollbars=0, width=800, height=600'
+    );
+});
+if ($('#btnBrowseImage1').length) {
+    var button1 = document.getElementById('btnBrowseImage1');
+    button1.onclick = function () {
+        selectFileWithKCFinder('pathImage1','showHinh1');
+        $('#clear-image-1').show();
+        $('#clear-image-1').css('display','block');
+    }
+}
+if ($('#btnBrowseImage2').length) {
+    var button2 = document.getElementById('btnBrowseImage2');
+    button2.onclick = function () {
+        selectFileWithKCFinder('pathImage2','showHinh2');
+        $('#clear-image-2').show();
+        $('#clear-image-2').css('display','block');
+    }
+}
+$('#clear-image-1').click(function(){
+    $('#pathImage1').val('');
+    $('#showHinh1').attr('src','');
+    $('#clear-image-1').hide();
+});
+$('#clear-image-2').click(function(){
+    $('#pathImage2').val('');
+    $('#showHinh2').attr('src','');
+    $('#clear-image-2').hide();
+});
+$('.ulti-copy').click(function(){
+    var selected = [];
+    $('input[type=checkbox][name=id\\[\\]]').each(function() {
+        if ($(this).is(":checked")) {
+            selected.push($(this).val());
+        }
+    });
+    if(selected.length!=0)
+    {
+        $('input[name=listID]').val(selected);
+        alert('Đã lưu sản phẩm');
+    }
+    else{
+        alert('Mời bạn chọn sản phẩm');
+    }
+    console.log(selected);
+    // alert(id[0]);
 });
 
 

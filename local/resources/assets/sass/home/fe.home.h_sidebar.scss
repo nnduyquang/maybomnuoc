@@ -23,7 +23,16 @@
       font-size: 14px;
       border-bottom: 1px dotted #e4e4e4;
       a {
+        transition: all 0.2s;
         color: #303030;
+
+      }
+      &:hover {
+        a {
+          color: #f60;
+          margin-left: 10px;
+          font-weight: bold;
+        }
       }
     }
   }

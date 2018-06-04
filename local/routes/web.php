@@ -7,9 +7,7 @@ Route::get('/san-pham/abc', function () {
 });
 
 //Route cửa front end
-Route::get('/', function () {
-    return view('frontend.home.index');
-});
+Route::get('/','FrontendController@getFrontend');
 Route::post('/tim-kiem','FrontendController@getSearch')->name('search');
 
 

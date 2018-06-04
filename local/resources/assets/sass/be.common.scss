@@ -1,6 +1,18 @@
 .show-image{
   width: 100%;
 }
+.image-choose{
+  height: 80px;
+}
+.remove-image{
+  cursor: pointer;
+}
+#clear-image-1{
+  cursor: pointer;
+}
+#clear-image-2{
+  cursor: pointer;
+}
 .table-style{
   tr,td{
     border: 1px solid #eee;

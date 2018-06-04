@@ -7,10 +7,25 @@
     font-weight: 600;
     margin: 0 0 0.5em;
   }
+  span.brand {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+
+    span {
+      margin-left: 10px;
+      color: #0d51db;
+    }
+  }
   span.price {
-    color: #f60;
-    font-size: 24px;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
     font-weight: 600;
+    span{
+      font-size: 24px;
+      color: #f60;
+    }
   }
   .description {
     line-height: 1.5;
@@ -43,8 +58,8 @@
       }
       &.active {
         background-color: #f7f7f7;
-        border-right: 1px solid rgba(0,0,0,0.08);
-        border-left: 1px solid rgba(0,0,0,0.08);
+        border-right: 1px solid rgba(0, 0, 0, 0.08);
+        border-left: 1px solid rgba(0, 0, 0, 0.08);
       }
     }
   }
@@ -83,7 +98,7 @@
       top: 0;
       opacity: 0;
       width: 100%;
-      button.owl-prev,button.owl-next{
+      button.owl-prev, button.owl-next {
         border: 1px solid #e4e4e4;
         width: 40px;
         height: 40px;
@@ -92,7 +107,7 @@
         text-align: center;
         background-color: white;
         outline: none;
-        i{
+        i {
           color: #e4e4e4;
           font-size: 30px;
           display: flex;
@@ -103,11 +118,11 @@
 
         }
       }
-      button.owl-prev{
+      button.owl-prev {
         float: left;
         margin-left: -20px;
       }
-      button.owl-next{
+      button.owl-next {
         float: right;
         margin-right: -20px;
       }

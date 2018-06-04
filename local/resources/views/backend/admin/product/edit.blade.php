@@ -36,14 +36,71 @@
                 </div>
             </div>
             <div class="col-md-6">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6 pl-0">
+                            <div class="form-group">
+                                @php
+                                    $mainImage=explode(';',$product->image);
+                                @endphp
+                                <strong>Hình Đại Diện 1: </strong>
+                                {!! Form::text('image[]', (!IsNullOrEmptyString($mainImage[0]))?url('/').'/'.$mainImage[0]:'', array('class' => 'form-control','id'=>'pathImage1')) !!}
+                                <br>
+                                {!! Form::button('Tìm', array('id' => 'btnBrowseImage1','class'=>'btn btn-primary')) !!}
+                            </div>
+                            <div class="form-group">
+                                {{ Html::image((!IsNullOrEmptyString($mainImage[0]))?$mainImage[0]:'','',array('id'=>'showHinh1','class'=>'show-image'))}}
+                                @if(!IsNullOrEmptyString(($mainImage[0])))
+                                    <span id="clear-image-1" style="text-align: center;display: block">X</span>
+                                @else
+                                    <span id="clear-image-1" style="text-align: center;display: none">X</span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="col-md-6 pr-0">
+                            <div class="form-group">
+                                <strong>Hình Đại Diện 2: </strong>
+                                {!! Form::text('image[]', (count($mainImage)==2)?url('/').'/'.$mainImage[1]:'', array('class' => 'form-control','id'=>'pathImage2')) !!}
+                                <br>
+                                {!! Form::button('Tìm', array('id' => 'btnBrowseImage2','class'=>'btn btn-primary')) !!}
+                            </div>
+                            <div class="form-group">
+                                {{ Html::image((count($mainImage)==2)?$mainImage[1]:'','',array('id'=>'showHinh2','class'=>'show-image'))}}
+                                @if(count($mainImage)==2)
+                                    <span id="clear-image-2" style="text-align: center;display: block">X</span>
+                                @else
+                                    <span id="clear-image-2" style="text-align: center;display: none">X</span>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{--<div class="form-group">--}}
+                {{--<strong>Hình Đại Diện: </strong>--}}
+                {{--{!! Form::text('image', url('/').'/'.$product->image, array('class' => 'form-control','id'=>'pathImage')) !!}--}}
+                {{--<br>--}}
+                {{--{!! Form::button('Tìm', array('id' => 'btnBrowseImage','class'=>'btn btn-primary')) !!}--}}
+                {{--</div>--}}
+                {{--<div class="form-group">--}}
+                {{--{{ Html::image($product->image,'',array('id'=>'showHinh','class'=>'show-image'))}}--}}
+                {{--</div>--}}
                 <div class="form-group">
-                    <strong>Hình Đại Diện: </strong>
-                    {!! Form::text('image', url('/').'/'.$product->image, array('class' => 'form-control','id'=>'pathImage')) !!}
-                    <br>
-                    {!! Form::button('Tìm', array('id' => 'btnBrowseImage','class'=>'btn btn-primary')) !!}
+                    {!! Form::button('Thêm Hình Dự Án', array('id' => 'btnBrowseMore','class'=>'btn btn-primary')) !!}
                 </div>
                 <div class="form-group">
-                    {{ Html::image($product->image,'',array('id'=>'showHinh','class'=>'show-image'))}}
+                    <div id="add-image" class="row">
+                        @php
+                            $listImage=explode(';',$product->sub_image);
+                        @endphp
+                        @foreach($listImage as $key=>$item)
+                            <div class="col-md-3 text-center one-image">
+                                {{ Html::image($item,'',array('id'=>'showHinh','class'=>'image-choose'))}}
+                                {{ Form::hidden('image-choose[]', $item) }}
+                                <span class='remove-image'>X</span>
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
                 <div class="form-group">
                     <strong>Loại Sản Phẩm</strong>
@@ -56,10 +113,6 @@
                         @endif
                         @endforeach
                     </select>
-                </div>
-                <div class="form-group">
-                    <strong>Mã Sản Phẩm</strong>
-                    {!! Form::text('code',null, array('placeholder' => 'Mã SP','class' => 'form-control')) !!}
                 </div>
                 <div class="row">
                     <div class="col-md-4">
@@ -81,13 +134,17 @@
                         </div>
                     </div>
                 </div>
+                <div class="form-group">
+                    <strong>Sản Phẩm Bán Chạy? </strong>
+                    <input {{$product->is_best_sale==1?'checked':''}} name="is_best_sale" data-on="Có" data-off="Không" type="checkbox" data-toggle="toggle">
+                </div>
             </div>
         </div>
         <div class="col-md-12 p-0">
-            <strong>Mô Tả Sản Phẩm:</strong>
+            <strong>Mô Tả Bất Động Sản:</strong>
             {!! Form::textarea('content',null,array('placeholder' => '','id'=>'content-page','class' => 'form-control','rows'=>'10','style'=>'resize:none')) !!}
-
         </div>
+
         <hr>
 
         <div class="col-md-12 p-0">

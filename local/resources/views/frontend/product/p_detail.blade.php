@@ -8,7 +8,8 @@
                     </div>
                     <div class="col-md-5">
                         <h1>Gravenix</h1>
-                        <span class="price">$120.00</span>
+                        <span class="brand">Thương hiệu:<span>Bentas</span></span>
+                        <span class="price">Giá Bán: <span>$120.00</span></span>
                         <hr>
                         <div class="description">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id purus et nisl elementum

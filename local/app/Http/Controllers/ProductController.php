@@ -61,6 +61,7 @@ class ProductController extends Controller
         $content = $request->input('content');
         $order = $request->input('order');
         $isActive = $request->input('is_active');
+        $isBestSale = $request->input('is_best_sale');
         $categoryPostID = $request->input('category_product');
         $seoTitle = $request->input('seo_title');
         $seoDescription = $request->input('seo_description');
@@ -95,6 +96,11 @@ class ProductController extends Controller
         } else {
             $product->isActive = 0;
         }
+        if (!IsNullOrEmptyString($isBestSale)) {
+            $product->is_best_sale = 1;
+        } else {
+            $product->is_best_sale = 0;
+        }
         if (!IsNullOrEmptyString($description)) {
             $product->description = $description;
         }
@@ -108,8 +114,23 @@ class ProductController extends Controller
             $product->seo_keywords = $seoKeywords;
         }
         $image = $request->input('image');
-        $image = substr($image, strpos($image, 'images'), strlen($image) - 1);
-
+        if (!IsNullOrEmptyString($image[0]) && !IsNullOrEmptyString($image[1]))
+            $image = substr($image[0], strpos($image[0], 'images'), strlen($image[0]) - 1) . ';' . substr($image[1], strpos($image[1], 'images'), strlen($image[1]) - 1);
+        else if (!IsNullOrEmptyString($image[0])) {
+            $image = substr($image[0], strpos($image[0], 'images'), strlen($image[0]) - 1) . ';';
+        } else if (!IsNullOrEmptyString($image[1])) {
+            $image = substr($image[1], strpos($image[1], 'images'), strlen($image[1]) - 1) . ';';
+        } else {
+            $image = null;
+        }
+        $listImage = $request->input('image-choose');
+        $subImage = '';
+        if (count($listImage) != 0) {
+            foreach ($listImage as $key => $item) {
+                $subImage = $subImage . substr($item, strpos($item, 'images'), strlen($item) - 1) . ';';
+            }
+            $product->sub_image = substr($subImage, 0, -1);
+        }
         $product->name = $name;
         $product->path = chuyen_chuoi_thanh_path($name);
         $product->image = $image;
@@ -176,6 +197,7 @@ class ProductController extends Controller
         $content = $request->input('content');
         $order = $request->input('order');
         $isActive = $request->input('is_active');
+        $isBestSale = $request->input('is_best_sale');
         $categoryPostID = $request->input('category_product');
         $seoTitle = $request->input('seo_title');
         $seoDescription = $request->input('seo_description');
@@ -202,21 +224,7 @@ class ProductController extends Controller
         if (!IsNullOrEmptyString($code)) {
             $product->code = $code;
         }
-//        if (!IsNullOrEmptyString($price)) {
-//            $product->price = $price;
-//            if (!IsNullOrEmptyString($sale)) {
-//                $product->sale = $sale;
-//                if ($sale != 0 && $price != 0)
-//                    $product->final_price = (int)$price - ((int)$price * (int)$sale / 100);
-//                else
-//                    $product->final_price=0;
-//            }
-//        }
-//        else{
-//            $product->price=0;
-//            $product->sale = 0;
-//            $product->final_price=0;
-//        }
+
         if (!IsNullOrEmptyString($order)) {
             $product->order = $order;
         }
@@ -224,6 +232,11 @@ class ProductController extends Controller
             $product->isActive = 1;
         } else {
             $product->isActive = 0;
+        }
+        if (!IsNullOrEmptyString($isBestSale)) {
+            $product->is_best_sale = 1;
+        } else {
+            $product->is_best_sale = 0;
         }
         if (!IsNullOrEmptyString($description)) {
             $product->description = $description;
@@ -238,7 +251,23 @@ class ProductController extends Controller
             $product->seo_keywords = $seoKeywords;
         }
         $image = $request->input('image');
-        $image = substr($image, strpos($image, 'images'), strlen($image) - 1);
+        if (!IsNullOrEmptyString($image[0]) && !IsNullOrEmptyString($image[1]))
+            $image = substr($image[0], strpos($image[0], 'images'), strlen($image[0]) - 1) . ';' . substr($image[1], strpos($image[1], 'images'), strlen($image[1]) - 1);
+        else if (!IsNullOrEmptyString($image[0])) {
+            $image = substr($image[0], strpos($image[0], 'images'), strlen($image[0]) - 1) . ';';
+        } else if (!IsNullOrEmptyString($image[1])) {
+            $image = substr($image[1], strpos($image[1], 'images'), strlen($image[1]) - 1) . ';';
+        } else {
+            $image = null;
+        }
+        $listImage = $request->input('image-choose');
+        $subImage = '';
+        if (count($listImage) != 0) {
+            foreach ($listImage as $key => $item) {
+                $subImage = $subImage . substr($item, strpos($item, 'images'), strlen($item) - 1) . ';';
+            }
+            $product->sub_image = substr($subImage, 0, -1);
+        }
         $product->name = $name;
         $product->path = chuyen_chuoi_thanh_path($name);
         $product->image = $image;

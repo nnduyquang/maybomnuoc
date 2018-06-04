@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.8.0
+-- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Apr 17, 2018 at 05:50 AM
--- Server version: 10.1.16-MariaDB
--- PHP Version: 7.0.27
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th6 04, 2018 lúc 12:28 PM
+-- Phiên bản máy phục vụ: 10.1.31-MariaDB
+-- Phiên bản PHP: 7.0.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `sangohoanghaiminh`
+-- Cơ sở dữ liệu: `maybomnuoc`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `category_items`
+-- Cấu trúc bảng cho bảng `category_items`
 --
 
 CREATE TABLE `category_items` (
@@ -45,10 +47,27 @@ CREATE TABLE `category_items` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `category_items`
+--
+
+INSERT INTO `category_items` (`id`, `name`, `path`, `description`, `image`, `image_mobile`, `level`, `parent_id`, `type`, `seo_title`, `seo_description`, `seo_keywords`, `order`, `isActive`, `created_at`, `updated_at`) VALUES
+(60, 'Bentas', 'bentas', '<p>\r\n	Bentas\r\n</p>', 'images/uploads/images/gt_1.jpg', 'images/uploads/images/gt_1.jpg', 0, NULL, 1, 'Bentas', 'Bentas', 'Bentas', 1, 1, '2018-06-04 02:44:48', '2018-06-04 02:44:48'),
+(61, 'Lepono', 'lepono', '<p>\r\n	Lepono\r\n</p>', 'images/uploads/images/gt_1.jpg', 'images/uploads/images/gt_1.jpg', 0, NULL, 1, 'Lepono', 'Lepono', 'Lepono', 2, 1, '2018-06-04 02:44:48', '2018-06-04 02:45:35'),
+(62, 'Panasonic', 'panasonic', '<p>\r\n	Panasonic\r\n</p>', 'images/uploads/images/gt_1.jpg', 'images/uploads/images/gt_1.jpg', 0, NULL, 1, 'Panasonic', 'Panasonic', 'Panasonic', 3, 1, '2018-06-04 02:44:48', '2018-06-04 02:46:08'),
+(63, 'Rheken', 'rheken', '<p>\r\n	Panasonic\r\n</p>', 'images/uploads/images/gt_1.jpg', 'images/uploads/images/gt_1.jpg', 0, NULL, 1, 'Rheken', 'Rheken', 'Rheken', 4, 1, '2018-06-04 02:44:48', '2018-06-04 02:46:28'),
+(64, 'Tân hoàn cầu', 'tan-hoan-cau', '<p>\r\n	Tân hoàn cầu\r\n</p>', 'images/uploads/images/gt_1.jpg', 'images/uploads/images/gt_1.jpg', 0, NULL, 1, 'Tân hoàn cầu', 'Tân hoàn cầu', 'Tân hoàn cầu', 5, 1, '2018-06-04 02:44:48', '2018-06-04 02:46:48'),
+(65, 'Techrumi', 'techrumi', '<p>\r\n	Techrumi\r\n</p>', 'images/uploads/images/gt_1.jpg', 'images/uploads/images/gt_1.jpg', 0, NULL, 1, 'Techrumi', 'Techrumi', 'Techrumi', 6, 1, '2018-06-04 02:44:48', '2018-06-04 02:47:43'),
+(66, 'Techpro', 'techpro', '<p>\r\n	Techpro\r\n</p>', 'images/uploads/images/gt_1.jpg', 'images/uploads/images/gt_1.jpg', 0, NULL, 1, 'Techpro', 'Techpro', 'Techpro', 7, 1, '2018-06-04 02:44:48', '2018-06-04 02:48:07'),
+(67, 'Mepcato', 'mepcato', '<p>\r\n	Mepcato\r\n</p>', 'images/uploads/images/gt_1.jpg', 'images/uploads/images/gt_1.jpg', 0, NULL, 1, 'Mepcato', 'Mepcato', 'Mepcato', 8, 1, '2018-06-04 02:44:48', '2018-06-04 02:48:35'),
+(68, 'Mepcato Công Nghiệp', 'mepcato-cong-nghiep', '<p>\r\n	Mepcato Công Nghiệp\r\n</p>', 'images/uploads/images/gt_1.jpg', 'images/uploads/images/gt_1.jpg', 0, NULL, 1, 'Mepcato Công Nghiệp', 'Mepcato Công Nghiệp', 'Mepcato Công Nghiệp', 9, 1, '2018-06-04 02:44:48', '2018-06-04 02:49:15'),
+(69, 'CNP', 'cnp', '<p>\r\n	CNP\r\n</p>', 'images/uploads/images/gt_1.jpg', 'images/uploads/images/gt_1.jpg', 0, NULL, 1, 'CNP', 'CNP', 'CNP', 10, 1, '2018-06-04 02:44:48', '2018-06-04 02:49:39'),
+(70, 'App Pump', 'app-pump', '<p>\r\n	App Pump\r\n</p>', 'images/uploads/images/gt_1.jpg', 'images/uploads/images/gt_1.jpg', 0, NULL, 1, 'App Pump', 'App Pump', 'App Pump', 11, 1, '2018-06-04 02:44:48', '2018-06-04 02:50:26');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `category_permissions`
+-- Cấu trúc bảng cho bảng `category_permissions`
 --
 
 CREATE TABLE `category_permissions` (
@@ -59,7 +78,7 @@ CREATE TABLE `category_permissions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `category_permissions`
+-- Đang đổ dữ liệu cho bảng `category_permissions`
 --
 
 INSERT INTO `category_permissions` (`id`, `name`, `created_at`, `updated_at`) VALUES
@@ -73,7 +92,7 @@ INSERT INTO `category_permissions` (`id`, `name`, `created_at`, `updated_at`) VA
 -- --------------------------------------------------------
 
 --
--- Table structure for table `configs`
+-- Cấu trúc bảng cho bảng `configs`
 --
 
 CREATE TABLE `configs` (
@@ -88,16 +107,16 @@ CREATE TABLE `configs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `configs`
+-- Đang đổ dữ liệu cho bảng `configs`
 --
 
 INSERT INTO `configs` (`id`, `name`, `content`, `description`, `order`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 'config-contact', '<p>\r\n	<strong><em><span style="background-color:#f1c40f;">Hotline đặt hàng</span>:</em></strong><em>&nbsp;&nbsp;<strong>097.388.9336 - 0914.675.777</strong></em>\r\n</p>\r\n\r\n<p>\r\n	<strong><em>Hotline hỗ trợ tư vấn và phản hồi ý kiến</em></strong><em>:&nbsp;&nbsp;<strong>097.388.9336</strong></em>\r\n</p>\r\n\r\n<p>\r\n	<strong><em>Hân hạnh được phục vụ quý khách hàng.!</em></strong>\r\n</p>\r\n\r\n<p>\r\n	<strong><em>Thông tin liên hệ với chúng tôi:</em></strong>\r\n</p>\r\n\r\n<p>\r\n	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<strong>CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ THÉP KHÁNH NAM</strong>\r\n</p>\r\n\r\n<p>\r\n	<strong>TRỤ SỞ CHÍNH:</strong>&nbsp;<em>201 Bình Thành, KP 4, P. Bình Hưng Hòa, Q. Bình Tân, thành phố Hồ Chí Minh</em>\r\n</p>\r\n\r\n<p>\r\n	<strong>Di động:</strong><em>&nbsp;097.388.9336 - 0914.675.777</em>\r\n</p>', NULL, NULL, 1, NULL, '2018-03-30 09:07:51');
+(1, 'config-contact', '<p>\r\n	<strong><em><span style=\"background-color:#f1c40f;\">Hotline đặt hàng</span>:</em></strong><em>&nbsp;&nbsp;<strong>097.388.9336 - 0914.675.777</strong></em>\r\n</p>\r\n\r\n<p>\r\n	<strong><em>Hotline hỗ trợ tư vấn và phản hồi ý kiến</em></strong><em>:&nbsp;&nbsp;<strong>097.388.9336</strong></em>\r\n</p>\r\n\r\n<p>\r\n	<strong><em>Hân hạnh được phục vụ quý khách hàng.!</em></strong>\r\n</p>\r\n\r\n<p>\r\n	<strong><em>Thông tin liên hệ với chúng tôi:</em></strong>\r\n</p>\r\n\r\n<p>\r\n	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<strong>CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ THÉP KHÁNH NAM</strong>\r\n</p>\r\n\r\n<p>\r\n	<strong>TRỤ SỞ CHÍNH:</strong>&nbsp;<em>201 Bình Thành, KP 4, P. Bình Hưng Hòa, Q. Bình Tân, thành phố Hồ Chí Minh</em>\r\n</p>\r\n\r\n<p>\r\n	<strong>Di động:</strong><em>&nbsp;097.388.9336 - 0914.675.777</em>\r\n</p>', NULL, NULL, 1, NULL, '2018-03-30 09:07:51');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `menus`
+-- Cấu trúc bảng cho bảng `menus`
 --
 
 CREATE TABLE `menus` (
@@ -117,7 +136,7 @@ CREATE TABLE `menus` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Cấu trúc bảng cho bảng `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -129,7 +148,7 @@ CREATE TABLE `migrations` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `password_resets`
+-- Cấu trúc bảng cho bảng `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -141,7 +160,7 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `permissions`
+-- Cấu trúc bảng cho bảng `permissions`
 --
 
 CREATE TABLE `permissions` (
@@ -155,7 +174,7 @@ CREATE TABLE `permissions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `permissions`
+-- Đang đổ dữ liệu cho bảng `permissions`
 --
 
 INSERT INTO `permissions` (`id`, `name`, `display_name`, `description`, `category_permission_id`, `created_at`, `updated_at`) VALUES
@@ -187,7 +206,7 @@ INSERT INTO `permissions` (`id`, `name`, `display_name`, `description`, `categor
 -- --------------------------------------------------------
 
 --
--- Table structure for table `permission_role`
+-- Cấu trúc bảng cho bảng `permission_role`
 --
 
 CREATE TABLE `permission_role` (
@@ -196,7 +215,7 @@ CREATE TABLE `permission_role` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `permission_role`
+-- Đang đổ dữ liệu cho bảng `permission_role`
 --
 
 INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
@@ -228,7 +247,7 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `posts`
+-- Cấu trúc bảng cho bảng `posts`
 --
 
 CREATE TABLE `posts` (
@@ -251,7 +270,7 @@ CREATE TABLE `posts` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `products`
+-- Cấu trúc bảng cho bảng `products`
 --
 
 CREATE TABLE `products` (
@@ -259,7 +278,8 @@ CREATE TABLE `products` (
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `path` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `isActive` tinyint(1) NOT NULL DEFAULT '0',
-  `image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` longtext COLLATE utf8mb4_unicode_ci,
+  `sub_image` longtext COLLATE utf8mb4_unicode_ci,
   `description` longtext COLLATE utf8mb4_unicode_ci,
   `content` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `code` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -269,6 +289,7 @@ CREATE TABLE `products` (
   `price` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT '0',
   `sale` int(11) NOT NULL DEFAULT '0',
   `final_price` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT '0',
+  `is_best_sale` tinyint(1) NOT NULL DEFAULT '0',
   `order` int(11) NOT NULL DEFAULT '1',
   `user_id` int(10) UNSIGNED NOT NULL,
   `category_product_id` int(10) UNSIGNED NOT NULL,
@@ -276,10 +297,26 @@ CREATE TABLE `products` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `path`, `isActive`, `image`, `sub_image`, `description`, `content`, `code`, `seo_title`, `seo_description`, `seo_keywords`, `price`, `sale`, `final_price`, `is_best_sale`, `order`, `user_id`, `category_product_id`, `created_at`, `updated_at`) VALUES
+(1, 'Bơm Tăng Áp (cánh đồng)', 'bom-tang-ap-canh-dong', 1, 'images/uploads/images/bentas/bentas_bom_tang_ap_1.jpg;images/uploads/images/bentas/bentas_bom_tang_ap_1.jpg', '', '<p>\r\n	Bơm Tăng Áp (cánh đồng)\r\n</p>', '<p>\r\n	Bơm Tăng Áp (cánh đồng)\r\n</p>', NULL, 'Bơm Tăng Áp (cánh đồng)', 'Bơm Tăng Áp (cánh đồng)', 'Bơm Tăng Áp (cánh đồng)', '0', 0, '0', 0, 1, 1, 60, '2018-06-04 04:15:42', '2018-06-04 08:47:56'),
+(2, 'Bơm Mỏ Chuột (cánh đồng)', 'bom-mo-chuot-canh-dong', 1, 'images/uploads/images/bentas/bentas_bom_mo_chuot_1.jpg;images/uploads/images/bentas/bentas_bom_mo_chuot_1.jpg', '', '<p>\r\n	Bơm Mỏ Chuột (cánh đồng)\r\n</p>', '<p>\r\n	Bơm Mỏ Chuột (cánh đồng)\r\n</p>', NULL, 'Bơm Mỏ Chuột (cánh đồng)', 'Bơm Mỏ Chuột (cánh đồng)', 'Bơm Mỏ Chuột (cánh đồng)', '0', 0, '0', 0, 1, 1, 60, '2018-06-04 04:15:42', '2018-06-04 09:00:57'),
+(3, 'Bơm Đầu Tròn (cánh đồng)', 'bom-dau-tron-canh-dong', 1, 'images/uploads/images/bentas/bentas_bom_dau_tron_1.jpg;images/uploads/images/bentas/bentas_bom_dau_tron_1.jpg', '', '<p>\r\n	Bơm Đầu Tròn (cánh đồng)\r\n</p>', '<p>\r\n	Bơm Đầu Tròn (cánh đồng)\r\n</p>', NULL, 'Bơm Đầu Tròn (cánh đồng)', 'Bơm Đầu Tròn (cánh đồng)', 'Bơm Đầu Tròn (cánh đồng)', '0', 0, '0', 0, 1, 1, 60, '2018-06-04 04:15:42', '2018-06-04 09:00:32'),
+(4, 'Bơm Đa Tầng Cánh (cánh đồng)', 'bom-da-tang-canh-canh-dong', 1, 'images/uploads/images/bentas/bentas_bom_da_tang_canh_1.jpg;images/uploads/images/bentas/bentas_bom_da_tang_canh_1.jpg', '', '<p>\r\n	Bơm Đa Tầng Cánh (cánh đồng)\r\n</p>', '<p>\r\n	Bơm Đa Tầng Cánh (cánh đồng)\r\n</p>', NULL, 'Bơm Đa Tầng Cánh (cánh đồng)', 'Bơm Đa Tầng Cánh (cánh đồng)', 'Bơm Đa Tầng Cánh (cánh đồng)', '0', 0, '0', 0, 1, 1, 60, '2018-06-04 04:15:42', '2018-06-04 09:00:15'),
+(5, 'Bơm Đầu JET Tự Mồi (cánh đồng)', 'bom-dau-jet-tu-moi-canh-dong', 1, 'images/uploads/images/bentas/bentas_bom_dau_jet_tu_moi_1.jpg;images/uploads/images/bentas/bentas_bom_dau_jet_tu_moi_1.jpg', '', '<p>\r\n	Bơm Đầu JET Tự Mồi (cánh đồng)\r\n</p>', '<p>\r\n	Bơm Đầu JET Tự Mồi (cánh đồng)\r\n</p>', NULL, 'Bơm Đầu JET Tự Mồi (cánh đồng)', 'Bơm Đầu JET Tự Mồi (cánh đồng)', 'Bơm Đầu JET Tự Mồi (cánh đồng)', '0', 0, '0', 0, 1, 1, 60, '2018-06-04 04:15:42', '2018-06-04 08:50:44'),
+(6, 'Bơm Lưu Lượng (cánh đồng)', 'bom-luu-luong-canh-dong', 1, 'images/uploads/images/bentas/bentas_bom_luu_luong_1.jpg;images/uploads/images/bentas/bentas_bom_luu_luong_1.jpg', '', '<p>\r\n	Bơm Lưu Lượng (cánh đồng)\r\n</p>', '<p>\r\n	Bơm Lưu Lượng (cánh đồng)\r\n</p>', NULL, 'Bơm Lưu Lượng (cánh đồng)', 'Bơm Lưu Lượng (cánh đồng)', 'Bơm Lưu Lượng (cánh đồng)', '0', 0, '0', 1, 1, 1, 60, '2018-06-04 04:15:42', '2018-06-04 10:14:06'),
+(7, 'Bơm Mặt Bích Công Nghiệp (cánh đồng)', 'bom-mat-bich-cong-nghiep-canh-dong', 1, 'images/uploads/images/bentas/bentas_bom_mat_bich_cong_nghiep_1.jpg;images/uploads/images/bentas/bentas_bom_mat_bich_cong_nghiep_1.jpg', '', '<p>\r\n	Bơm Mặt Bích Công Nghiệp (cánh đồng)\r\n</p>', '<p>\r\n	Bơm Mặt Bích Công Nghiệp (cánh đồng)\r\n</p>', NULL, 'Bơm Mặt Bích Công Nghiệp (cánh đồng)', 'Bơm Mặt Bích Công Nghiệp (cánh đồng)', 'Bơm Mặt Bích Công Nghiệp (cánh đồng)', '0', 0, '0', 1, 1, 1, 60, '2018-06-04 04:15:42', '2018-06-04 10:13:50'),
+(8, 'Bơm Chìm Thân Nhựa PPC', 'bom-chim-than-nhua-ppc', 1, 'images/uploads/images/bentas/bentas_bom_chim_than_nhua_PPC_1.jpg;images/uploads/images/bentas/bentas_bom_chim_than_nhua_PPC_1.jpg', '', '<p>\r\n	Bơm Chìm Thân Nhựa PPC\r\n</p>', '<p>\r\n	Bơm Chìm Thân Nhựa PPC\r\n</p>', NULL, 'Bơm Chìm Thân Nhựa PPC', 'Bơm Chìm Thân Nhựa PPC', 'Bơm Chìm Thân Nhựa PPC', '0', 0, '0', 0, 1, 1, 60, '2018-06-04 04:15:42', '2018-06-04 08:49:53'),
+(9, 'Bơm Chìm Thải Inox SPC', 'bom-chim-thai-inox-spc', 1, 'images/uploads/images/bentas/bentas_bom_chim_thai_inox_SPC_1.jpg;images/uploads/images/bentas/bentas_bom_chim_thai_inox_SPC_1.jpg', '', '<p>\r\n	Bơm Chìm Thải Inox SPC\r\n</p>', '<p>\r\n	Bơm Chìm Thải Inox SPC\r\n</p>', NULL, 'Bơm Chìm Thải Inox SPC', 'Bơm Chìm Thải Inox SPC', 'Bơm Chìm Thải Inox SPC', '0', 0, '0', 0, 1, 1, 60, '2018-06-04 04:15:42', '2018-06-04 08:49:38'),
+(10, 'Bơm Chìm Thải Inox SPS', 'bom-chim-thai-inox-sps', 1, 'images/uploads/images/bentas/bentas_bom_chim_thai_inox_SPS_1.jpg;images/uploads/images/bentas/bentas_bom_chim_thai_inox_SPS_1.jpg', '', '<p>\r\n	Bơm Chìm Thải Inox SPS\r\n</p>', '<p>\r\n	Bơm Chìm Thải Inox SPS\r\n</p>', NULL, 'Bơm Chìm Thải Inox SPS', 'Bơm Chìm Thải Inox SPS', 'Bơm Chìm Thải Inox SPS', '0', 0, '0', 1, 1, 1, 60, '2018-06-04 04:15:42', '2018-06-04 10:13:41');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `roles`
+-- Cấu trúc bảng cho bảng `roles`
 --
 
 CREATE TABLE `roles` (
@@ -292,7 +329,7 @@ CREATE TABLE `roles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `roles`
+-- Đang đổ dữ liệu cho bảng `roles`
 --
 
 INSERT INTO `roles` (`id`, `name`, `display_name`, `description`, `created_at`, `updated_at`) VALUES
@@ -301,7 +338,7 @@ INSERT INTO `roles` (`id`, `name`, `display_name`, `description`, `created_at`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `role_user`
+-- Cấu trúc bảng cho bảng `role_user`
 --
 
 CREATE TABLE `role_user` (
@@ -310,7 +347,7 @@ CREATE TABLE `role_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `role_user`
+-- Đang đổ dữ liệu cho bảng `role_user`
 --
 
 INSERT INTO `role_user` (`user_id`, `role_id`) VALUES
@@ -319,7 +356,7 @@ INSERT INTO `role_user` (`user_id`, `role_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Cấu trúc bảng cho bảng `users`
 --
 
 CREATE TABLE `users` (
@@ -333,56 +370,56 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `users`
+-- Đang đổ dữ liệu cho bảng `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'nnduyquang', 'nnduyquang@gmail.com', '$2y$10$mStg572JFNI89/0Cg7TOGOUkACFaBl/nsNeOvx8zglr1qyJPA0tj6', NULL, '2018-03-14 07:24:10', NULL);
+(1, 'nnduyquang', 'nnduyquang@gmail.com', '$2y$10$mStg572JFNI89/0Cg7TOGOUkACFaBl/nsNeOvx8zglr1qyJPA0tj6', '5fG80Ynv69OAWqAj6BoYHxcQl4yMUrfUvfhEppI7wEUAydIGp9v5y5l0Tno5', '2018-03-14 07:24:10', NULL);
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `category_items`
+-- Chỉ mục cho bảng `category_items`
 --
 ALTER TABLE `category_items`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `category_permissions`
+-- Chỉ mục cho bảng `category_permissions`
 --
 ALTER TABLE `category_permissions`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `category_permissions_name_unique` (`name`);
 
 --
--- Indexes for table `configs`
+-- Chỉ mục cho bảng `configs`
 --
 ALTER TABLE `configs`
   ADD PRIMARY KEY (`id`),
   ADD KEY `configs_user_id_foreign` (`user_id`);
 
 --
--- Indexes for table `menus`
+-- Chỉ mục cho bảng `menus`
 --
 ALTER TABLE `menus`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `migrations`
+-- Chỉ mục cho bảng `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `password_resets`
+-- Chỉ mục cho bảng `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
--- Indexes for table `permissions`
+-- Chỉ mục cho bảng `permissions`
 --
 ALTER TABLE `permissions`
   ADD PRIMARY KEY (`id`),
@@ -390,21 +427,21 @@ ALTER TABLE `permissions`
   ADD KEY `permissions_category_permission_id_foreign` (`category_permission_id`);
 
 --
--- Indexes for table `permission_role`
+-- Chỉ mục cho bảng `permission_role`
 --
 ALTER TABLE `permission_role`
   ADD PRIMARY KEY (`permission_id`,`role_id`),
   ADD KEY `permission_role_role_id_foreign` (`role_id`);
 
 --
--- Indexes for table `posts`
+-- Chỉ mục cho bảng `posts`
 --
 ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`),
   ADD KEY `posts_user_id_foreign` (`user_id`);
 
 --
--- Indexes for table `products`
+-- Chỉ mục cho bảng `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
@@ -412,122 +449,133 @@ ALTER TABLE `products`
   ADD KEY `products_category_product_id_foreign` (`category_product_id`);
 
 --
--- Indexes for table `roles`
+-- Chỉ mục cho bảng `roles`
 --
 ALTER TABLE `roles`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `roles_name_unique` (`name`);
 
 --
--- Indexes for table `role_user`
+-- Chỉ mục cho bảng `role_user`
 --
 ALTER TABLE `role_user`
   ADD PRIMARY KEY (`user_id`,`role_id`),
   ADD KEY `role_user_role_id_foreign` (`role_id`);
 
 --
--- Indexes for table `users`
+-- Chỉ mục cho bảng `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `category_items`
+-- AUTO_INCREMENT cho bảng `category_items`
 --
 ALTER TABLE `category_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+
 --
--- AUTO_INCREMENT for table `category_permissions`
+-- AUTO_INCREMENT cho bảng `category_permissions`
 --
 ALTER TABLE `category_permissions`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
--- AUTO_INCREMENT for table `configs`
+-- AUTO_INCREMENT cho bảng `configs`
 --
 ALTER TABLE `configs`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
--- AUTO_INCREMENT for table `menus`
+-- AUTO_INCREMENT cho bảng `menus`
 --
 ALTER TABLE `menus`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT cho bảng `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT for table `permissions`
+-- AUTO_INCREMENT cho bảng `permissions`
 --
 ALTER TABLE `permissions`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
 --
--- AUTO_INCREMENT for table `posts`
+-- AUTO_INCREMENT cho bảng `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT for table `products`
+-- AUTO_INCREMENT cho bảng `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=302;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
 --
--- AUTO_INCREMENT for table `roles`
+-- AUTO_INCREMENT cho bảng `roles`
 --
 ALTER TABLE `roles`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
--- Constraints for dumped tables
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- Constraints for table `configs`
+-- Các ràng buộc cho bảng `configs`
 --
 ALTER TABLE `configs`
   ADD CONSTRAINT `configs_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `permissions`
+-- Các ràng buộc cho bảng `permissions`
 --
 ALTER TABLE `permissions`
   ADD CONSTRAINT `permissions_category_permission_id_foreign` FOREIGN KEY (`category_permission_id`) REFERENCES `category_permissions` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `permission_role`
+-- Các ràng buộc cho bảng `permission_role`
 --
 ALTER TABLE `permission_role`
   ADD CONSTRAINT `permission_role_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `permission_role_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `posts`
+-- Các ràng buộc cho bảng `posts`
 --
 ALTER TABLE `posts`
   ADD CONSTRAINT `posts_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `products`
+-- Các ràng buộc cho bảng `products`
 --
 ALTER TABLE `products`
   ADD CONSTRAINT `products_category_product_id_foreign` FOREIGN KEY (`category_product_id`) REFERENCES `category_items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `products_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `role_user`
+-- Các ràng buộc cho bảng `role_user`
 --
 ALTER TABLE `role_user`
   ADD CONSTRAINT `role_user_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `role_user_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

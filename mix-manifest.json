@@ -1,4 +1,5 @@
 {
+    "/ss/frontend.css": "/ss/frontend.css",
     "/ss/backend.css": "/ss/backend.css",
     "/s/core.common.js": "/s/core.common.js",
     "/ss/core.common.css": "/ss/core.common.css",
@@ -9,6 +10,5 @@
     "/s/scripts.js": "/s/scripts.js",
     "/ss/login.css": "/ss/login.css",
     "/s/login.js": "/s/login.js",
-    "/s/backend.js": "/s/backend.js",
-    "/ss/frontend.css": "/ss/frontend.css"
+    "/s/backend.js": "/s/backend.js"
 }

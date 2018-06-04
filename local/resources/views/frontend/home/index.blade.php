@@ -8,9 +8,6 @@
 @section('styles')
 
 @stop
-@section('slider')
-@include('frontend.home.home_leftmenu')
-@stop
 @section('container')
     <div class="container">
         <div class="row">

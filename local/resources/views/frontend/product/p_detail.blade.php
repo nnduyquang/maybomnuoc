@@ -7,8 +7,8 @@
                         @include('frontend.product.p_slider')
                     </div>
                     <div class="col-md-5">
-                        <h1>Gravenix</h1>
-                        <span class="brand">Thương hiệu:<span>Bentas</span></span>
+                        <h1>{{$data['product']->name}}</h1>
+                        <span class="brand">Thương hiệu:<span>{{$data['product']->categoryproduct->name}}</span></span>
                         <span class="price">Giá Bán: <span>$120.00</span></span>
                         <hr>
                         <div class="description">

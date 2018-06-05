@@ -35,6 +35,22 @@
       background-color: #ddd;
     }
   }
+  h1.title-search{
+    position: relative;
+    margin-top: 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-bottom: 40px;
+    &:after {
+      content: "";
+      width: 40px;
+      height: 4px;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      background-color: #0d51db;
+    }
+  }
   .one-product {
     padding-top: 20px;
     position: relative;

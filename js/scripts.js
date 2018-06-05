@@ -1,15 +1,15 @@
 var plugins = {
-    btCategory:$('.bt-category'),
+    btCategory: $('.bt-category'),
     menuSideBar: $('.sidebar'),
     slider: $('#slider'),
-    marquee:$('.marquee'),
-    owlCarouselProduct:$('.p-d-owl'),
-    owlCarouselHBottom:$('.h-b-owl')
+    marquee: $('.marquee'),
+    owlCarouselProduct: $('.p-d-owl'),
+    owlCarouselHBottom: $('.h-b-owl')
 };
 $(document).ready(function () {
     $('.fancybox').fancybox({
-        beforeShow : function(){
-            this.title =  $(this.element).data("caption");
+        beforeShow: function () {
+            this.title = $(this.element).data("caption");
         }
     });
     function sidebar() {
@@ -26,8 +26,9 @@ $(document).ready(function () {
             }
         })
     }
+
     sidebar();
-    plugins.btCategory.click(function(){
+    plugins.btCategory.click(function () {
         $('ul.list-category').toggle();
     });
     function runSlider() {
@@ -39,67 +40,77 @@ $(document).ready(function () {
             controlNav: false,
         });
     }
-    function runMarquee(){
+
+    function runMarquee() {
         plugins.marquee.marquee({
-            direction:'up',
+            direction: 'up',
             duplicated: true,
             delayBeforeStart: 0,
             duration: 10000,
-            pauseOnHover:true,
+            pauseOnHover: true,
         });
     }
-    function runOwlCarouselProduct(){
+
+    function runOwlCarouselProduct() {
         plugins.owlCarouselProduct.owlCarousel({
-            dots:false,
-            nav:true,
-            autoplay:true,
-            navContainer:'.nav-arrow',
-            loop:true,
-            navText : ["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],
-            responsive:{
-                0:{
-                    items:1
+            dots: false,
+            nav: true,
+            autoplay: true,
+            navContainer: '.nav-arrow',
+            loop: true,
+            navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],
+            responsive: {
+                0: {
+                    items: 1
                 },
-                600:{
-                    items:3
+                600: {
+                    items: 3
                 },
-                1000:{
-                    items:3
+                1000: {
+                    items: 3
                 }
             }
         });
     }
-    function runOwlCarouselHBottom(){
+
+    function runOwlCarouselHBottom() {
         plugins.owlCarouselHBottom.owlCarousel({
-            dots:false,
-            nav:true,
-            autoplay:true,
-            navContainer:'.nav-arrow',
-            loop:true,
-            navText : ["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],
-            responsive:{
-                0:{
-                    items:1
+            dots: false,
+            nav: true,
+            autoplay: true,
+            navContainer: '.nav-arrow',
+            loop: true,
+            navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],
+            responsive: {
+                0: {
+                    items: 1
                 },
-                600:{
-                    items:4
+                600: {
+                    items: 4
                 },
-                1000:{
-                    items:4
+                1000: {
+                    items: 4
                 }
             }
         });
     }
+
     if (plugins.slider.length) {
         runSlider();
     }
-    if(plugins.marquee.length){
+    if (plugins.marquee.length) {
         runMarquee();
     }
-    if(plugins.owlCarouselProduct.length){
+    if (plugins.owlCarouselProduct.length) {
         runOwlCarouselProduct();
     }
-    if(plugins.owlCarouselHBottom.length){
+    if (plugins.owlCarouselHBottom.length) {
         runOwlCarouselHBottom();
     }
+    $('input[name=txtSearch]').keyup(function (e) {
+        if (e.keyCode == 13) {
+            if ($(this).val() != '')
+                $('.frm-search').submit();
+        }
+    });
 });

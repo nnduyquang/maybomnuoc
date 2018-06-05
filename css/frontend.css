@@ -898,6 +898,24 @@ This class is added to the container
   background-color: #ddd;
 }
 
+#h_product h1.title-search {
+  position: relative;
+  margin-top: 20px;
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+#h_product h1.title-search:after {
+  content: "";
+  width: 40px;
+  height: 4px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  background-color: #0d51db;
+}
+
 #h_product .one-product {
   padding-top: 20px;
   position: relative;
@@ -1677,6 +1695,53 @@ This class is added to the container
 
 #n_all .detail-new .description {
   line-height: 1.5;
+}
+
+#contact_info {
+  margin-bottom: 20px;
+}
+
+#contact_info .contact_top h3.title {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+#contact_info .contact_top p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+#contact_info .contact_top h4 {
+  font-size: 20px;
+  color: #0d51db;
+  margin-bottom: 20px;
+}
+
+#contact_info .contact_top ul {
+  list-style: none;
+}
+
+#contact_info .contact_top ul li i {
+  margin-right: 10px;
+}
+
+#contact_info .contact_bottom .input-group {
+  margin-bottom: 20px;
+}
+
+#contact_info .contact_bottom .input-group input, #contact_info .contact_bottom .input-group textarea {
+  border-radius: inherit;
+}
+
+#contact_info .contact_bottom button {
+  border-radius: inherit;
+  background-color: #0d51db;
+  color: white;
+  font-weight: bold;
+}
+
+#contact_info .contact_bottom button .successSending, #contact_info .contact_bottom button .loadingSending {
+  margin-left: 5px;
 }
 
 #footer {

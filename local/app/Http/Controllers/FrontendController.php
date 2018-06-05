@@ -14,27 +14,46 @@ class FrontendController extends Controller
         $this->frontendRepository = $frontendRepository;
     }
 
-    public function getFrontend(){
-        $data=$this->frontendRepository->getFrontend();
+    public function getFrontend()
+    {
+        $data = $this->frontendRepository->getFrontend();
         return view('frontend.home.index', compact('data'));
     }
 
-    public function getCategory($path){
-        $data=$this->frontendRepository->getCategory($path);
+    public function getCategory($path)
+    {
+        $data = $this->frontendRepository->getCategory($path);
         return view('frontend.home.index', compact('data'));
     }
 
-    public function getProductDetail($path){
-        $data=$this->frontendRepository->getProductDetail($path);
+    public function getProductDetail($path)
+    {
+        $data = $this->frontendRepository->getProductDetail($path);
         return view('frontend.product.index', compact('data'));
     }
-    public function getAllNews(){
-        $data=$this->frontendRepository->getAllNews();
+
+    public function getAllNews()
+    {
+        $data = $this->frontendRepository->getAllNews();
         return view('frontend.news.index', compact('data'));
     }
-    public function getNewsDetail($path){
-        $data=$this->frontendRepository->getNewsDetail($path);
+
+    public function getNewsDetail($path)
+    {
+        $data = $this->frontendRepository->getNewsDetail($path);
         return view('frontend.news.index', compact('data'));
+    }
+
+    public function getSearch(Request $request)
+    {
+        $data = $this->frontendRepository->getSearch($request->input('txtSearch'));
+        return view('frontend.home.index', compact('data'));
+    }
+
+    public function getPage($type)
+    {
+        $data['type'] = $type;
+        return view('frontend.page.index', compact('data'));
     }
 
 }

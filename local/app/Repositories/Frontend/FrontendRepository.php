@@ -13,11 +13,7 @@ class FrontendRepository implements FrontendRepositoryInterface
     public function getFrontend()
     {
         $data = '';
-//        $categoryRight = CategoryItem::where('type', CATEGORY_PRODUCT)->where('isActive', ACTIVE)->get();
-//        $productBestSale = Product::where('isActive', ACTIVE)->where('is_best_sale', BEST_SALE)->get();
         $newProduct = Product::where('isActive', ACTIVE)->orderBy('is_best_sale', 'DESC')->orderBy('created_at', 'DESC')->take(12)->get();
-//        $data['categoryRight'] = $categoryRight;
-//        $data['productBestSale'] = $productBestSale;
         $data['newProduct'] = $newProduct;
         $data['type'] = 0;
         return $data;
@@ -71,6 +67,17 @@ class FrontendRepository implements FrontendRepositoryInterface
         $post = Post::where('path', $path)->first();
         $data['post'] = $post;
         $data['type'] = 1;
+        return $data;
+    }
+
+    public function getSearch($keySearch)
+    {
+        $data = [];
+        $keySearch = preg_replace('/\s+/', ' ', $keySearch);
+        $newProduct = Product::where('name', 'like', '%' . $keySearch . '%')->orderBy('is_best_sale', 'DESC')->orderBy('created_at', 'DESC')->get();
+        $data['newProduct'] = $newProduct;
+        $data['key-search'] = $keySearch;
+        $data['type'] = 2;
         return $data;
     }
 

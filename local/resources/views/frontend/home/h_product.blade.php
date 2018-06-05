@@ -2,6 +2,9 @@
     @if($data['type']==1)
         <h1 class="title">{{$data['categoryId']->name}}</h1>
     @endif
+    @if($data['type']==2)
+        <h1 class="title-search">Kết Quả Tìm Kiếm Cho Từ Khóa: {{$data['key-search']}}</h1>
+    @endif
     <div class="row no-gutters">
         @foreach($data['newProduct'] as $key=>$item)
             <div class="col-md-4 col-6">

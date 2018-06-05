@@ -10,9 +10,11 @@ Route::get('/san-pham/abc', function () {
 Route::get('/','FrontendController@getFrontend');
 Route::get('/danh-muc/{path}','FrontendController@getCategory');
 Route::get('/san-pham/{path}','FrontendController@getProductDetail');
-Route::post('/tim-kiem','FrontendController@getSearch')->name('search');
+Route::post('/tim-kiem','FrontendController@getSearch')->name('home.search');
 Route::get('/tin-tuc/','FrontendController@getAllNews');
 Route::get('/tin-tuc/{path}','FrontendController@getNewsDetail');
+Route::get('/lien-he','FrontendController@getPage')->defaults('type','1');
+Route::get('/gioi-thieu','FrontendController@getPage')->defaults('type','2');
 
 
 

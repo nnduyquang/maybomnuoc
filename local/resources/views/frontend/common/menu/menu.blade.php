@@ -10,17 +10,15 @@
                     <div class="row">
                         <div class="col-md-7">
                             <ul class="main-menu">
-                                <li class="no-item-down"><a href="#">Home</a></li>
-                                <li class="has-item-down"><a href="#">Shop</a>
+                                <li class="no-item-down"><a href="{{URL::to('/')}}">Trang Chủ</a></li>
+                                <li class="has-item-down"><a href="#">Danh Mục Sản Phẩm</a>
                                     <ul>
-                                        <li><a href="#">Menu 1</a></li>
-                                        <li><a href="#">Menu 2</a></li>
-                                        <li><a href="#">Menu 3</a></li>
-                                        <li><a href="#">Menu 4</a></li>
-                                        <li><a href="#">Menu 5</a></li>
+                                        @foreach($listMenu['menuCategory'] as $key=>$data)
+                                        <li><a href="{{URL::to('danh-muc/'.$data->path)}}">{{$data->name}}</a></li>
+                                        @endforeach
                                     </ul>
                                 </li>
-                                <li class="no-item-down"><a href="#">Blog</a></li>
+                                <li class="no-item-down"><a href="{{URL::to('tin-tuc')}}">Tin Tức</a></li>
                             </ul>
                         </div>
                         <div class="col-md-5 menu-contact" style="padding-top: 13px">
@@ -45,20 +43,17 @@
                 <div class="row">
                     <div class="col-md-3 pl-0 pr-0">
                         <button aria-expanded="false" class="bt-category" type="button">
-                            <i class="fas fa-bars"></i>All category
+                            <i class="fas fa-bars"></i>Tất Cả Sản Phẩm
                             <ul class="list-category" style="display: none">
-                                <li><a href="#">Menu 1</a></li>
-                                <li><a href="#">Menu 2</a></li>
-                                <li><a href="#">Menu 3</a></li>
-                                <li><a href="#">Menu 4</a></li>
-                                <li><a href="#">Menu 5</a></li>
-                                <li><a href="#">Menu 6</a></li>
+                                @foreach($listMenu['menuCategory'] as $key=>$data)
+                                    <li><a href="{{URL::to('danh-muc/'.$data->path)}}">{{$data->name}}</a></li>
+                                @endforeach
                             </ul>
                         </button>
                     </div>
                     <div class="col-md-6">
                         {!! Form::open(array('method'=>'POST','class'=>'frm-search h-100')) !!}
-                        {!! Form::text('txtSearch',null, array('placeholder' => 'Search our store','class' => 'input-search h-100')) !!}
+                        {!! Form::text('txtSearch',null, array('placeholder' => 'Tìm kiếm sản phẩm','class' => 'input-search h-100')) !!}
                         <button class="bt-search" type="submit">
                             <i class="fas fa-search"></i>
                         </button>

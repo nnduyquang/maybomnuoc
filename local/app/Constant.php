@@ -23,3 +23,6 @@ define("DEACTIVATE",0);
 define("BEST_SALE",1);
 define("NOT_BEST_SALE",0);
 
+define("IS_PAGE",0);
+define("IS_POST",1);
+

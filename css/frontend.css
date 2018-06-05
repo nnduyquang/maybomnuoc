@@ -824,6 +824,36 @@ This class is added to the container
   color: #f60;
 }
 
+#h_sidebar #realFake {
+  margin-top: 20px;
+}
+
+#h_sidebar #realFake a {
+  border: 1px solid #0d51db;
+  display: block;
+  position: relative;
+}
+
+#h_sidebar #realFake a img.img-real-fake {
+  width: 100%;
+}
+
+#h_sidebar #realFake a:after {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: absolute;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.32);
+  left: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#h_sidebar #realFake a:hover:after {
+  opacity: 1;
+}
+
 #h_product {
   margin-top: 20px;
 }
@@ -995,6 +1025,124 @@ This class is added to the container
   }
 }
 
+#h_bottom h3 {
+  position: relative;
+  margin-top: 20px;
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+#h_bottom h3:after {
+  content: "";
+  width: 40px;
+  height: 4px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  background-color: #0d51db;
+}
+
+#h_bottom .h-b-left-relative {
+  position: relative;
+}
+
+#h_bottom .h-b-left-relative .nav-arrow {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+}
+
+#h_bottom .h-b-left-relative .nav-arrow button.owl-prev, #h_bottom .h-b-left-relative .nav-arrow button.owl-next {
+  border: 1px solid #e4e4e4;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  background-color: white;
+  outline: none;
+}
+
+#h_bottom .h-b-left-relative .nav-arrow button.owl-prev i, #h_bottom .h-b-left-relative .nav-arrow button.owl-next i {
+  color: #e4e4e4;
+  font-size: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#h_bottom .h-b-left-relative .nav-arrow button.owl-prev {
+  float: left;
+  margin-left: -20px;
+}
+
+#h_bottom .h-b-left-relative .nav-arrow button.owl-next {
+  float: right;
+  margin-right: -20px;
+}
+
+#h_bottom .h-b-left-relative:hover .nav-arrow {
+  opacity: 1;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+#h_bottom .h-b-left-relative .one-item a img.img-one-project {
+  width: 100%;
+  height: 100px;
+}
+
+#h_top {
+  padding: 40px 0 40px 0;
+}
+
+#h_top .one-item {
+  border: 1px solid #d2d2d2;
+  padding: 10px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#h_top .one-item i {
+  margin-right: 20px;
+  color: #0d51db;
+  font-size: 33px;
+  font-weight: 700;
+}
+
+#h_top .one-item .sold-by-caption h4 {
+  color: #505050;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
+
+#h_top .one-item .sold-by-caption p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #505050;
+}
+
+#h_top .one-item:hover {
+  background-color: #afb0bd;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1012,7 +1160,7 @@ This class is added to the container
 
 .mySlides img {
   width: 100%;
-  height: 500px;
+  height: 390px;
 }
 
 /* Add a pointer when hovering over the thumbnail images */
@@ -1270,7 +1418,13 @@ This class is added to the container
           transform: translate(0, -50%);
 }
 
-#p_detail .product-relative .owl-carousel .one-product {
+#p_detail .product-relative .owl-carousel .owl-stage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#p_detail .product-relative .owl-carousel .owl-stage .one-product {
   padding-top: 20px;
   position: relative;
   -webkit-transition: all 0.2s;
@@ -1279,18 +1433,18 @@ This class is added to the container
   border-bottom: solid 2px #5CBE6D;
 }
 
-#p_detail .product-relative .owl-carousel .one-product .img-wrap {
+#p_detail .product-relative .owl-carousel .owl-stage .one-product .img-wrap {
   position: relative;
 }
 
-#p_detail .product-relative .owl-carousel .one-product .img-wrap img.img-one-product-1 {
+#p_detail .product-relative .owl-carousel .owl-stage .one-product .img-wrap img.img-one-product-1 {
   height: 210px;
   width: 100%;
   padding: 10px;
   opacity: 1;
 }
 
-#p_detail .product-relative .owl-carousel .one-product .img-wrap img.img-one-product-2 {
+#p_detail .product-relative .owl-carousel .owl-stage .one-product .img-wrap img.img-one-product-2 {
   position: absolute;
   height: 210px;
   width: 100%;
@@ -1301,21 +1455,21 @@ This class is added to the container
           animation: fadeOut 0.5s;
 }
 
-#p_detail .product-relative .owl-carousel .one-product .img-wrap:hover img.img-one-product-1 {
+#p_detail .product-relative .owl-carousel .owl-stage .one-product .img-wrap:hover img.img-one-product-1 {
   opacity: 0;
 }
 
-#p_detail .product-relative .owl-carousel .one-product .img-wrap:hover img.img-one-product-2 {
+#p_detail .product-relative .owl-carousel .owl-stage .one-product .img-wrap:hover img.img-one-product-2 {
   opacity: 1;
   -webkit-animation: fadeIn 0.5s;
           animation: fadeIn 0.5s;
 }
 
-#p_detail .product-relative .owl-carousel .one-product h2.title {
+#p_detail .product-relative .owl-carousel .owl-stage .one-product h2.title {
   padding: 20px 20px 15px;
 }
 
-#p_detail .product-relative .owl-carousel .one-product h2.title a {
+#p_detail .product-relative .owl-carousel .owl-stage .one-product h2.title a {
   display: block;
   color: #0d51db;
   text-transform: capitalize;
@@ -1325,26 +1479,26 @@ This class is added to the container
   line-height: 1.5;
 }
 
-#p_detail .product-relative .owl-carousel .one-product .info {
+#p_detail .product-relative .owl-carousel .owl-stage .one-product .info {
   margin-top: 5px;
   padding: 10px;
 }
 
-#p_detail .product-relative .owl-carousel .one-product .info .price {
+#p_detail .product-relative .owl-carousel .owl-stage .one-product .info .price {
   color: #f60;
 }
 
-#p_detail .product-relative .owl-carousel .one-product .info .info-bottom {
+#p_detail .product-relative .owl-carousel .owl-stage .one-product .info .info-bottom {
   color: black;
   padding: 0px 20px 15px;
 }
 
-#p_detail .product-relative .owl-carousel .one-product .info .info-bottom i {
+#p_detail .product-relative .owl-carousel .owl-stage .one-product .info .info-bottom i {
   color: #0d51db;
   padding-right: 10px;
 }
 
-#p_detail .product-relative .owl-carousel .one-product .label-new {
+#p_detail .product-relative .owl-carousel .owl-stage .one-product .label-new, #p_detail .product-relative .owl-carousel .owl-stage .one-product .label-hot {
   position: absolute;
   border-radius: 50%;
   font-size: 15px;
@@ -1352,16 +1506,25 @@ This class is added to the container
   text-align: center;
   width: 50px;
   height: 50px;
+}
+
+#p_detail .product-relative .owl-carousel .owl-stage .one-product .label-new p, #p_detail .product-relative .owl-carousel .owl-stage .one-product .label-hot p {
+  margin: 0;
+  line-height: 50px;
+  color: white;
+  font-weight: 700;
+}
+
+#p_detail .product-relative .owl-carousel .owl-stage .one-product .label-new {
   top: 5px;
   left: 3px;
   background-color: #7dcd0a;
 }
 
-#p_detail .product-relative .owl-carousel .one-product .label-new p {
-  margin: 0;
-  line-height: 50px;
-  color: white;
-  font-weight: 700;
+#p_detail .product-relative .owl-carousel .owl-stage .one-product .label-hot {
+  top: 60px;
+  left: 3px;
+  background-color: red;
 }
 
 #p_detail .more-info h3.title {
@@ -1420,6 +1583,100 @@ This class is added to the container
   font-weight: 400;
   font-size: 14px;
   color: #505050;
+}
+
+#n_all .title-header {
+  background-color: #f7f7f7;
+}
+
+#n_all .title-header h1 {
+  margin-bottom: 40px;
+  font-weight: bold;
+  padding: 34px 0 34px 0;
+  color: #303030;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+#n_all .one-news {
+  border: 1px solid #e4e4e4;
+  padding: 20px 20px 0px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#n_all .one-news a.img-wrap {
+  margin: -21px -21px 20px;
+  display: block;
+  position: relative;
+}
+
+#n_all .one-news a.img-wrap img.img-one-news {
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#n_all .one-news a.img-wrap:after {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: absolute;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.32);
+  left: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#n_all .one-news a.img-wrap:hover:after {
+  opacity: 1;
+}
+
+#n_all .one-news h2.title {
+  margin-top: 40px;
+  margin-bottom: 0px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+#n_all .one-news h2.title a {
+  line-height: 1.2;
+  color: #303030;
+}
+
+#n_all .one-news .description {
+  line-height: 1.5;
+  padding: 50px 0 40px 0;
+  font-size: 14px;
+}
+
+#n_all .one-news .info span {
+  padding: 10px 0 20px 0;
+  display: block;
+}
+
+#n_all .one-news .info span i {
+  margin-right: 10px;
+  color: #0d51db;
+  font-size: 22px;
+}
+
+#n_all .one-news .info span span {
+  display: inline-block;
+  color: #0d51db;
+  font-weight: bold;
+}
+
+#n_all .detail-new img.img-one-news {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 40px;
+}
+
+#n_all .detail-new .description {
+  line-height: 1.5;
 }
 
 #footer {

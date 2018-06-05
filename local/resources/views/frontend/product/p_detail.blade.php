@@ -9,250 +9,94 @@
                     <div class="col-md-5">
                         <h1>{{$data['product']->name}}</h1>
                         <span class="brand">Thương hiệu:<span>{{$data['product']->categoryproduct->name}}</span></span>
-                        <span class="price">Giá Bán: <span>$120.00</span></span>
+                        <span class="price">Giá Bán: <span>
+                                @if($data['product']->price==0)
+                                    Liên Hệ
+                                @else
+                                    {{$data['product']->price}}
+                                @endif
+                            </span></span>
                         <hr>
                         <div class="description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id purus et nisl elementum
-                            ornare sit amet non mi. Phasellus euismod sapien et sapien mollis auctor. Suspendisse
-                            interdum erat ut...
+                            {!! $data['product']->description !!}
                         </div>
                         <hr>
                         <input class="btn-confirm btn" type="button" value="0907.468.264">
                     </div>
                     <div class="col-md-12">
                         <div class="tab bg-primary">
-                            <button class="tablinks" onclick="openCity(event, 'content-info')" id="defaultOpen">Thông
-                                Tin
+                            <button class="tablinks" onclick="openCity(event, 'content-info')" id="defaultOpen">Chi Tiết
                             </button>
-                            <button class="tablinks" onclick="openCity(event, 'content-position')">Vị Trí</button>
-                            <button class="tablinks" onclick="openCity(event, 'content-design')">Thiết Kế</button>
-                            <button class="tablinks" onclick="openCity(event, 'content-utility')">Tiện Ích</button>
-                            <button class="tablinks" onclick="openCity(event, 'content-ground')">Mặt Bằng</button>
+                            {{--<button class="tablinks" onclick="openCity(event, 'content-position')">Vị Trí</button>--}}
+                            {{--<button class="tablinks" onclick="openCity(event, 'content-design')">Thiết Kế</button>--}}
+                            {{--<button class="tablinks" onclick="openCity(event, 'content-utility')">Tiện Ích</button>--}}
+                            {{--<button class="tablinks" onclick="openCity(event, 'content-ground')">Mặt Bằng</button>--}}
                         </div>
                         <!-- Tab content -->
                         <div id="content-info" class="tab-content" style="line-height: 1.5">
-                            <p>1</p>
+                            {!! $data['product']->content !!}
                         </div>
-                        <div id="content-position" class="tab-content" style="line-height: 1.5">
-                            <p>2</p>
-                        </div>
-                        <div id="content-design" class="tab-content" style="line-height: 1.5">
-                            <p>3</p>
-                        </div>
-                        <div id="content-utility" class="tab-content" style="line-height: 1.5">
-                            <p>4</p>
-                        </div>
-                        <div id="content-ground" class="tab-content" style="line-height: 1.5">
-                            <p>5</p>
-                        </div>
+                        {{--<div id="content-position" class="tab-content" style="line-height: 1.5">--}}
+                        {{--<p>2</p>--}}
+                        {{--</div>--}}
+                        {{--<div id="content-design" class="tab-content" style="line-height: 1.5">--}}
+                        {{--<p>3</p>--}}
+                        {{--</div>--}}
+                        {{--<div id="content-utility" class="tab-content" style="line-height: 1.5">--}}
+                        {{--<p>4</p>--}}
+                        {{--</div>--}}
+                        {{--<div id="content-ground" class="tab-content" style="line-height: 1.5">--}}
+                        {{--<p>5</p>--}}
+                        {{--</div>--}}
                     </div>
                     <div class="col-md-12">
                         <h3>Sản Phẩm Liên Quan</h3>
                         <div class="product-relative">
-                            <div class="owl-carousel owl-theme">
-                                <div class="pl-0 pr-0">
-                                    <div class="card one-product h-100">
-                                        <div class="img-wrap">
-                                            <a href="{{URL::to('#')}}">
-                                                {{ Html::image('images/temps/sua-dien-nuoc-1.jpg','',array('class'=>'img-one-product-1')) }}
-                                                {{ Html::image('images/temps/sua-dien-nuoc-2.jpg','',array('class'=>'img-one-product-2')) }}
-                                            </a>
-                                        </div>
-                                        <div class="card-body">
-                                            <h2 class="title card-title"><a href="{{URL::to('#')}}">Bơm Công Suất Lớn
-                                                    Công
-                                                    Suất Lớn Công Suất
-                                                    Lớn CM Công Suất Lớn (cánh gang)
+                            <div class="owl-carousel owl-theme p-d-owl">
+                                @foreach($data['other'] as $key=>$item)
+                                        <div class="card one-product h-100">
+                                            <div class="img-wrap">
+                                                <a href="{{URL::to('san-pham/'.$item->path)}}">
+                                                    @php
+                                                        $mainImage=explode(';',$item->image);
+                                                    @endphp
+                                                    {{ Html::image($mainImage[0],'',array('class'=>'img-one-product-1')) }}
+                                                    @if(count($mainImage)==1)
+                                                        {{ Html::image($mainImage[0],'',array('class'=>'img-one-product-2')) }}
+                                                    @else
+                                                        {{ Html::image($mainImage[1],'',array('class'=>'img-one-product-2')) }}
+                                                    @endif
                                                 </a>
-                                            </h2>
-
-                                        </div>
-                                        <div class="info card-footer">
-                                            <hr>
-                                            <div class="row">
-                                                <div class="col-md-5 price">$120.00</div>
-                                                <div class="col-md-5"></div>
                                             </div>
-                                        </div>
-                                        <div class="label-new">
-                                            <p>New</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="pl-0 pr-0">
-                                    <div class="card one-product h-100">
-                                        <div class="img-wrap">
-                                            <a href="{{URL::to('#')}}">
-                                                {{ Html::image('images/temps/sua-dien-nuoc-1.jpg','',array('class'=>'img-one-product-1')) }}
-                                                {{ Html::image('images/temps/sua-dien-nuoc-2.jpg','',array('class'=>'img-one-product-2')) }}
-                                            </a>
-                                        </div>
-                                        <div class="card-body">
-                                            <h2 class="title card-title"><a href="{{URL::to('#')}}">Bơm Công Suất Lớn
-                                                    Công
-                                                    Suất Lớn Công Suất
-                                                    Lớn CM Công Suất Lớn (cánh gang)
-                                                </a>
-                                            </h2>
+                                            <div class="card-body">
+                                                <h2 class="title card-title"><a href="{{URL::to('san-pham/'.$item->path)}}">{{$item->name}}
+                                                    </a>
+                                                </h2>
 
-                                        </div>
-                                        <div class="info card-footer">
-                                            <hr>
-                                            <div class="row">
-                                                <div class="col-md-5 price">$120.00</div>
-                                                <div class="col-md-5"></div>
                                             </div>
-                                        </div>
-                                        <div class="label-new">
-                                            <p>New</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="pl-0 pr-0">
-                                    <div class="card one-product h-100">
-                                        <div class="img-wrap">
-                                            <a href="{{URL::to('#')}}">
-                                                {{ Html::image('images/temps/sua-dien-nuoc-1.jpg','',array('class'=>'img-one-product-1')) }}
-                                                {{ Html::image('images/temps/sua-dien-nuoc-2.jpg','',array('class'=>'img-one-product-2')) }}
-                                            </a>
-                                        </div>
-                                        <div class="card-body">
-                                            <h2 class="title card-title"><a href="{{URL::to('#')}}">Bơm Công Suất Lớn
-                                                    Công
-                                                    Suất Lớn Công Suất
-                                                    Lớn CM Công Suất Lớn (cánh gang)
-                                                </a>
-                                            </h2>
-
-                                        </div>
-                                        <div class="info card-footer">
-                                            <hr>
-                                            <div class="row">
-                                                <div class="col-md-5 price">$120.00</div>
-                                                <div class="col-md-5"></div>
+                                            <div class="info card-footer">
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-md-5 price"> @if($item->price==0)
+                                                            Liên Hệ
+                                                        @else
+                                                            $item->price}}
+                                                        @endif</div>
+                                                    <div class="col-md-5"></div>
+                                                </div>
                                             </div>
+                                            @if($item->updated_at > \Carbon\Carbon::now()->subDays(30))
+                                                <div class="label-new">
+                                                    <p>Mới</p>
+                                                </div>
+                                            @endif
+                                            @if($item->is_best_sale==1)
+                                                <div class="label-hot">
+                                                    <p>Hot</p>
+                                                </div>
+                                            @endif
                                         </div>
-                                        <div class="label-new">
-                                            <p>New</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="pl-0 pr-0">
-                                    <div class="card one-product h-100">
-                                        <div class="img-wrap">
-                                            <a href="{{URL::to('#')}}">
-                                                {{ Html::image('images/temps/sua-dien-nuoc-1.jpg','',array('class'=>'img-one-product-1')) }}
-                                                {{ Html::image('images/temps/sua-dien-nuoc-2.jpg','',array('class'=>'img-one-product-2')) }}
-                                            </a>
-                                        </div>
-                                        <div class="card-body">
-                                            <h2 class="title card-title"><a href="{{URL::to('#')}}">Bơm Công Suất Lớn
-                                                    Công
-                                                    Suất Lớn Công Suất
-                                                    Lớn CM Công Suất Lớn (cánh gang)
-                                                </a>
-                                            </h2>
-
-                                        </div>
-                                        <div class="info card-footer">
-                                            <hr>
-                                            <div class="row">
-                                                <div class="col-md-5 price">$120.00</div>
-                                                <div class="col-md-5"></div>
-                                            </div>
-                                        </div>
-                                        <div class="label-new">
-                                            <p>New</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="pl-0 pr-0">
-                                    <div class="card one-product h-100">
-                                        <div class="img-wrap">
-                                            <a href="{{URL::to('#')}}">
-                                                {{ Html::image('images/temps/sua-dien-nuoc-1.jpg','',array('class'=>'img-one-product-1')) }}
-                                                {{ Html::image('images/temps/sua-dien-nuoc-2.jpg','',array('class'=>'img-one-product-2')) }}
-                                            </a>
-                                        </div>
-                                        <div class="card-body">
-                                            <h2 class="title card-title"><a href="{{URL::to('#')}}">Bơm Công Suất Lớn
-                                                    Công
-                                                    Suất Lớn Công Suất
-                                                    Lớn CM Công Suất Lớn (cánh gang)
-                                                </a>
-                                            </h2>
-
-                                        </div>
-                                        <div class="info card-footer">
-                                            <hr>
-                                            <div class="row">
-                                                <div class="col-md-5 price">$120.00</div>
-                                                <div class="col-md-5"></div>
-                                            </div>
-                                        </div>
-                                        <div class="label-new">
-                                            <p>New</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="l-0 pr-0">
-                                    <div class="card one-product h-100">
-                                        <div class="img-wrap">
-                                            <a href="{{URL::to('#')}}">
-                                                {{ Html::image('images/temps/sua-dien-nuoc-1.jpg','',array('class'=>'img-one-product-1')) }}
-                                                {{ Html::image('images/temps/sua-dien-nuoc-2.jpg','',array('class'=>'img-one-product-2')) }}
-                                            </a>
-                                        </div>
-                                        <div class="card-body">
-                                            <h2 class="title card-title"><a href="{{URL::to('#')}}">Bơm Công Suất Lớn
-                                                    Công
-                                                    Suất Lớn Công Suất
-                                                    Lớn CM Công Suất Lớn (cánh gang)
-                                                </a>
-                                            </h2>
-
-                                        </div>
-                                        <div class="info card-footer">
-                                            <hr>
-                                            <div class="row">
-                                                <div class="col-md-5 price">$120.00</div>
-                                                <div class="col-md-5"></div>
-                                            </div>
-                                        </div>
-                                        <div class="label-new">
-                                            <p>New</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="pl-0 pr-0">
-                                    <div class="card one-product h-100">
-                                        <div class="img-wrap">
-                                            <a href="{{URL::to('#')}}">
-                                                {{ Html::image('images/temps/sua-dien-nuoc-1.jpg','',array('class'=>'img-one-product-1')) }}
-                                                {{ Html::image('images/temps/sua-dien-nuoc-2.jpg','',array('class'=>'img-one-product-2')) }}
-                                            </a>
-                                        </div>
-                                        <div class="card-body">
-                                            <h2 class="title card-title"><a href="{{URL::to('#')}}">Bơm Công Suất Lớn
-                                                    Công
-                                                    Suất Lớn Công Suất
-                                                    Lớn CM Công Suất Lớn (cánh gang)
-                                                </a>
-                                            </h2>
-
-                                        </div>
-                                        <div class="info card-footer">
-                                            <hr>
-                                            <div class="row">
-                                                <div class="col-md-5 price">$120.00</div>
-                                                <div class="col-md-5"></div>
-                                            </div>
-                                        </div>
-                                        <div class="label-new">
-                                            <p>New</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                             <div class="nav-arrow">
 
@@ -264,26 +108,25 @@
             <div class="col-md-3">
                 <div class="more-info">
                     <h3 class="title">
-                        Sold By
+                        Giới Thiệu
                     </h3>
                     <div style="text-align: center">
                         {{Html::image('images/temps/sb_block_sold_by_image.png','',array('class'=>'img-sold'))}}
                     </div>
                     <p>
-                        Fashion has been creating well-designed collections since 2010. The brand offers feminine
-                        designs delivering stylish separates and statement dresses.
+                        Cửa Hàng Điện Cơ Điện Lạnh Ngọc Dương với trên 5 năm kinh doanh hoạt động trong lĩnh vực sửa chữa bảo dưỡng bảo trì ngành điện nước. Thi công công trình khoang giếng, mua bán thương mại các sản phẩm máy bơm nước, máy khoan đục bê tông, máy mài cầm tay, máy mô tơ kéo tời …
                     </p>
                     <hr>
                     <ul>
                         <li>
                             <div class="row">
                                 <div class="col-md-3">
-                                    <i class="fas fa-shipping-fast"></i>
+                                    <i class="fas fa-toolbox"></i>
                                 </div>
                                 <div class="col-md-9">
                                     <div class="sold-by-caption">
-                                        <h4>Free Ship Offered</h4>
-                                        <p>To all countries</p>
+                                        <h4>Sửa Chữa Tận Nhà</h4>
+                                        <p>Có mặt sau 20 phút</p>
                                     </div>
                                 </div>
                             </div>
@@ -291,12 +134,12 @@
                         <li>
                             <div class="row">
                                 <div class="col-md-3">
-                                    <i class="fas fa-shipping-fast"></i>
+                                    <i class="fas fa-trophy"></i>
                                 </div>
                                 <div class="col-md-9">
                                     <div class="sold-by-caption">
-                                        <h4>Free Ship Offered</h4>
-                                        <p>To all countries</p>
+                                        <h4>Máy Nhập Khẩu 100%</h4>
+                                        <p>Từ thương hiệu nổi tiếng</p>
                                     </div>
                                 </div>
                             </div>
@@ -304,12 +147,12 @@
                         <li>
                             <div class="row">
                                 <div class="col-md-3">
-                                    <i class="fas fa-shipping-fast"></i>
+                                    <i class="fas fa-gift"></i>
                                 </div>
                                 <div class="col-md-9">
                                     <div class="sold-by-caption">
-                                        <h4>Free Ship Offered</h4>
-                                        <p>To all countries</p>
+                                        <h4>Giảm 5% Cho Khách Hàng Lắp Mới</h4>
+                                        <p>Khuyến mãi trong tháng</p>
                                     </div>
                                 </div>
                             </div>

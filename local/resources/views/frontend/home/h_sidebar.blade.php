@@ -2,7 +2,7 @@
     <div class="col-md-12">
         <h3>Danh Mục</h3>
         <ul>
-            @foreach($data['categoryRight'] as $key=>$item)
+            @foreach($sidebar['categoryRight'] as $key=>$item)
                 @if($data['type']==1)
                     @if($item->id== $data['categoryId']->id)
                         <li><a class="active" href="{{URL::to('danh-muc/'.$item->path)}}">{{$item->name}}</a></li>
@@ -17,7 +17,7 @@
         </ul>
         <h3>Sản Phẩm Tiêu Biểu</h3>
         <div class="col-md-12 marquee">
-            @foreach($data['productBestSale'] as $key=>$item)
+            @foreach($sidebar['productBestSale'] as $key=>$item)
                 <div class="one-product">
                     @php
                         $mainImage=explode(';',$item->image);
@@ -38,6 +38,9 @@
                     </div>
                 </div>
             @endforeach
+        </div>
+        <div id="realFake" class="col-md-12">
+            <a href="{{URL::to('tin-tuc/cach-phan-biet-may-bom-nuoc-chinh-hang-va-hang-gia')}}">{{ Html::image('images/temps/may_bom_nuoc_real_fake.jpg','',array('class'=>'img-real-fake')) }}</a>
         </div>
     </div>
 </div>

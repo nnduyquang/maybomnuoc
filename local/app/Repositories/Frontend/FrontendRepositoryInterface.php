@@ -10,5 +10,11 @@ interface FrontendRepositoryInterface
 
     public function getProductDetail($path);
 
+    public function getAllSidebar();
+
+    public function getAllNews();
+
+    public function getNewsDetail($path);
+
     public function getFrontEndInfo();
 }

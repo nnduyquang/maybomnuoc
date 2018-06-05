@@ -4,15 +4,11 @@
             <div class="col-md-8">
                 <div class="row">
                     <div class="col-md-4">
-                        <h4>Your Resource</h4>
+                        <h4>Danh Mục Sản Phẩm</h4>
                         <ul class="one-footer">
-                            <li><a href="#">Customer Service</a></li>
-                            <li><a href="#">Customer Service</a></li>
-                            <li><a href="#">Customer Service</a></li>
-                            <li><a href="#">Customer Service</a></li>
-                            <li><a href="#">Customer Service</a></li>
-                            <li><a href="#">Customer Service</a></li>
-                            <li><a href="#">Customer Service</a></li>
+                            @foreach($listFrontEndInfo['footerCategory'] as $key=>$data)
+                                <li><a href="{{URL::to('danh-muc/'.$data->path)}}">{{$data->name}}</a></li>
+                            @endforeach
                         </ul>
                     </div>
                     <div class="col-md-4">

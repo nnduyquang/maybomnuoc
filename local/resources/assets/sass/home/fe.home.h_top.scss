@@ -1,0 +1,32 @@
+#h_top {
+  padding: 40px 0 40px 0;
+  .one-item {
+    border: 1px solid #d2d2d2;
+    padding: 10px;
+    transition: all 0.2s;
+    i {
+      margin-right: 20px;
+      color: #0d51db;
+      font-size: 33px;
+      font-weight: 700;
+    }
+    .sold-by-caption {
+      h4 {
+        color: #505050;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        text-transform: capitalize;
+        margin-bottom: 0;
+      }
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        color: #505050;
+      }
+    }
+    &:hover{
+      background-color: #afb0bd;
+    }
+  }
+}

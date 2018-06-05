@@ -11,6 +11,8 @@ Route::get('/','FrontendController@getFrontend');
 Route::get('/danh-muc/{path}','FrontendController@getCategory');
 Route::get('/san-pham/{path}','FrontendController@getProductDetail');
 Route::post('/tim-kiem','FrontendController@getSearch')->name('search');
+Route::get('/tin-tuc/','FrontendController@getAllNews');
+Route::get('/tin-tuc/{path}','FrontendController@getNewsDetail');
 
 
 

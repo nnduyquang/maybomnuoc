@@ -1,51 +1,52 @@
 <div class="container">
 
     <div class="row p-0">
-        <!-- Full-width images with number text -->
-        {{--@php--}}
-        {{--$subImage=explode(';',$data['product']->sub_image);--}}
-        {{--$i=1;--}}
-        {{--$sum=$i+count($subImage)--}}
-        {{--@endphp--}}
+        @php
+            $subImage=explode(';',$data['product']->sub_image);
+            if(count($subImage)==1)
+                if($subImage[0]=='')
+                $i=0;
+                else
+                $i=1;
+            $sum=$i+count($subImage)
+        @endphp
         <div class="mySlides">
-            {{--<div class="numbertext">{{$i}} / {{$sum}}</div>--}}
-            <div class="numbertext">1 / 4</div>
-            {{--{{ Html::image($data['product']->image,'',array('class'=>'img-one-product')) }}--}}
-            {{ Html::image('images/temps/product/product_1.jpg','',array('class'=>'img-one-product')) }}
+            <div class="numbertext">{{$i}} / {{$sum}}</div>
+            @php
+                $mainImage=explode(';',$data['product']->image);
+            @endphp
+            {{ Html::image($mainImage[0],'',array('class'=>'img-one-product')) }}
+            {{--{{ Html::image('images/temps/product/product_1.jpg','',array('class'=>'img-one-product')) }}--}}
         </div>
-        {{--@php--}}
-        {{--$i++;--}}
-        {{--@endphp--}}
+        @php
+            $i++;
+        @endphp
 
-        {{--@foreach($subImage as $key=>$item)--}}
-        {{--<div class="mySlides">--}}
-        {{--<div class="numbertext">{{$i}} / {{$sum}}</div>--}}
-        {{--{{ Html::image($item,'',array('class'=>'img-one-product')) }}--}}
-        {{--</div>--}}
-        {{--@php--}}
-        {{--$i++;--}}
-        {{--@endphp--}}
-        {{--@endforeach--}}
-        <div class="mySlides">
-            <div class="numbertext">2 / 4</div>
-            {{ Html::image('images/temps/product/product_2.jpg','',array('class'=>'img-one-product')) }}
-        </div>
-        <div class="mySlides">
-            <div class="numbertext">3 / 4</div>
-            {{ Html::image('images/temps/product/product_3.jpg','',array('class'=>'img-one-product')) }}
-        </div>
-        <div class="mySlides">
-            <div class="numbertext">4 / 4</div>
-            {{ Html::image('images/temps/product/product_4.jpg','',array('class'=>'img-one-product')) }}
-        </div>
-
-
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-        <!-- Image text -->
-
+        @foreach($subImage as $key=>$item)
+            @if(count($subImage)==1)
+                @if($subImage[0]=='')
+                    @break
+                @endif
+            @endif
+            <div class="mySlides">
+                <div class="numbertext">{{$i}} / {{$sum}}</div>
+                {{ Html::image($item,'',array('class'=>'img-one-product')) }}
+            </div>
+            @php
+                $i++;
+            @endphp
+        @endforeach
+    <!-- Next and previous buttons -->
+        @if(count($subImage)==1)
+            @if($subImage[0]=='')
+                <a class="prev" style="display: none" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" style="display: none" onclick="plusSlides(1)">&#10095;</a>
+            @endif
+        @else
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    @endif
+    <!-- Image text -->
 
     </div>
 
@@ -57,39 +58,39 @@
     </div>
     <!-- Thumbnail images -->
     <div class="row">
-        {{--@php--}}
-        {{--$i=1;--}}
-        {{--@endphp--}}
+        @php
+            $i=1;
+        @endphp
         <div class="column">
-            {{--<img class="demo cursor" src="{{URL::to($data['product']->image)}}" style="width:100%"--}}
-            {{--onclick="currentSlide(1)" alt="">--}}
-            <img class="demo cursor" src="{{URL::to('images/temps/product/product_1.jpg')}}" style="width:100%"
+            <img class="demo cursor" src="{{URL::to($data['product']->image)}}" style="width:100%"
                  onclick="currentSlide(1)" alt="">
+            {{--<img class="demo cursor" src="{{URL::to('images/temps/product/product_1.jpg')}}" style="width:100%"--}}
+            {{--onclick="currentSlide(1)" alt="">--}}
         </div>
-        {{--@php--}}
-        {{--$i++;--}}
-        {{--@endphp--}}
-        {{--@foreach($subImage as $key=>$item)--}}
+        @php
+            $i++;
+        @endphp
+        @foreach($subImage as $key=>$item)
+            <div class="column">
+                <img class="demo cursor" src="{{URL::to($item)}}" style="width:100%"
+                     onclick="currentSlide({{$i}})" alt="">
+            </div>
+            @php
+                $i++;
+            @endphp
+        @endforeach
         {{--<div class="column">--}}
-        {{--<img class="demo cursor" src="{{URL::to($item)}}" style="width:100%"--}}
-        {{--onclick="currentSlide({{$i}})" alt="">--}}
+        {{--<img class="demo cursor" src="{{URL::to('images/temps/product/product_2.jpg')}}" style="width:100%"--}}
+        {{--onclick="currentSlide(2)" alt="">--}}
         {{--</div>--}}
-        {{--@php--}}
-        {{--$i++;--}}
-        {{--@endphp--}}
-        {{--@endforeach--}}
-        <div class="column">
-            <img class="demo cursor" src="{{URL::to('images/temps/product/product_2.jpg')}}" style="width:100%"
-                 onclick="currentSlide(2)" alt="">
-        </div>
-        <div class="column">
-            <img class="demo cursor" src="{{URL::to('images/temps/product/product_3.jpg')}}" style="width:100%"
-                 onclick="currentSlide(3)" alt="">
-        </div>
-        <div class="column">
-            <img class="demo cursor" src="{{URL::to('images/temps/product/product_4.jpg')}}" style="width:100%"
-                 onclick="currentSlide(4)" alt="">
-        </div>
+        {{--<div class="column">--}}
+        {{--<img class="demo cursor" src="{{URL::to('images/temps/product/product_3.jpg')}}" style="width:100%"--}}
+        {{--onclick="currentSlide(3)" alt="">--}}
+        {{--</div>--}}
+        {{--<div class="column">--}}
+        {{--<img class="demo cursor" src="{{URL::to('images/temps/product/product_4.jpg')}}" style="width:100%"--}}
+        {{--onclick="currentSlide(4)" alt="">--}}
+        {{--</div>--}}
     </div>
 
 </div>

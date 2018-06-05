@@ -34,7 +34,7 @@
           font-weight: bold;
         }
       }
-      a.active{
+      a.active {
         color: #f60;
         margin-left: 10px;
         font-weight: bold;
@@ -64,6 +64,30 @@
       }
       span.price {
         color: #f60;
+      }
+    }
+  }
+  #realFake {
+    margin-top: 20px;
+    a {
+      border: 1px solid #0d51db;
+      display: block;
+      position: relative;
+      img.img-real-fake {
+        width: 100%;
+      }
+      &:after{
+        transition: all 0.2s;
+        position: absolute;
+        content: '';
+        background-color: rgba(0,0,0,0.32);
+        left: 0;
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+      }
+      &:hover:after {
+        opacity: 1;
       }
     }
   }

@@ -240,6 +240,8 @@ img {
 .m-category-layout .m-item-category .m-item-category-0 a span {
   width: 100%;
   display: block;
+  padding: 20px;
+  color: #0d51db;
 }
 
 @media screen and (max-width: 768px) {
@@ -658,7 +660,7 @@ This class is added to the container
     width: 36%;
   }
   #slider2 .carousel-item .edit-slide img.main-slider {
-    height: 250px;
+    height: 185px;
   }
   #slider2 .carousel-item .edit-slide img.arrow-slider-1 {
     left: 222px;
@@ -1124,6 +1126,12 @@ This class is added to the container
   height: 100px;
 }
 
+@media (max-width: 575.98px) {
+  #h_bottom .h-b-left-relative .one-item a img.img-one-project {
+    height: 245px;
+  }
+}
+
 #h_top {
   padding: 40px 0 40px 0;
 }
@@ -1135,14 +1143,34 @@ This class is added to the container
   transition: all 0.2s;
 }
 
-#h_top .one-item i {
+#h_top .one-item .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#h_top .one-item .card-body .h-top-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+#h_top .one-item .card-body .h-top-item i {
   margin-right: 20px;
   color: #0d51db;
   font-size: 33px;
   font-weight: 700;
 }
 
-#h_top .one-item .sold-by-caption h4 {
+#h_top .one-item .card-body .sold-by-caption h4 {
   color: #505050;
   font-size: 14px;
   font-weight: 600;
@@ -1151,7 +1179,7 @@ This class is added to the container
   margin-bottom: 0;
 }
 
-#h_top .one-item .sold-by-caption p {
+#h_top .one-item .card-body .sold-by-caption p {
   font-weight: 400;
   font-size: 14px;
   color: #505050;
@@ -1159,6 +1187,25 @@ This class is added to the container
 
 #h_top .one-item:hover {
   background-color: #afb0bd;
+}
+
+@media (max-width: 575.98px) {
+  #h_top {
+    margin-top: 20px;
+  }
+  #h_top .one-item {
+    margin-bottom: 20px;
+  }
+  #h_top .one-item.h-100 {
+    height: auto !important;
+  }
+  #h_top .one-item .card-body .h-top-item {
+    display: block;
+    text-align: center;
+  }
+  #h_top .one-item .card-body .sold-by-caption {
+    text-align: center;
+  }
 }
 
 * {
@@ -1604,6 +1651,15 @@ This class is added to the container
   color: #505050;
 }
 
+@media (max-width: 575.98px) {
+  #p_detail .btn-confirm-wrap {
+    text-align: center;
+  }
+  #p_detail .more-info ul li {
+    text-align: center;
+  }
+}
+
 #n_all .title-header {
   background-color: #f7f7f7;
 }
@@ -1700,6 +1756,11 @@ This class is added to the container
 
 #contact_info {
   margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#contact_info .contact_top {
+  line-height: 1.5 !important;
 }
 
 #contact_info .contact_top h3.title {
@@ -1745,6 +1806,31 @@ This class is added to the container
   margin-left: 5px;
 }
 
+@media (max-width: 575.98px) {
+  #contact_info .contact_top {
+    margin-top: 20px;
+  }
+  #contact_info .contact_bottom .button-group {
+    text-align: center;
+  }
+}
+
+#introduce-info {
+  margin-top: 20px;
+}
+
+#introduce-info h1 {
+  display: block;
+  text-align: center;
+  font-size: 28px;
+  color: #0d51db;
+}
+
+#introduce-info .description {
+  margin-top: 20px;
+  line-height: 1.5 !important;
+}
+
 #footer {
   margin-top: 20px;
   background-color: #0d51db;
@@ -1770,13 +1856,9 @@ This class is added to the container
   margin-top: 10px;
 }
 
-#footer ul.one-footer {
-  list-style: none;
-}
-
-#footer ul.one-footer li a {
+#footer .one-footer a {
   color: white;
-  line-height: 1.5;
+  line-height: 2.5;
 }
 
 #footer img.img-logo-footer {
@@ -1785,43 +1867,6 @@ This class is added to the container
   margin-bottom: 30px;
 }
 
-#footer .footer-address ul {
-  list-style: none;
-}
-
-#footer .footer-address ul li i {
-  float: left;
-  width: 18px;
-  height: 18px;
-  font-size: 20px;
-  color: white;
-  line-height: 18px;
-  margin-right: 10px;
-}
-
-#footer .footer-address ul li p {
-  font-size: 12px;
-  vertical-align: top;
-  font-weight: 500;
-  display: inline-block;
-  color: white;
-}
-
-#footer .footer-address ul li p b {
-  color: #ffa800;
-  font-weight: 400;
-}
-
-#footer .footer-address ul li p span {
-  font-size: 16px;
-  display: block;
-  line-height: 2.5;
-  font-weight: bold;
-}
-
-#footer .footer-address ul li p email {
-  line-height: 2.5;
-  font-size: 16px;
-  font-weight: bold;
-  display: block;
+#footer .footer-address .description {
+  line-height: 2.5 !important;
 }

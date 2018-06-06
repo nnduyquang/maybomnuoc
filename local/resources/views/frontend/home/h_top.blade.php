@@ -2,12 +2,9 @@
     <div class="row">
         <div class="col-md-4">
             <div class="card one-item h-100">
-                <div class="card-body" style="display: flex;
-    justify-content: center;
-    align-items: center;">
+                <div class="card-body">
                     <div class="row">
-                        <div class="col-md-3" style="display: flex;
-    align-self: center;">
+                        <div class="col-md-3 h-top-item">
                             <i class="fas fa-toolbox"></i>
                         </div>
                         <div class="col-md-9">
@@ -22,12 +19,9 @@
         </div>
         <div class="col-md-4">
             <div class="card one-item h-100">
-                <div class="card-body" style="display: flex;
-    justify-content: center;
-    align-items: center;">
+                <div class="card-body">
                     <div class="row">
-                        <div class="col-md-3" style="display: flex;
-    align-self: center;">
+                        <div class="col-md-3 h-top-item">
                             <i class="fas fa-trophy"></i>
                         </div>
                         <div class="col-md-9">
@@ -42,12 +36,9 @@
         </div>
         <div class="col-md-4">
             <div class="card one-item h-100">
-                <div class="card-body" style="display: flex;
-    justify-content: center;
-    align-items: center;">
+                <div class="card-body">
                     <div class="row">
-                        <div class="col-md-3" style="display: flex;
-    align-self: center;">
+                        <div class="col-md-3 h-top-item">
                             <i class="fas fa-gift"></i>
                         </div>
                         <div class="col-md-9">

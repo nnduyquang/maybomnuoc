@@ -27,11 +27,14 @@
     span {
       width: 100%;
       display: block;
+      padding: 20px;
+      color: #0d51db;
     }
   }
 }
+
 @media screen and (max-width: 768px) {
-  .m-category-layout{
+  .m-category-layout {
     margin-top: 30px;
   }
 }

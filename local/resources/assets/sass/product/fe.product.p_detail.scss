@@ -68,7 +68,7 @@
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
-    line-height: 2.5!important;
+    line-height: 2.5 !important;
   }
   .bg-primary {
     background-color: white !important;
@@ -286,6 +286,22 @@
             font-size: 14px;
             color: #505050;
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  #p_detail {
+
+    .btn-confirm-wrap{
+      text-align: center;
+    }
+    .more-info {
+      ul {
+        li {
+          text-align: center;
         }
       }
     }

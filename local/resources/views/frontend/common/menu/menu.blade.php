@@ -27,8 +27,8 @@
                             <div class="row">
                                 <div class="col-md-9 pr-0">
                                     <div class="c-content">
-                                        <p><i class="fas fa-phone-square"></i>0907.468.264</p>
-                                        <span>8am ~ 6pm PST / Mon ~ Sun</span>
+                                        <p><i class="fas fa-phone-square"></i>{{$dataConfig['config-phone']}}</p>
+                                        <span>8AM ~ 6PM / Từ Thứ 2 Đến CHủ Nhật</span>
                                     </div>
                                 </div>
                                 <div class="col-md-3">

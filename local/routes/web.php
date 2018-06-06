@@ -2,9 +2,6 @@
 
 //Route cửa front end
 
-Route::get('/san-pham/abc', function () {
-    return view('frontend.product.index');
-});
 
 //Route cửa front end
 Route::get('/','FrontendController@getFrontend');
@@ -15,7 +12,9 @@ Route::get('/tin-tuc/','FrontendController@getAllNews');
 Route::get('/tin-tuc/{path}','FrontendController@getNewsDetail');
 Route::get('/lien-he','FrontendController@getPage')->defaults('type','1');
 Route::get('/gioi-thieu','FrontendController@getPage')->defaults('type','2');
-
+Route::get('mobile/category', function () {
+    return view('frontend.common.menu.m-category');
+});
 
 
 Route::get('/admin/sml_login', 'AuthController@checklogin');
@@ -95,8 +94,15 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('sml_admin/load-tree','MenuController@loadTreeMenu');
     Route::delete('sml_admin/menu-delete/{id}','MenuController@deleteMenu');
 
-    Route::get('sml_admin/config/', ['as' => 'config.index', 'uses' => 'ConfigController@getConfig']);
-    Route::post('sml_admin/config/', ['as' => 'config.store', 'uses' => 'ConfigController@saveConfig']);
+    //CONFIG
+    //------GENERAL
+    Route::get('sml_admin/config/', ['as' => 'config.general.index', 'uses' => 'ConfigGeneralController@getConfig']);
+    Route::post('sml_admin/config/', ['as' => 'config.general.store', 'uses' => 'ConfigGeneralController@saveConfig']);
+    //-------EMAIL
+
+    Route::get('sml_admin/config/email', ['as' => 'config.email.index', 'uses' => 'ConfigEmailController@getEmailConfig']);
+    Route::post('sml_admin/config/email', ['as' => 'config.email.store', 'uses' => 'ConfigEmailController@saveEmailConfig']);
+
 
 
 });

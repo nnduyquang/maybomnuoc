@@ -19,14 +19,11 @@
       margin-top: 10px;
     }
   }
-  ul.one-footer {
-    list-style: none;
-    li {
+  .one-footer {
       a {
         color: white;
-        line-height: 1.5;
+        line-height: 2.5;
       }
-    }
   }
   img.img-logo-footer {
     width: 100%;
@@ -34,42 +31,8 @@
     margin-bottom: 30px;
   }
   .footer-address {
-    ul {
-      list-style: none;
-      li {
-        i {
-          float: left;
-          width: 18px;
-          height: 18px;
-          font-size: 20px;
-          color: white;
-          line-height: 18px;
-          margin-right: 10px;
-        }
-        p{
-          font-size: 12px;
-          vertical-align: top;
-          font-weight: 500;
-          display: inline-block;
-          color: white;
-          b{
-            color: #ffa800;
-            font-weight: 400;
-          }
-          span{
-            font-size: 16px;
-            display: block;
-            line-height: 2.5;
-            font-weight: bold;
-          }
-          email{
-            line-height: 2.5;
-            font-size: 16px;;
-            font-weight: bold;
-            display: block;
-          }
-        }
-      }
-    }
+   .description{
+     line-height: 2.5!important;
+   }
   }
 }

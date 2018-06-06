@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Config;
 use App\Repositories\Frontend\FrontendRepositoryInterface;
 use Illuminate\Http\Request;
 
@@ -52,6 +53,10 @@ class FrontendController extends Controller
 
     public function getPage($type)
     {
+        if($type==2){
+            $configs = Config::whereIn('name', ['config-introduce'])->first();
+            $data['content']=$configs->content;
+        }
         $data['type'] = $type;
         return view('frontend.page.index', compact('data'));
     }

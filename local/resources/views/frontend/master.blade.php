@@ -28,5 +28,32 @@
 </body>
 {{ Html::script('js/core.common.js') }}
 {{ Html::script('js/core.frontend.js') }}
+<script type="text/javascript">
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+</script>
 {{ Html::script('js/scripts.js') }}
+<div class="callback d-lg-none d-md-none">
+    <div class="phone_animation">
+        <div class="phone_animation_circle"></div>
+        <div class="phone_animation_circle_fill"></div>
+        <a href="tel:{{$dataConfig['config-phone-2']}}" class="phone_animation_circle_fill_img"><i class="fas fa-phone"
+                                                                            aria-hidden="true"></i></a>
+    </div>
+</div>
+<div class="callback d-none d-md-block" style="right: 150px;bottom: -30px;left:inherit">
+    <div class="phone_animation">
+        <div class="phone_animation_circle"></div>
+        <div class="phone_animation_circle_fill"></div>
+        <a href="tel:{{$dataConfig['config-phone-2']}}" class="phone_animation_circle_fill_img"><i class="fas fa-phone"
+                                                                            aria-hidden="true"></i></a>
+    </div>
+</div>
+<div class="mess_desk_bot d-none d-md-block" style="position: fixed;bottom:40px;right: 0px;">
+    <a href="tel:{{$dataConfig['config-phone-2']}}" style="display: block;width: 260px;height: 56px;background: url({{URL::to('images/nenhot.png')}}) no-repeat;text-align: center;padding-top: 10px;color:#fff;font-size: 20px;font-family: 'roboto-bold'">
+    </a>
+</div>
 </Html>

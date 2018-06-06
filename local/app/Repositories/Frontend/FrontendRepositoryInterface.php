@@ -19,4 +19,6 @@ interface FrontendRepositoryInterface
     public function getFrontEndInfo();
 
     public function getSearch($keySearch);
+
+    public function getDataConfig();
 }

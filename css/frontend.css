@@ -1353,6 +1353,7 @@ This class is added to the container
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
+  line-height: 2.5 !important;
 }
 
 #p_detail .bg-primary {

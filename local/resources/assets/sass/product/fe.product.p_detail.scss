@@ -1,5 +1,15 @@
 #p_detail {
-  margin-top: 20px;
+  margin-top: 0px;
+  .p_detail_top{
+    background-color: #f7f7f7;
+    .bread{
+      padding: 40px 0 40px 0;
+      margin-bottom: 20px;
+      a{
+        color: gray;
+      }
+    }
+  }
   h1 {
     color: #0d51db;
     line-height: 1.2;

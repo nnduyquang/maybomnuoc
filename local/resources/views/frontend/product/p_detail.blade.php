@@ -1,10 +1,18 @@
 <div id="p_detail">
+    <div class="p_detail_top">
+        <div class="container">
+            <div class="bread">
+                <a href="{{URL::to('/')}}">Trang Chủ</a > > <a href="{{URL::to('danh-muc/'.$data['product']->categoryproduct->path)}}">{{$data['product']->categoryproduct->name}}</a>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-9">
 
                 <div class="row">
-                    <div class="col-md-12 mb-3 d-lg-none d-md-none d-sm-block d-block d-xl-none mt-4 mb-5 border-bottom" id="logo_mobile">
+                    <div class="col-md-12 mb-3 d-lg-none d-md-none d-sm-block d-block d-xl-none mt-4 mb-5 border-bottom"
+                         id="logo_mobile">
                         <div class="col-md-12">
                             <a href="{{URL::to('/')}}">{{Html::image('images/logo/logo.png','',array('class'=>'img-logo'))}}
                             </a>

@@ -2,7 +2,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-9">
+
                 <div class="row">
+                    <div class="col-md-12 mb-3 d-lg-none d-md-none d-sm-block d-block d-xl-none mt-4 mb-5 border-bottom" id="logo_mobile">
+                        <div class="col-md-12">
+                            <a href="{{URL::to('/')}}">{{Html::image('images/logo/logo.png','',array('class'=>'img-logo'))}}
+                            </a>
+                        </div>
+                    </div>
                     <div class="col-md-7">
                         @include('frontend.product.p_slider')
                     </div>
@@ -71,13 +78,14 @@
                                             </a>
                                         </div>
                                         <div class="card-body">
+
+                                        </div>
+                                        <div class="info card-footer">
                                             <h2 class="title card-title"><a
                                                         href="{{URL::to('san-pham/'.$item->path)}}">{{$item->name}}
                                                 </a>
                                             </h2>
 
-                                        </div>
-                                        <div class="info card-footer">
                                             <hr>
                                             <div class="row">
                                                 <div class="col-md-5 price"> @if($item->price==0)

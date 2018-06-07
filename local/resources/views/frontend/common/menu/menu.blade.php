@@ -1,4 +1,17 @@
-<div id="menu" class="d-none d-md-block d-lg-block">
+<style>
+div.frm-search2{
+    width: 70%;
+    float: right;
+}
+
+div.c-content span{
+    font-size: 15px;
+    font-family: 'Cuprum', sans-serif;
+    color: #565758;
+}
+</style>
+
+<div id="menu" class="d-none d-md-block d-lg-block border-bottom">
     <div class="container">
         <div id="menu-top">
             <div class="row">
@@ -28,7 +41,7 @@
                                 <div class="col-md-9 pr-0">
                                     <div class="c-content">
                                         <p><i class="fas fa-phone-square"></i>{{$dataConfig['config-phone']}}</p>
-                                        <span>8AM ~ 6PM / Từ Thứ 2 Đến CHủ Nhật</span>
+                                        <span>8AM ~ 6PM / TỪ THỨ 2 ĐẾN CHỦ NHẬT</span>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
@@ -53,13 +66,16 @@
                             </ul>
                         </button>
                     </div>
-                    <div class="col-md-6">
+
+                    <div class="col-md-9 position-relative">
+                        <div class="frm-search2">
                         {!! Form::open(array('route' => 'home.search','method'=>'POST','class'=>'frm-search h-100')) !!}
                         {!! Form::text('txtSearch',null, array('placeholder' => 'Tìm kiếm sản phẩm','class' => 'input-search h-100')) !!}
                         <button class="bt-search" type="submit">
                             <i class="fas fa-search"></i>
                         </button>
                         {!! Form::close() !!}
+                        </div>
                     </div>
                 </div>
             </div>

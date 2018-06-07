@@ -1,3 +1,4 @@
+
 <div id="h_product">
     @if($data['type']==1)
         <h1 class="title">{{$data['categoryId']->name}}</h1>
@@ -9,7 +10,7 @@
         @foreach($data['newProduct'] as $key=>$item)
             <div class="col-md-4 col-6">
                 <div class="card one-product h-100">
-                    <div class="img-wrap">
+                    <div class="img-wrap align-self-center">
                         <a href="{{URL::to('san-pham/'.$item->path)}}">
                             @php
                                 $mainImage=explode(';',$item->image);
@@ -26,9 +27,9 @@
                         <h2 class="title card-title"><a href="{{URL::to('san-pham/'.$item->path)}}">{{$item->name}}
                             </a>
                         </h2>
-
                     </div>
                     <div class="info card-footer">
+
                         <hr>
                         <div class="row">
                             <div class="col-md-6 price">

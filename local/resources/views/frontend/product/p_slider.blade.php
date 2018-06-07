@@ -1,6 +1,7 @@
-<div class="container">
+
 
     <div class="row p-0">
+        <div class="col-12">
         @php
             $subImage=explode(';',$data['product']->sub_image);
             if(count($subImage)==1)
@@ -47,15 +48,10 @@
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
     @endif
     <!-- Image text -->
-
-    </div>
-
-
-    <div class="row">
-        <div class="caption-container p-3" style="width:100%;">
-            <p id="caption"></p>
         </div>
+
     </div>
+
     <!-- Thumbnail images -->
     <div class="row">
         @php
@@ -93,7 +89,7 @@
         {{--</div>--}}
     </div>
 
-</div>
+
 
 
 <script>

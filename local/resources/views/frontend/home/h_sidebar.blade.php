@@ -42,5 +42,49 @@
         <div id="realFake" class="col-md-12">
             <a href="{{URL::to('tin-tuc/cach-phan-biet-may-bom-nuoc-chinh-hang-va-hang-gia')}}">{{ Html::image('images/temps/may_bom_nuoc_real_fake.jpg','',array('class'=>'img-real-fake')) }}</a>
         </div>
+
+        <style>
+            div.left-banner{
+                box-sizing: border-box;
+            }
+
+            div.left-banner img{
+                width: 100%;
+                height: auto;
+            }
+
+            div.left-banner a {
+                display: block;
+                position: relative;
+                text-align: center;
+            }
+
+            div.left-banner a:before {
+                content: "";
+                position: absolute;
+                z-index: 10;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: rgba(0,0,0,0.1);
+                -webkit-transform: scaleY(0);
+                transform: scaleY(0);
+                -webkit-transform-origin: 50%;
+                transform-origin: 50%;
+                -webkit-transition-property: transform;
+                transition-property: transform;
+                -webkit-transition-duration: 0.3s;
+                transition-duration: 0.3s;
+                -webkit-transition-timing-function: ease-out;
+                transition-timing-function: ease-out;
+            }
+        </style>
+
+        <div class="col-md-12 left-banner mt-3" >
+            <a href="">
+            <img src="http://pentaxpump.com/Data/upload/images/banner_right4_216x300.jpg" alt="">
+            </a>
+        </div>
     </div>
 </div>

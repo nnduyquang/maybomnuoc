@@ -34,29 +34,15 @@
                     </div>
                     <div class="col-md-12">
                         <div class="tab bg-primary">
-                            <button class="tablinks" onclick="openCity(event, 'content-info')" id="defaultOpen">Chi Tiết
+                            <button class="tablinks" onclick="openCity(event, 'content-info')" id="defaultOpen">SẢN PHẨM CHI TIẾT
                             </button>
-                            {{--<button class="tablinks" onclick="openCity(event, 'content-position')">Vị Trí</button>--}}
-                            {{--<button class="tablinks" onclick="openCity(event, 'content-design')">Thiết Kế</button>--}}
-                            {{--<button class="tablinks" onclick="openCity(event, 'content-utility')">Tiện Ích</button>--}}
-                            {{--<button class="tablinks" onclick="openCity(event, 'content-ground')">Mặt Bằng</button>--}}
+
                         </div>
                         <!-- Tab content -->
                         <div id="content-info" class="tab-content" style="line-height: 1.5">
                             {!! $data['product']->content !!}
                         </div>
-                        {{--<div id="content-position" class="tab-content" style="line-height: 1.5">--}}
-                        {{--<p>2</p>--}}
-                        {{--</div>--}}
-                        {{--<div id="content-design" class="tab-content" style="line-height: 1.5">--}}
-                        {{--<p>3</p>--}}
-                        {{--</div>--}}
-                        {{--<div id="content-utility" class="tab-content" style="line-height: 1.5">--}}
-                        {{--<p>4</p>--}}
-                        {{--</div>--}}
-                        {{--<div id="content-ground" class="tab-content" style="line-height: 1.5">--}}
-                        {{--<p>5</p>--}}
-                        {{--</div>--}}
+
                     </div>
                     <div class="col-md-12">
                         <h3>Sản Phẩm Liên Quan</h3>
@@ -119,7 +105,7 @@
             <div class="col-md-3">
                 <div class="more-info">
                     <h3 class="title">
-                        Giới Thiệu
+                        GIỚI THIỆU
                     </h3>
                     <div style="text-align: center">
                         {{Html::image('images/temps/sb_block_sold_by_image.png','',array('class'=>'img-sold'))}}

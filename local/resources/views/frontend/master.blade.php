@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Cuprum|Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Arimo|Comfortaa|Roboto+Mono" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="{{URL::to('images/logo/logo_icon.ico')}}">
     {{ Html::style('css/core.common.css') }}
     {{ Html::style('css/core.frontend.css') }}
     {{ Html::style('css/frontend.css') }}

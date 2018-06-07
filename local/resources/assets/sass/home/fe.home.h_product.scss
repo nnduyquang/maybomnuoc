@@ -164,6 +164,14 @@
         }
         img.img-one-product-2 {
           height: 140px;
+          display: none;
+        }
+        &:hover {
+          img.img-one-product-2 {
+            opacity: 1;
+            animation: fadeIn 0.5s;
+            display: none;
+          }
         }
       }
       .info{

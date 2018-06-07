@@ -117,7 +117,7 @@
                         {{Html::image('images/temps/sb_block_sold_by_image.png','',array('class'=>'img-sold'))}}
                     </div>
                     <p>
-                        Cửa Hàng Điện Cơ Điện Lạnh Ngọc Dương với trên 5 năm kinh doanh hoạt động trong lĩnh vực sửa
+                        Cửa Hàng Điện Cơ Điện Lạnh Duy Dương với trên 5 năm kinh doanh hoạt động trong lĩnh vực sửa
                         chữa bảo dưỡng bảo trì ngành điện nước. Thi công công trình khoang giếng, mua bán thương mại các
                         sản phẩm máy bơm nước, máy khoan đục bê tông, máy mài cầm tay, máy mô tơ kéo tời …
                     </p>

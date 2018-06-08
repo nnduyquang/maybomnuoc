@@ -3,10 +3,11 @@
   .p_detail_top{
     background-color: #f7f7f7;
     .bread{
-      padding: 40px 0 40px 0;
+      padding: 20px 0 20px 0;
       margin-bottom: 20px;
       a{
         color: gray;
+        text-transform: uppercase;
       }
     }
   }
@@ -316,4 +317,8 @@
       }
     }
   }
+}
+
+span.title-secondary{
+  color: #007bff;
 }

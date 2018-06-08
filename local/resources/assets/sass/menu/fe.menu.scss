@@ -121,6 +121,7 @@
     }
     .frm-search {
       border: 2px solid #8d8d8d;
+      border-radius: 6px;
       input.input-search {
         border: none;
         padding: 15px 30px;
@@ -138,4 +139,13 @@
       }
     }
   }
+}
+
+
+@media (min-width: 100px) and (max-width: 999px) {
+
+  div#top_menu_info{
+    display: none;
+  }
+
 }

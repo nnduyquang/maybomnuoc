@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <h3>Hình Ảnh Công Trình Đã Thi Công</h3>
+                <h3>HÌNH ẢNH CÔNG TRÌNH ĐÃ THI CÔNG</h3>
                 <div class="h-b-left-relative">
                     <div class="owl-carousel owl-theme h-b-owl">
                         <div class="one-item">
@@ -121,7 +121,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <h3>Video</h3>
+                <h3>VIDEO THI CÔNG</h3>
             </div>
         </div>
     </div>

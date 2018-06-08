@@ -1,10 +1,12 @@
 #h_top {
   padding: 40px 0 40px 0;
   .one-item {
-    border: 1px solid #d2d2d2;
-    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #044f84;
+    padding:1px;
     transition: all 0.2s;
     .card-body {
+      background-color: #05355a;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -13,31 +15,37 @@
         align-self: center;
         i {
           margin-right: 20px;
-          color: #0d51db;
+          color: white;
           font-size: 33px;
           font-weight: 700;
         }
       }
       .sold-by-caption {
+        padding: 13px 0px;
         h4 {
-          color: #505050;
+          color: white;
           font-size: 14px;
           font-weight: 600;
           line-height: 20px;
-          text-transform: uppercase;
+          text-transform: capitalize;
           margin-bottom: 0;
         }
         p {
           font-weight: 400;
           font-size: 14px;
-          color: #505050;
+          color: #dddddd;
         }
       }
     }
     &:hover {
-      background-color: #afb0bd;
+      background-color: #0879d0;
+    }
+
+    &:hover {
+      border: 2px solid #0365a9;
     }
   }
+
 }
 
 @media (max-width: 575.98px) {

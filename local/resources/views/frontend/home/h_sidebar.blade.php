@@ -1,6 +1,7 @@
 <div id="h_sidebar" class="d-none d-md-block d-lg-block">
-    <div class="col-md-12">
-        <h3>Danh Mục</h3>
+    <div class="col-md-12 p-0">
+
+        <h3>DANH MỤC <span class="sub-title">THƯƠNG HIỆU</span></h3>
         <ul>
             @foreach($sidebar['categoryRight'] as $key=>$item)
                 @if($data['type']==1)
@@ -15,7 +16,11 @@
             @endforeach
 
         </ul>
-        <h3>Sản Phẩm Tiêu Biểu</h3>
+
+        <img class="mt-3 mb-3" src="images/slider/slider2/tips-to-find-a-professional-water-pump-supplier-in-cork-1-638.jpg" alt="" style="width: 100%;height: auto;">
+
+
+        <h3>SẢN PHẨM <span class="sub-title">TIÊU BIỂU</span></h3>
         <div class="col-md-12 marquee">
             @foreach($sidebar['productBestSale'] as $key=>$item)
                 <div class="one-product">
@@ -44,11 +49,16 @@
         </div>
 
         <style>
-            div.left-banner{
+
+            span.sub-title{
+                color: #0561a8;
+            }
+
+            div.left-banner {
                 box-sizing: border-box;
             }
 
-            div.left-banner img{
+            div.left-banner img {
                 width: 100%;
                 height: auto;
             }
@@ -67,7 +77,7 @@
                 bottom: 0;
                 left: 0;
                 right: 0;
-                background: rgba(0,0,0,0.1);
+                background: rgba(0, 0, 0, 0.1);
                 -webkit-transform: scaleY(0);
                 transform: scaleY(0);
                 -webkit-transform-origin: 50%;
@@ -81,9 +91,9 @@
             }
         </style>
 
-        <div class="col-md-12 left-banner mt-3" >
+        <div class="col-md-12 left-banner mt-3">
             <a href="">
-            <img src="http://pentaxpump.com/Data/upload/images/banner_right4_216x300.jpg" alt="">
+                <img src="http://pentaxpump.com/Data/upload/images/banner_right4_216x300.jpg" alt="">
             </a>
         </div>
     </div>

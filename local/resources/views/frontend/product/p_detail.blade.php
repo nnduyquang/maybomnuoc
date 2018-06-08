@@ -1,23 +1,28 @@
 <div id="p_detail">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 d-lg-none d-md-none d-sm-block d-block d-xl-none mt-5 border-bottom"
+                 id="logo_mobile">
+                <div class="col-md-12 mb-3">
+                    <a href="{{URL::to('/')}}">{{Html::image('images/logo/logo.png','',array('class'=>'img-logo'))}}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="p_detail_top">
         <div class="container">
             <div class="bread">
-                <a href="{{URL::to('/')}}">Trang Chủ</a > > <a href="{{URL::to('danh-muc/'.$data['product']->categoryproduct->path)}}">{{$data['product']->categoryproduct->name}}</a>
+                <a href="{{URL::to('/')}}">Trang Chủ</a > - <a href="{{URL::to('danh-muc/'.$data['product']->categoryproduct->path)}}">{{$data['product']->categoryproduct->name}}</a>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-md-9">
-
                 <div class="row">
-                    <div class="col-md-12 mb-3 d-lg-none d-md-none d-sm-block d-block d-xl-none mt-4 mb-5 border-bottom"
-                         id="logo_mobile">
-                        <div class="col-md-12">
-                            <a href="{{URL::to('/')}}">{{Html::image('images/logo/logo.png','',array('class'=>'img-logo'))}}
-                            </a>
-                        </div>
-                    </div>
                     <div class="col-md-7">
                         @include('frontend.product.p_slider')
                     </div>
@@ -42,7 +47,7 @@
                     </div>
                     <div class="col-md-12">
                         <div class="tab bg-primary">
-                            <button class="tablinks" onclick="openCity(event, 'content-info')" id="defaultOpen">SẢN PHẨM CHI TIẾT
+                            <button class="tablinks" onclick="openCity(event, 'content-info')" id="defaultOpen">CHI TIẾT SẢN PHẨM
                             </button>
 
                         </div>
@@ -53,7 +58,7 @@
 
                     </div>
                     <div class="col-md-12">
-                        <h3>Sản Phẩm Liên Quan</h3>
+                        <h3>SẢN PHẦM <span class="title-secondary">LIÊN QUAN</span></h3>
                         <div class="product-relative">
                             <div class="owl-carousel owl-theme p-d-owl">
                                 @foreach($data['other'] as $key=>$item)
@@ -113,7 +118,7 @@
             <div class="col-md-3">
                 <div class="more-info">
                     <h3 class="title">
-                        GIỚI THIỆU
+                        THÔNG TIN <span class="title-secondary">CÔNG TY</span>
                     </h3>
                     <div style="text-align: center">
                         {{Html::image('images/temps/sb_block_sold_by_image.png','',array('class'=>'img-sold'))}}

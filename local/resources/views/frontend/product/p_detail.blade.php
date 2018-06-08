@@ -1,3 +1,24 @@
+<style>
+    .f-pro-option{
+        border: 2px solid white;
+        align-self: center;
+        margin-bottom: 10px;
+        text-align: center;
+        background-color: #034c7a;
+        padding: 2px;
+        transition: .3s;
+    }
+
+    .f-pro-option:hover{
+        background-color: #034c7a;
+    }
+
+    .pro-title{
+        text-transform: uppercase;
+    }
+</style>
+
+
 <div id="p_detail">
 
     <div class="container">
@@ -27,11 +48,11 @@
                         @include('frontend.product.p_slider')
                     </div>
                     <div class="col-md-5">
-                        <h1>{{$data['product']->name}}</h1>
-                        <span class="brand">Thương hiệu:<span>{{$data['product']->categoryproduct->name}}</span></span>
-                        <span class="price">Giá Bán: <span>
+                        <h1 class="pro-title">{{$data['product']->name}}</h1>
+                        <span class="brand">THƯƠNG HIỆU: <span>{{$data['product']->categoryproduct->name}}</span></span>
+                        <span class="price">GIÁ BÁN: <span>
                                 @if($data['product']->price==0)
-                                    Liên Hệ
+                                    LIÊN HỆ
                                 @else
                                     {{$data['product']->price}}
                                 @endif
@@ -117,9 +138,53 @@
             </div>
             <div class="col-md-3">
                 <div class="more-info">
+
+                    <ul>
+                        <li>
+                            <div class="row f-pro-option align-self-center">
+                                <div class="col-md-4 align-self-center">
+                                    <i class="fas fa-toolbox"></i>
+                                </div>
+                                <div class="col-md-8 align-self-center mt-3 text-center">
+                                    <div class="sold-by-caption">
+                                        <h4>SỬA CHỬA TẬN NHÀ</h4>
+                                        <p>Có mặt sau 20 phút</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row f-pro-option">
+                                <div class="col-md-4 align-self-center">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <div class="col-md-8 align-self-center mt-3 text-center">
+                                    <div class="sold-by-caption">
+                                        <h4>MÁY NHẬP KHẨU 100%</h4>
+                                        <p>Từ thương hiệu nổi tiếng</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row f-pro-option align-self-center">
+                                <div class="col-md-4 align-self-center">
+                                    <i class="fas fa-gift"></i>
+                                </div>
+                                <div class="col-md-8 align-self-center mt-3 text-center">
+                                    <div class="sold-by-caption">
+                                        <h4>GIẢM 5% KHÁCH HÀNG MỚI</h4>
+                                        <p>Khuyến mãi trong tháng</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
                     <h3 class="title">
                         THÔNG TIN <span class="title-secondary">CÔNG TY</span>
                     </h3>
+
                     <div style="text-align: center">
                         {{Html::image('images/temps/sb_block_sold_by_image.png','',array('class'=>'img-sold'))}}
                     </div>
@@ -129,47 +194,7 @@
                         sản phẩm máy bơm nước, máy khoan đục bê tông, máy mài cầm tay, máy mô tơ kéo tời …
                     </p>
                     <hr>
-                    <ul>
-                        <li>
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <i class="fas fa-toolbox"></i>
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="sold-by-caption">
-                                        <h4>Sửa Chữa Tận Nhà</h4>
-                                        <p>Có mặt sau 20 phút</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <i class="fas fa-trophy"></i>
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="sold-by-caption">
-                                        <h4>Máy Nhập Khẩu 100%</h4>
-                                        <p>Từ thương hiệu nổi tiếng</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <i class="fas fa-gift"></i>
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="sold-by-caption">
-                                        <h4>Giảm 5% Cho Khách Hàng Lắp Mới</h4>
-                                        <p>Khuyến mãi trong tháng</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+
                 </div>
             </div>
         </div>

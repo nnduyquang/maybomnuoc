@@ -1671,14 +1671,13 @@ This class is added to the container
 }
 
 #p_detail .more-info ul li i {
-  margin-right: 20px;
-  color: #0d51db;
+  color: white;
   font-size: 33px;
   font-weight: 700;
 }
 
 #p_detail .more-info ul li .sold-by-caption h4 {
-  color: #505050;
+  color: white;
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
@@ -1689,7 +1688,7 @@ This class is added to the container
 #p_detail .more-info ul li .sold-by-caption p {
   font-weight: 400;
   font-size: 14px;
-  color: #505050;
+  color: #d5d5d5;
 }
 
 @media (max-width: 575.98px) {
@@ -1697,6 +1696,7 @@ This class is added to the container
     text-align: center;
   }
   #p_detail .more-info ul li {
+    background-color: #fff;
     text-align: center;
   }
 }

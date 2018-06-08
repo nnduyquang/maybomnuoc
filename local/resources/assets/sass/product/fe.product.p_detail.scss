@@ -278,14 +278,13 @@
       list-style: none;
       li {
         i {
-          margin-right: 20px;
-          color: #0d51db;
+          color: white;
           font-size: 33px;
           font-weight: 700;
         }
         .sold-by-caption {
           h4 {
-            color: #505050;
+            color: white;
             font-size: 14px;
             font-weight: 600;
             line-height: 20px;
@@ -295,7 +294,7 @@
           p {
             font-weight: 400;
             font-size: 14px;
-            color: #505050;
+            color: #d5d5d5;
           }
         }
       }
@@ -312,6 +311,7 @@
     .more-info {
       ul {
         li {
+          background-color: #fff;
           text-align: center;
         }
       }

@@ -7,73 +7,80 @@
                     <div class="owl-carousel owl-theme h-b-owl">
                         <div class="one-item">
                             <div class="col-md-12 pb-2">
-                                <a class="fancybox" data-caption="Bơm Hỏa Tiễn - Chung Cư Him Lam" data-fancybox="gallery-cus"
+                                <a class="fancybox" data-caption="Bơm Hỏa Tiễn - Chung Cư Him Lam"
+                                   data-fancybox="gallery-cus"
                                    href="{{url('/').'/images/project/1.jpg'}}">{{ Html::image('images/project/1.jpg','',array('class'=>'img-one-project')) }}
                                 </a>
                             </div>
                             <div class="col-md-12 pb-2">
-                                <a class="fancybox" data-caption="Bơm Hỏa Tiễn - Chung Cư Him Lam" data-fancybox="gallery-cus"
+                                <a class="fancybox" data-caption="Bơm Hỏa Tiễn - Chung Cư Him Lam"
+                                   data-fancybox="gallery-cus"
                                    href="{{url('/').'/images/project/2.jpg'}}">{{ Html::image('images/project/2.jpg','',array('class'=>'img-one-project')) }}
                                 </a>
                             </div>
                         </div>
                         <div class="one-item">
                             <div class="col-md-12 pb-2">
-                                <a class="fancybox" data-caption="Bơm Hỏa Tiễn - Chung Cư Him Lam" data-fancybox="gallery-cus"
-                                href="{{url('/').'/images/project/3.jpg'}}">{{ Html::image('images/project/3.jpg','',array('class'=>'img-one-project')) }}
+                                <a class="fancybox" data-caption="Bơm Hỏa Tiễn - Chung Cư Him Lam"
+                                   data-fancybox="gallery-cus"
+                                   href="{{url('/').'/images/project/3.jpg'}}">{{ Html::image('images/project/3.jpg','',array('class'=>'img-one-project')) }}
                                 </a>
                             </div>
                             <div class="col-md-12 pb-2">
-                                <a class="fancybox" data-caption="Lắp Máy Cho Karaoke Kingdom" data-fancybox="gallery-cus"
-                                href="{{url('/').'/images/project/4.jpg'}}">{{ Html::image('images/project/4.jpg','',array('class'=>'img-one-project')) }}
+                                <a class="fancybox" data-caption="Lắp Máy Cho Karaoke Kingdom"
+                                   data-fancybox="gallery-cus"
+                                   href="{{url('/').'/images/project/4.jpg'}}">{{ Html::image('images/project/4.jpg','',array('class'=>'img-one-project')) }}
                                 </a>
                             </div>
                         </div>
                         <div class="one-item">
                             <div class="col-md-12 pb-2">
-                                <a class="fancybox" data-caption="Lắp Máy Cho Karaoke Kingdom" data-fancybox="gallery-cus"
-                                href="{{url('/').'/images/project/5.jpg'}}">{{ Html::image('images/project/5.jpg','',array('class'=>'img-one-project')) }}
+                                <a class="fancybox" data-caption="Lắp Máy Cho Karaoke Kingdom"
+                                   data-fancybox="gallery-cus"
+                                   href="{{url('/').'/images/project/5.jpg'}}">{{ Html::image('images/project/5.jpg','',array('class'=>'img-one-project')) }}
                                 </a>
                             </div>
                             <div class="col-md-12 pb-2">
                                 <a class="fancybox" data-caption="Tòa Nhà Petrolimex" data-fancybox="gallery-cus"
-                                href="{{url('/').'/images/project/6.jpg'}}">{{ Html::image('images/project/6.jpg','',array('class'=>'img-one-project')) }}
+                                   href="{{url('/').'/images/project/6.jpg'}}">{{ Html::image('images/project/6.jpg','',array('class'=>'img-one-project')) }}
                                 </a>
                             </div>
                         </div>
                         <div class="one-item">
                             <div class="col-md-12 pb-2">
                                 <a class="fancybox" data-caption="Tòa Nhà Petrolimex" data-fancybox="gallery-cus"
-                                href="{{url('/').'/images/project/7.jpg'}}">{{ Html::image('images/project/7.jpg','',array('class'=>'img-one-project')) }}
+                                   href="{{url('/').'/images/project/7.jpg'}}">{{ Html::image('images/project/7.jpg','',array('class'=>'img-one-project')) }}
                                 </a>
                             </div>
                             <div class="col-md-12 pb-2">
-                                <a class="fancybox" data-caption="Lắp Máy Cho Công An Thành Phố" data-fancybox="gallery-cus"
-                                href="{{url('/').'/images/project/8.jpg'}}">{{ Html::image('images/project/8.jpg','',array('class'=>'img-one-project')) }}
-                                </a>
-                            </div>
-                        </div>
-                        <div class="one-item">
-                            <div class="col-md-12 pb-2">
-                                <a class="fancybox" data-caption="Lắp Máy Cho Công An Thành Phố" data-fancybox="gallery-cus"
-                                href="{{url('/').'/images/project/9.jpg'}}">{{ Html::image('images/project/9.jpg','',array('class'=>'img-one-project')) }}
-                                </a>
-                            </div>
-                            <div class="col-md-12 pb-2">
-                                <a class="fancybox" data-caption="Làm Cho Nhà Dân" data-fancybox="gallery-cus"
-                                href="{{url('/').'/images/project/10.jpg'}}">{{ Html::image('images/project/10.jpg','',array('class'=>'img-one-project')) }}
+                                <a class="fancybox" data-caption="Lắp Máy Cho Công An Thành Phố"
+                                   data-fancybox="gallery-cus"
+                                   href="{{url('/').'/images/project/8.jpg'}}">{{ Html::image('images/project/8.jpg','',array('class'=>'img-one-project')) }}
                                 </a>
                             </div>
                         </div>
                         <div class="one-item">
                             <div class="col-md-12 pb-2">
-                                <a class="fancybox" data-caption="Làm Cho Nhà Dân" data-fancybox="gallery-cus"
-                                href="{{url('/').'/images/project/11.jpg'}}">{{ Html::image('images/project/11.jpg','',array('class'=>'img-one-project')) }}
+                                <a class="fancybox" data-caption="Lắp Máy Cho Công An Thành Phố"
+                                   data-fancybox="gallery-cus"
+                                   href="{{url('/').'/images/project/9.jpg'}}">{{ Html::image('images/project/9.jpg','',array('class'=>'img-one-project')) }}
                                 </a>
                             </div>
                             <div class="col-md-12 pb-2">
                                 <a class="fancybox" data-caption="Làm Cho Nhà Dân" data-fancybox="gallery-cus"
-                                href="{{url('/').'/images/project/12.jpg'}}">{{ Html::image('images/project/12.jpg','',array('class'=>'img-one-project')) }}
+                                   href="{{url('/').'/images/project/10.jpg'}}">{{ Html::image('images/project/10.jpg','',array('class'=>'img-one-project')) }}
+                                </a>
+                            </div>
+                        </div>
+                        <div class="one-item">
+                            <div class="col-md-12 pb-2">
+                                <a class="fancybox" data-caption="Làm Cho Nhà Dân" data-fancybox="gallery-cus"
+                                   href="{{url('/').'/images/project/11.jpg'}}">{{ Html::image('images/project/11.jpg','',array('class'=>'img-one-project')) }}
+                                </a>
+                            </div>
+                            <div class="col-md-12 pb-2">
+                                <a class="fancybox" data-caption="Làm Cho Nhà Dân" data-fancybox="gallery-cus"
+                                   href="{{url('/').'/images/project/12.jpg'}}">{{ Html::image('images/project/12.jpg','',array('class'=>'img-one-project')) }}
                                 </a>
                             </div>
                         </div>
@@ -110,6 +117,30 @@
                             <div class="col-md-12 pb-2">
                                 <a class="fancybox" data-caption="Làm Cho Nhà Dân" data-fancybox="gallery-cus"
                                    href="{{url('/').'/images/project/18.jpg'}}">{{ Html::image('images/project/18.jpg','',array('class'=>'img-one-project')) }}
+                                </a>
+                            </div>
+                        </div>
+                        <div class="one-item">
+                            <div class="col-md-12 pb-2">
+                                <a class="fancybox" data-caption="Công Trình Bason" data-fancybox="gallery-cus"
+                                   href="{{url('/').'/images/project/19.jpg'}}">{{ Html::image('images/project/19.jpg','',array('class'=>'img-one-project')) }}
+                                </a>
+                            </div>
+                            <div class="col-md-12 pb-2">
+                                <a class="fancybox" data-caption="Công Trình Bason" data-fancybox="gallery-cus"
+                                   href="{{url('/').'/images/project/20.jpg'}}">{{ Html::image('images/project/20.jpg','',array('class'=>'img-one-project')) }}
+                                </a>
+                            </div>
+                        </div>
+                        <div class="one-item">
+                            <div class="col-md-12 pb-2">
+                                <a class="fancybox" data-caption="Khoan Giếng Nhà Dân" data-fancybox="gallery-cus"
+                                   href="{{url('/').'/images/project/21.jpg'}}">{{ Html::image('images/project/21.jpg','',array('class'=>'img-one-project')) }}
+                                </a>
+                            </div>
+                            <div class="col-md-12 pb-2">
+                                <a class="fancybox" data-caption="Khoan Giếng Nhà Dân" data-fancybox="gallery-cus"
+                                   href="{{url('/').'/images/project/22.jpg'}}">{{ Html::image('images/project/22.jpg','',array('class'=>'img-one-project')) }}
                                 </a>
                             </div>
                         </div>

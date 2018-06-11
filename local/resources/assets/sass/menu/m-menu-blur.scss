@@ -16,7 +16,8 @@
   z-index: 9999999;
   left: 0;
   top: 0;
-  height: 100%;
+  overflow: scroll;
+  height: auto;
   width: 260px;
   background: white;
   -webkit-transition: left 0.3s ease, -webkit-box-shadow 0.3s ease 0.2s;

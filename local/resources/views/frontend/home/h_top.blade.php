@@ -1,4 +1,3 @@
-
 <div id="h_top">
     <div class="row">
 
@@ -10,10 +9,12 @@
                             <i class="fas fa-toolbox"></i>
                         </div>
                         <div class="col-md-9">
-                            <div class="sold-by-caption">
-                                <h4>SỮA CHỮA TẬN NHÀ</h4>
-                                <p>Có mặt sau 20 phút</p>
-                            </div>
+                            <a href="{{URL::to('tin-tuc/sua-may-bom-nuoc-tan-nha')}}">
+                                <div class="sold-by-caption">
+                                    <h4>SỮA CHỮA TẬN NHÀ</h4>
+                                    <p>Có mặt sau 20 phút</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>

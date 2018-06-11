@@ -21,7 +21,7 @@
         font-size: 20px;
     }
 
-    div#top_menu_info{
+    div#top_menu_info {
         background-color: #0d51db;
         padding: 10px;
         font-family: 'Cuprum', sans-serif;
@@ -29,11 +29,11 @@
         font-size: 14px;
     }
 
-    div#top_menu_info div.col-md-6:first-child{
+    div#top_menu_info div.col-md-6:first-child {
 
     }
 
-    div#top_menu_info div:nth-last-child(1) a{
+    div#top_menu_info div:nth-last-child(1) a {
         display: inline-block;
         padding: 0 3px;
         color: white;
@@ -45,7 +45,9 @@
         <div class="row">
             <div class="col-md-6">Chào mừng bạn đến với WEBSITE ĐIỆN CƠ DUY DƯƠNG</div>
             <div class="col-md-6 text-right">
-                <a href=""><div> <i class="far fa-question-circle"></i> Báo Giá DỊCH VỤ</div></a>
+                <a href="">
+                    <div><i class="far fa-question-circle"></i> Báo Giá DỊCH VỤ</div>
+                </a>
 
             </div>
         </div>
@@ -70,6 +72,13 @@
                                     <ul>
                                         @foreach($listMenu['menuCategory'] as $key=>$data)
                                             <li><a href="{{URL::to('danh-muc/'.$data->path)}}">{{$data->name}}</a></li>
+                                        @endforeach
+                                    </ul>
+                                </li>
+                                <li class="has-item-down"><a href="#">Dịch Vụ</a>
+                                    <ul>
+                                        @foreach($listMenu['menuService'] as $key=>$data)
+                                        <li><a href="{{URL::to('tin-tuc/'.$data->path)}}">{{$data->title}}</a></li>
                                         @endforeach
                                     </ul>
                                 </li>

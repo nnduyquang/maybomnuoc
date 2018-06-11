@@ -1,4 +1,4 @@
-integratedCKEDITOR('content-post',height=800);
+
 $('#btnBrowseMore').click(function () {
     window.KCFinder = {
         callBackMultiple: function (files) {

@@ -43,49 +43,49 @@ function resetForm() {
     $('select[name=category_id]').children("option").removeAttr('selected');
     $('select[name=category_id]').children("option").first().attr('selected', 'selected');
 }
-function loadTreeMenu() {
-    $.ajax({
-        type: "GET",
-        url: getBaseURL() + "sml_admin/load-tree",
-        dataType: 'json',
-        success: function (data) {
-            var runTree = $('#tree').tree({
-                uiLibrary: 'bootstrap4',
-                dataSource: data,
-                primaryKey: 'id',
-                dragAndDrop: true
-                // imageUrlField: 'flagUrl'
-            });
-            runTree.bind('select', {key: data}, function (e, node, id) {
-                $.ajax({
-                    type: "GET",
-                    url: getBaseURL() + "sml_admin/find/" + id,
-                    dataType: 'json',
-                    success: function (data2) {
-                        loadDataFormWhenSelectTreeMenu(data2)
-                    }
-                });
-            });
-            runTree.on('nodeDrop', function (e, id, parentId, orderNumber) {
-                console.log(orderNumber);
-                if (parentId == null)
-                    parentId = 0;
-                $.ajax({
-                    type: "GET",
-                    url: getBaseURL() + "sml_admin/updateNodeFamily/" + id + "/" + parentId,
-                    dataType: 'json',
-                    success: function (data2) {
-                        // loadDataFormWhenSelectTreeMenu(data2)
-                    }
-                });
-            });
-        },
-        error: function (data) {
-            // alert(data);
-        }
-    });
-}
-loadTreeMenu();
+// function loadTreeMenu() {
+//     $.ajax({
+//         type: "GET",
+//         url: getBaseURL() + "sml_admin/load-tree",
+//         dataType: 'json',
+//         success: function (data) {
+//             var runTree = $('#tree').tree({
+//                 uiLibrary: 'bootstrap4',
+//                 dataSource: data,
+//                 primaryKey: 'id',
+//                 dragAndDrop: true
+//                 // imageUrlField: 'flagUrl'
+//             });
+//             runTree.bind('select', {key: data}, function (e, node, id) {
+//                 $.ajax({
+//                     type: "GET",
+//                     url: getBaseURL() + "sml_admin/find/" + id,
+//                     dataType: 'json',
+//                     success: function (data2) {
+//                         loadDataFormWhenSelectTreeMenu(data2)
+//                     }
+//                 });
+//             });
+//             runTree.on('nodeDrop', function (e, id, parentId, orderNumber) {
+//                 console.log(orderNumber);
+//                 if (parentId == null)
+//                     parentId = 0;
+//                 $.ajax({
+//                     type: "GET",
+//                     url: getBaseURL() + "sml_admin/updateNodeFamily/" + id + "/" + parentId,
+//                     dataType: 'json',
+//                     success: function (data2) {
+//                         // loadDataFormWhenSelectTreeMenu(data2)
+//                     }
+//                 });
+//             });
+//         },
+//         error: function (data) {
+//             // alert(data);
+//         }
+//     });
+// }
+// loadTreeMenu();
 if ($('#select_state_menu_category').is(':checked')) {
     $('#menu_state_page_category').show();
     $('#menu_state_page_single').hide();

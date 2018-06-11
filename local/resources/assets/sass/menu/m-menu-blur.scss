@@ -17,7 +17,7 @@
   left: 0;
   top: 0;
   overflow: scroll;
-  height: auto;
+  height: 100%;
   width: 260px;
   background: white;
   -webkit-transition: left 0.3s ease, -webkit-box-shadow 0.3s ease 0.2s;
@@ -47,6 +47,9 @@
   padding-top: 50px;
   padding-bottom: 30px;
   margin: 0;
+}
+.sidebar ul.service{
+  padding-top: 0;
 }
 .sidebar ul li {
   width: 90%;

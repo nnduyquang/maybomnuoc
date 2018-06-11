@@ -1,5 +1,5 @@
 <style>
-    .f-pro-option{
+    .f-pro-option {
         border: 2px solid white;
         align-self: center;
         margin-bottom: 10px;
@@ -9,11 +9,11 @@
         transition: .3s;
     }
 
-    .f-pro-option:hover{
+    .f-pro-option:hover {
         background-color: #034c7a;
     }
 
-    .pro-title{
+    .pro-title {
         text-transform: uppercase;
     }
 </style>
@@ -36,7 +36,8 @@
     <div class="p_detail_top">
         <div class="container">
             <div class="bread">
-                <a href="{{URL::to('/')}}">Trang Chủ</a > - <a href="{{URL::to('danh-muc/'.$data['product']->categoryproduct->path)}}">{{$data['product']->categoryproduct->name}}</a>
+                <a href="{{URL::to('/')}}">Trang Chủ</a> - <a
+                        href="{{URL::to('danh-muc/'.$data['product']->categoryproduct->path)}}">{{$data['product']->categoryproduct->name}}</a>
             </div>
         </div>
     </div>
@@ -68,7 +69,8 @@
                     </div>
                     <div class="col-md-12">
                         <div class="tab bg-primary">
-                            <button class="tablinks" onclick="openCity(event, 'content-info')" id="defaultOpen">CHI TIẾT SẢN PHẨM
+                            <button class="tablinks" onclick="openCity(event, 'content-info')" id="defaultOpen">CHI TIẾT
+                                SẢN PHẨM
                             </button>
 
                         </div>
@@ -146,10 +148,12 @@
                                     <i class="fas fa-toolbox"></i>
                                 </div>
                                 <div class="col-md-8 align-self-center mt-3 text-center">
-                                    <div class="sold-by-caption">
-                                        <h4>SỬA CHỬA TẬN NHÀ</h4>
-                                        <p>Có mặt sau 20 phút</p>
-                                    </div>
+                                    <a href="{{URL::to('tin-tuc/sua-may-bom-nuoc-tan-nha')}}">
+                                        <div class="sold-by-caption">
+                                            <h4>SỬA CHỮA TẬN NHÀ</h4>
+                                            <p>Có mặt sau 20 phút</p>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </li>

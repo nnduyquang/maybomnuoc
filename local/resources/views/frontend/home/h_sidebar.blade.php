@@ -21,7 +21,7 @@
 
 
         <h3>SẢN PHẨM <span class="sub-title">TIÊU BIỂU</span></h3>
-        <div class="col-md-12 marquee">
+        <div class="col-md-12 marquee up-sidebar">
             @foreach($sidebar['productBestSale'] as $key=>$item)
                 <div class="one-product">
                     @php

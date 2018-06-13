@@ -152,7 +152,8 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <h3>VIDEO THI CÔNG</h3>
+                <h3>Giới Thiệu</h3>
+                <iframe width="100%" height="80%" src="https://www.youtube.com/embed/B9H4aWTrlzI? theme=light&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
         </div>
     </div>

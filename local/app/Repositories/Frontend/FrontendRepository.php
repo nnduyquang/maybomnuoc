@@ -14,7 +14,9 @@ class FrontendRepository implements FrontendRepositoryInterface
     {
         $data = '';
         $newProduct = Product::where('isActive', ACTIVE)->orderBy('is_best_sale', 'DESC')->orderBy('created_at', 'DESC')->take(12)->get();
+        $brandProduct=CategoryItem::where('type',CATEGORY_PRODUCT)->where('isActive', ACTIVE)->orderBy('order','DESC')->get();
         $data['newProduct'] = $newProduct;
+        $data['brandProduct']=$brandProduct;
         $data['type'] = 0;
         return $data;
     }
@@ -24,6 +26,8 @@ class FrontendRepository implements FrontendRepositoryInterface
         $data = '';
         $category = CategoryItem::where('path', $path)->first();
         $newProduct = Product::where('isActive', ACTIVE)->where('category_product_id', $category->id)->orderBy('is_best_sale', 'DESC')->orderBy('created_at', 'DESC')->get();
+        $brandProduct=CategoryItem::where('type',CATEGORY_PRODUCT)->where('isActive', ACTIVE)->orderBy('order','DESC')->get();
+        $data['brandProduct']=$brandProduct;
         $data['newProduct'] = $newProduct;
         $data['categoryId'] = $category;
         $data['type'] = 1;

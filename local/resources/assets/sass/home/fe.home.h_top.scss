@@ -3,7 +3,7 @@
   .one-item {
     box-sizing: border-box;
     border: 2px solid #044f84;
-    padding:1px;
+    padding: 1px;
     transition: all 0.2s;
     .card-body {
       background-color: #05355a;
@@ -45,28 +45,40 @@
       border: 2px solid #0365a9;
     }
   }
-
-}
-
-@media (max-width: 575.98px) {
-#h_top{
-  margin-top: 20px;
-  .one-item{
-    margin-bottom: 20px;
-    &.h-100{
-      height: auto!important;
-    }
-    .card-body{
-      .h-top-item{
-        display: block;
-        text-align: center;
-      }
-      .sold-by-caption{
-        text-align: center;
+  .info-bottom {
+    overflow: hidden;
+    .one-brand {
+      float: left;
+      padding: 10px;
+      a {
+        img.img-one-brand {
+          width: 170px;
+          height: 170px;
+        }
       }
     }
   }
 }
+
+@media (max-width: 575.98px) {
+  #h_top {
+    margin-top: 20px;
+    .one-item {
+      margin-bottom: 20px;
+      &.h-100 {
+        height: auto !important;
+      }
+      .card-body {
+        .h-top-item {
+          display: block;
+          text-align: center;
+        }
+        .sold-by-caption {
+          text-align: center;
+        }
+      }
+    }
+  }
 }
 
 //Check titlt để comit

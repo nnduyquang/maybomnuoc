@@ -12,22 +12,22 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="edit-slide">
-                    {{ Html::image('http://maybomchinhhang.net/upload/Slide/banner-trong-may-bom-chinh-hang.gif','',array('class'=>'main-slider')) }}
+                    {{ Html::image('images/slider/slider2/slider1.jpg','',array('class'=>'main-slider')) }}
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="edit-slide">
-                    {{ Html::image('https://banletaikho.vn/wp-content/uploads/2017/07/banner-binh-tich-ap.jpg','',array('class'=>'main-slider')) }}
+                    {{ Html::image('images/slider/slider2/slider2.jpg','',array('class'=>'main-slider')) }}
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="edit-slide" style="position: relative">
-                    {{ Html::image('http://maybomtienphat.com/wp-content/uploads/2015/11/banner22.jpg','',array('class'=>'main-slider')) }}
+                    {{ Html::image('images/slider/slider2/slider3.jpg','',array('class'=>'main-slider')) }}
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="edit-slide" style="position: relative">
-                    {{ Html::image('http://wsc.com.vn/template/uploads/2016/04/banner-zenit.jpg','',array('class'=>'main-slider')) }}
+                    {{ Html::image('images/slider/slider2/slider4.jpg','',array('class'=>'main-slider')) }}
                 </div>
             </div>
         </div>

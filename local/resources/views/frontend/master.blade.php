@@ -26,6 +26,22 @@
     @include('frontend.common.footer')
 </div>
 @include('frontend.common.menu.m-sidebar')
+
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 876283114;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+    <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/876283114/?guid=ON&amp;script=0"/>
+    </div>
+</noscript>
+
 </body>
 {{ Html::script('js/core.common.js') }}
 {{ Html::script('js/core.frontend.js') }}
